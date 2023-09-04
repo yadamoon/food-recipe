@@ -1,14 +1,25 @@
+import { Route, Routes } from "react-router-dom";
+import Nav from "./components/Nav";
 import FooterApp from "./components/common/FooterApp";
 import HeaderApp from "./components/common/HeaderApp";
-import NewRecipe from "./components/common/NewRecipe";
-import MainApp from "./components/main/MainApp";
+import DetailsComponents from "./components/Navs/DetailsComponents";
+import NotFound from "./components/Navs/NotFound";
+// import EditorFoodRecipe from "./components/cards/EditorFoodRecipe";
+import Services from "./components/Services";
+import Help from "./components/Help";
 
 function App() {
   return (
     <div className="pt-0 bg-gray-300">
       <HeaderApp />
-      <MainApp />
-      <NewRecipe/>
+      <Nav/>
+      <Routes>
+             <Route path="/" element={<DetailsComponents />}/>
+             <Route path="/Services" element={<Services />} />
+             <Route path="/help" element={<Help />} />
+             <Route path="*" element={<NotFound />} />
+            
+      </Routes>
       <FooterApp />
     </div>
   );
