@@ -7,6 +7,7 @@ import NotFound from "./components/Navs/NotFound";
 // import EditorFoodRecipe from "./components/cards/EditorFoodRecipe";
 import Services from "./components/Services";
 import Help from "./components/Help";
+import RegisterForm from "./components/forms/RegisterForm";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
              <Route path="/" element={<DetailsComponents />}/>
              <Route path="/Services" element={<Services />} />
              <Route path="/help" element={<Help />} />
+             <Route path="/register" element={<RegisterForm />} />
              <Route path="*" element={<NotFound />} />
             
       </Routes>
