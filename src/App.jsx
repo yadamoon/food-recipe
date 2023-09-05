@@ -18,7 +18,7 @@ function App() {
              <Route path="/" element={<DetailsComponents />}/>
              <Route path="/Services" element={<Services />} />
              <Route path="/help" element={<Help />} />
-             <Route path="/register" element={<RegisterForm />} />
+             <Route path="/RegisterForm" element={<RegisterForm />} />
              <Route path="*" element={<NotFound />} />
             
       </Routes>

@@ -21,7 +21,7 @@ const Nav = () => {
             <Link to="/Services">Services</Link>
             </p>
             <p  className="text-gray-800 hover:text-green-900 hover:text-xl  px-3 py-2 rounded-md  font-medium">
-            <Link to="/registerForm">Register</Link>
+            <Link to="/RegisterForm">Register</Link>
             </p>
             <p className="text-gray-800 hover:text-green-900 hover:text-xl  px-3 py-2 rounded-md text-sm font-medium">
             <Link to="/help">Help</Link>
