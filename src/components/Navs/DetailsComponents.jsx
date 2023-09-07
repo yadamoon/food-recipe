@@ -8,8 +8,8 @@ const DetailsComponents = ({ recipes }) => {
   return (
     <div>
       <h1 className="text-5xl text-center">Details Componenets</h1>
-      <div class="min-h-screen flex items-center justify-center">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 p-5">
+      <div class="w-full  flex items-center justify-center">
+        <div class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 sm:grid-cols-1 p-5">
           {recipes.map((recipe) => (
             <div key={recipe.id}>
               {
@@ -17,18 +17,19 @@ const DetailsComponents = ({ recipes }) => {
                   <img
                     src={recipe.image}
                     alt={recipe.title}
-                    className="w-full border rounded"
+                    className="w-full border rounded text-3xl"
                   />
-                  <p className="font-bold text-3xl uppercase text-center   ">
+                  <p className="font-bold uppercase text-center   ">
                     {recipe.title}
                   </p>
-                  {!show && <p>{recipe.descripition}</p>}
-                  {show && (
+
+                  {!show && (
                     <p className="font-thin">
                       <span>5 steps ....</span>
                       <span>5 ingridents ....</span>
                     </p>
                   )}
+                  <div>{show && <p>{recipe.body}</p>}</div>
                   <button
                     className="text-white p-2 border rounded bg-teal-700 text-center"
                     onClick={seeMore}

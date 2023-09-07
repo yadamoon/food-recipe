@@ -10,15 +10,16 @@ import NotFound from './components/Navs/NotFound'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const apiURL = ''
+const apiURL = 'https://jsonplaceholder.typicode.com/posts'
 
 function App() {
   const [recipes, setRecipe] = useState([])
 
   useEffect(() => {
     async function getRecipes() {
-      const result = await axios.Axios(apiURL)
+      const result = await axios(apiURL)
       setRecipe(result.data)
+      console.log(result.data)
     }
     getRecipes()
   }, [])

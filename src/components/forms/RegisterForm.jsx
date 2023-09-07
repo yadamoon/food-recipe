@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
-const apiURL = ''
+const apiURL = 'https://jsonplaceholder.typicode.com/posts'
 
 function RegisterForm() {
   const [newRecipes, setNewRecipes] = useState([])
@@ -12,17 +12,18 @@ function RegisterForm() {
     handleSubmit,
     formState: { errors },
   } = useForm()
-  const addRecipes = async (titel, descripition, image) => {
+  const addRecipes = async (titel, descripition) => {
     const obj = { titel, descripition, image }
-    const { data: recipes } = await axios.post(apiURL, obj)
-    setNewRecipes(recipes)
+    // const { data: recipes } = await axios.post(apiURL, obj)
+    // setNewRecipes(recipes)
+    console.log(titel, descripition)
   }
   return (
     <div className="flex justify-center py-6">
       <div className="w-1/3 items-center justify-center min-h-full bg-white p-4 rounded">
         <h1 className="text-4xl text-center font-bold">Register New Item</h1>
         <br />
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form>
           <input
             {...register('titel', { required: 'enter Titel' })}
             className="p-4 border w-full rounded bg-gray-100"
@@ -46,14 +47,14 @@ function RegisterForm() {
           )}
           <br />
           <br />
-          <label htmlFor="img" className="w-full flex space-x-2">
+          {/* <label htmlFor="img" className="w-full flex space-x-2">
             Set Photo :
             <input
               type="file"
               ref={register('image', { required: 'Enter IMG' })}
               className="bg-gray-100 flex-auto"
             />
-          </label>
+          </label> */}
           <br />
           <br />
           <div class="mt-10 flex items-center justify-center gap-x-6">
