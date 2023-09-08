@@ -1,7 +1,21 @@
-import React, { useState } from 'react'
-
-const DetailsComponents = ({ recipes }) => {
+import React, { useState, useEffect } from 'react'
+import DetailsRecipe from './DetailsRecipe'
+import { Route, Router } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+const apiURL = 'http://localhost:3000/api/v1/recipe'
+const DetailsComponents = () => {
   const [show, setShow] = useState(false)
+  const [recipes, setRecipe] = useState([])
+
+  useEffect(() => {
+    async function getRecipes() {
+      const result = await axios(apiURL)
+      setRecipe(result.data)
+      console.log(result.data)
+    }
+    getRecipes()
+  }, [])
   const seeMore = () => {
     setShow(!show)
   }
@@ -32,12 +46,13 @@ const DetailsComponents = ({ recipes }) => {
                     </p>
                   )}
                   <div>{show && <p>{recipe.body}</p>}</div>
-                  <button
+                  <Link
+                    to="/DetailsRecipe"
                     className="text-white p-2 pl-20 pr-20 border rounded-xl bg-yellow-300 text-center uppercase "
-                    onClick={seeMore}
+                    // onClick={seeMore}
                   >
                     Ingrident
-                  </button>
+                  </Link>
                   <br />
                   <br />
                   <button
