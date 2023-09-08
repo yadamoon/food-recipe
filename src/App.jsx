@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import FooterApp from './components/common/FooterApp'
 import HeaderApp from './components/common/HeaderApp'
-import DetailsComponents from './components/Navs/DetailsComponents'
+import DetailsComponents from './components/Navs/List_Recipes'
 import Services from './components/Navs/Services'
 import Help from './components/Navs/Help'
 import RegisterForm from './components/forms/RegisterForm'
@@ -27,7 +27,7 @@ function App() {
     <div className="pt-0 bg-gray-300 ">
       <HeaderApp />
       <Nav />
-      <Routes className="">
+      <Routes className="pl-40 pr-40">
         <Route path="/" element={<DetailsComponents recipes={recipes} />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/help" element={<Help />} />
