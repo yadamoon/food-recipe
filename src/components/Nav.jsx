@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Nav = () => {
   return (
     <div>
-      <nav className="mt-6 bg-white p-3">
+      <nav className="mt-6 bg-white p-5 ">
         <ul className="flex justify-center  items-center space-x-4">
           <li>
             <Link
