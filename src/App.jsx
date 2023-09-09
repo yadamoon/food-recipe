@@ -9,12 +9,14 @@ import RegisterForm from './components/forms/RegisterForm'
 import NotFound from './components/Navs/NotFound'
 
 import DetailsRecipe from './components/Navs/DetailsRecipe'
+import SearchForm from './components/forms/SearchForm'
 
 function App() {
   return (
     <div className="pt-0 bg-gray-300 ">
       <HeaderApp />
       <Nav />
+
       <Routes className="pl-40 pr-40">
         <Route path="/" element={<DetailsComponents />} />
         <Route path="/Services" element={<Services />} />

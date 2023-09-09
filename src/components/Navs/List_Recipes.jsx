@@ -3,6 +3,7 @@ import DetailsRecipe from './DetailsRecipe'
 import { Route, Router } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import SearchForm from '../forms/SearchForm'
 const apiURL = 'http://localhost:3000/api/v1/recipe'
 function DetailsComponents() {
   const [show, setShow] = useState(false)
@@ -24,6 +25,8 @@ function DetailsComponents() {
       <h1 className="text-5xl text-center font-extrabold text-teal-800">
         Our Food Recipes
       </h1>
+
+      <SearchForm />
       <div className="w-full  flex items-center justify-center">
         <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 sm:grid-cols-1 p-5">
           {recipes.map((recipe) => (
