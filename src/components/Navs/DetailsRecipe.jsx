@@ -2,32 +2,9 @@ import React from 'react'
 
 const DetailsRecipe = () => {
   return (
-    // <div className="space-y-2">
-    //   <br />
-    //   <div className=" flex items-center justify-center text-center bg-slate-50 space-y-6">
-    //     <img
-    //       className=" w-full rounded-t-lg md:rounded-l-lg"
-    //       src="public/images/recipeIMG.jpg"
-    //       alt=""
-    //     />
-    //     <div></div>
-    //     <div className="flex flex-col justify-start p-6">
-    //       <h5 className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-700">
-    //         Card title
-    //       </h5>
-    //       <p className="mb-4 text-base text-neutral-600 dark:text-neutral-500">
-    //         This is a wider card with supporting text below as a natural lead-in
-    //         to additional content. This content is a little bit longer.
-    //       </p>
-    //       <p className="text-xs text-neutral-500 dark:text-neutral-500">
-    //         Last updated 3 mins ago
-    //       </p>
-    //     </div>
-    //   </div>
-    // </div>
     <div>
       <br />
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full ">
         <div class="p-4 bg-white flex items-center justify-center">
           <img
             className=" w-full rounded-t-lg md:rounded-l-lg"
@@ -37,22 +14,30 @@ const DetailsRecipe = () => {
         </div>
         <div class="p-4 bg-white rounded-md   ">
           <div>
-            <h1 class="text-green-600 text-5xl font-bold">Details View</h1>
-
-            <b>Tailwind CSS Grid Auto Rows Class</b>
+            <h1 class="text-green-600 text-5xl font-bold space-y-2">
+              Details View
+            </h1>
+            <br />
+            <b className="text-2xl "> Title : </b>
             <div
-              class="m-8 p-8 grid bg-gray-600 grid-cols-2 
-                     grid-flow-row gap-4 auto-rows-fr"
+              class="m-8 p-8 grid  grid-cols-2 
+                     grid-flow-row gap-4 auto-rows-fr w-full"
             >
-              <div class="p-4 bg-green-200 ">
+              <div class="p-4 border ">
                 <span className="uppercase text-2xl">Ingridents</span>
                 <br />
                 <br />
-                <div className="flex  grid-col-2  gap-4 items-center justify-center ">
-                  <div className="border border-black w-1/12">salad</div>
-                  <div className="border border-black">salad</div>
-                </div>
                 <hr />
+                <div className=" grid grid-cols-2 gap-3 ">
+                  <div className="border h-28"></div>
+                  <div className="border"></div>
+                  <div className="border h-28"></div>
+                  <div className="border"></div>
+                  <div className="border h-28"></div>
+                  <div className="border"></div>
+                  <div className="border h-28"></div>
+                  <div className="border"></div>
+                </div>
               </div>
 
               <div class="p-4 bg-white  rounded">

@@ -4,7 +4,7 @@ import { Route, Router } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 const apiURL = 'http://localhost:3000/api/v1/recipe'
-const DetailsComponents = () => {
+function DetailsComponents() {
   const [show, setShow] = useState(false)
   const [recipes, setRecipe] = useState([])
 
@@ -24,12 +24,12 @@ const DetailsComponents = () => {
       <h1 className="text-5xl text-center font-extrabold text-teal-800">
         Our Food Recipes
       </h1>
-      <div class="w-full  flex items-center justify-center">
-        <div class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 sm:grid-cols-1 p-5">
+      <div className="w-full  flex items-center justify-center">
+        <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 sm:grid-cols-1 p-5">
           {recipes.map((recipe) => (
             <div key={recipe.id}>
               {
-                <div class="bg-gray-100 text-center rounded-lg">
+                <div className="bg-gray-100 text-center rounded-lg">
                   <img
                     src="public/images/recipeIMG.jpg"
                     alt={recipe.title}
@@ -67,10 +67,8 @@ const DetailsComponents = () => {
           ))}
 
           <div></div>
-        </div>
+        </div>{' '}
       </div>
-
-      {/* //todo new card */}
     </div>
   )
 }
