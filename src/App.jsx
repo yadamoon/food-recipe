@@ -9,11 +9,14 @@ import RegisterForm from './components/forms/RegisterForm'
 import NotFound from './components/Navs/NotFound'
 
 import DetailsRecipe from './components/Navs/DetailsRecipe'
-import SearchForm from './components/forms/SearchForm'
+
+/*
+  
+*/
 
 function App() {
   return (
-    <div className="pt-0 bg-gray-300 ">
+    <div className=" bg-gray-300 ">
       <HeaderApp />
       <Nav />
 
@@ -25,7 +28,7 @@ function App() {
         <Route path="DetailsRecipe" element={<DetailsRecipe />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <FooterApp />
+      <FooterApp className="space-10" />
     </div>
   )
 }

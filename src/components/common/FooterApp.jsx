@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const FooterApp = () => {
   return (
@@ -8,11 +8,13 @@ const FooterApp = () => {
           <div class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
             <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
               <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
-              <img src="public/svg/cookware-svgrepo-com(2).svg" class="w-48  text-teal-500 fill-current" />
-
+                <img
+                  src="public/svg/cookware-svgrepo-com(2).svg"
+                  class="w-48  text-teal-500 fill-current"
+                />
               </a>
               <p class="mt-2 text-sm text-gray-500 uppercase">
-                {" "}
+                {' '}
                 Yared Teklehaymannot
               </p>
               <div class="mt-4">
@@ -177,14 +179,14 @@ const FooterApp = () => {
           <div class="bg-white">
             <div class="container px-5 py-4 mx-auto">
               <p class="text-sm text-gray-700 capitalize xl:text-center">
-                © 2023 All rights reserved{" "}
+                © 2023 All rights reserved{' '}
               </p>
             </div>
           </div>
         </footer>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default FooterApp;
+export default FooterApp

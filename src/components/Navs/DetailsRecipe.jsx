@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SearchForm from '../forms/SearchForm'
+import axios from 'axios'
+
+const apiURL = 'http://localhost:3000/api/v1/recipe'
 
 const DetailsRecipe = () => {
+  const [title, setTitle] = useState('')
+  const [time, setTime] = useState('')
+  const [ingridents, setIngridents] = useState('')
+  const [instruction, setInstruction] = useState('')
+
+  useEffect(() => {
+    async function getRecipes() {
+      const result = await axios(apiURL)
+      setTitle([result.data])
+      setIngridents(result.data)
+      setTime(result.time)
+      setInstruction(result.data)
+
+      console.log(result.data)
+    }
+    getRecipes()
+  }, [])
+
   return (
-    <div>
+    <div className=" w-11/12 ml-20">
       <br />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full ">
+      <div className=" grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 w-full ">
         <div className="p-4 bg-white flex items-center justify-center">
           <img
             className=" w-full rounded-t-lg md:rounded-l-lg"
@@ -15,13 +36,9 @@ const DetailsRecipe = () => {
         </div>
         <div className="p-4 bg-white rounded-md   ">
           <div>
-            <h1 className="text-green-600 text-5xl font-bold space-y-2">
-              Details View
-            </h1>
             <br />
             <b className="text-2xl ">
-              Title :
-              <span className="font-bold uppercase">Spaghetti pasta</span>
+              {/* <span className="font-bold uppercase">{details.titel}</span> */}
             </b>
             <div
               className="m-8 p-8 grid  grid-cols-2 
@@ -35,10 +52,10 @@ const DetailsRecipe = () => {
                 <hr />
                 <section>
                   <div className="">
-                    <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+                    <div className="grid grid-cols-2 gap-8 mt-8 md:mt-16 md:grid-cols-2">
                       <div>
                         <img
-                          className="object-cover w-full h-28 rounded-lg lg:w-64"
+                          className="object-cover w-full h-28 rounded-t lg:w-64"
                           src="https://dummyimage.com/421x261"
                           alt=""
                         />
@@ -53,7 +70,7 @@ const DetailsRecipe = () => {
 
                       <div>
                         <img
-                          className="object-cover w-full h-28 rounded-lg lg:w-64"
+                          className="object-cover w-full h-28 rounded-t lg:w-64"
                           src="https://dummyimage.com/421x261"
                           alt=""
                         />
@@ -68,7 +85,7 @@ const DetailsRecipe = () => {
 
                       <div>
                         <img
-                          className="object-cover w-full h-28 rounded-lg lg:w-64"
+                          className="object-cover w-full h-28 rounded-t lg:w-64"
                           src="https://dummyimage.com/421x261"
                           alt=""
                         />
@@ -83,7 +100,7 @@ const DetailsRecipe = () => {
 
                       <div>
                         <img
-                          className="object-cover w-full h-28 rounded-lg lg:w-64"
+                          className="object-cover w-full h-28 rounded-t lg:w-64"
                           src="https://dummyimage.com/421x261"
                           alt=""
                         />
@@ -98,7 +115,7 @@ const DetailsRecipe = () => {
 
                       <div>
                         <img
-                          className="object-cover w-full h-28 rounded-lg lg:w-64"
+                          className="object-cover w-full h-28 rounded-t lg:w-64"
                           src="https://dummyimage.com/421x261"
                           alt=""
                         />
@@ -113,7 +130,7 @@ const DetailsRecipe = () => {
 
                       <div>
                         <img
-                          className="object-cover w-full h-28 rounded-lg lg:w-64"
+                          className="object-cover w-full h-28 rounded-t lg:w-64"
                           src="https://dummyimage.com/421x261"
                           alt=""
                         />
@@ -166,10 +183,6 @@ const DetailsRecipe = () => {
                 </div>
                 <hr />
               </div>
-              {/* <div class="p-4 bg-green-200">
-                Bootstratp become replacement of CSS
-              </div>
-              <div class="p-4 bg-green-200">Cascading Style Sheet</div> */}
             </div>
           </div>
         </div>

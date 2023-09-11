@@ -4,15 +4,17 @@ import { Route, Router } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import SearchForm from '../forms/SearchForm'
+import ago from 's-ago'
+
 const apiURL = 'http://localhost:3000/api/v1/recipe'
 function DetailsComponents() {
-  const [show, setShow] = useState(false)
   const [recipes, setRecipe] = useState([])
 
   useEffect(() => {
     async function getRecipes() {
       const result = await axios(apiURL)
       setRecipe(result.data)
+
       console.log(result.data)
     }
     getRecipes()
@@ -29,15 +31,15 @@ function DetailsComponents() {
       <SearchForm />
       <div className="w-full  flex items-center justify-center">
         <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 sm:grid-cols-1 p-5">
-          {recipes.map((recipe) => (
+          {recipes.map((recipe, index) => (
             <section
-              className=" h-5/5 body-font bg-white text-gray-600 "
+              className=" h-5/5 body-font bg-white text-gray-600 rounded-t"
               key={recipe.id}
             >
               <div className="container grid grid-cols">
                 <div className=" flex flex-wrap">
                   <div className="">
-                    <a className="relative block h-48 w-full overflow-hidden rounded">
+                    <a className="relative block h-48 w-full overflow-hidden rounded-t">
                       <img
                         alt="ecommerce"
                         className="block h-full w-full object-cover object-center cursor-pointer"
@@ -52,12 +54,11 @@ function DetailsComponents() {
                         {recipe.body}
                       </h2>
 
-                      <p className="mt-1">01/09/2022</p>
+                      <p className="mt-1">{ago(new Date())}</p>
                       <div className="flex  grid-cols-2 gap-4">
                         <Link
                           to="/DetailsRecipe"
                           className="bg-yellow-300 rounded-lg m-2 shadow text-center text-white text-base font-semibold w-full py-3 mt-9 uppercase"
-                          // onClick={seeMore}
                         >
                           Ingrident
                         </Link>
