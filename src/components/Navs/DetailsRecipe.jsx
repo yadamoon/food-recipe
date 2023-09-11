@@ -24,7 +24,7 @@ const DetailsRecipe = () => {
   }, [])
 
   return (
-    <div className=" w-11/12 ml-20">
+    <div className=" w-11/12 ml-20 rounded-xl">
       <br />
       <div className=" grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 w-full ">
         <div className="p-4 bg-white flex items-center justify-center">
@@ -34,7 +34,7 @@ const DetailsRecipe = () => {
             alt=""
           />
         </div>
-        <div className="p-4 bg-white rounded-md   ">
+        <div className="p-4 bg-white rounded ">
           <div>
             <br />
             <b className="text-2xl ">
