@@ -10,6 +10,7 @@ const SearchForm = () => {
             placeholder="Search"
             className="w-full p-3 rounded"
           />
+          <span></span>
         </div>
       </div>
     </div>

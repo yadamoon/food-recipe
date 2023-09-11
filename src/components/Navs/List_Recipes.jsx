@@ -39,23 +39,26 @@ function DetailsComponents() {
               <div className="container grid grid-cols">
                 <div className=" flex flex-wrap">
                   <div className="">
-                    <a className="relative block h-48 w-full overflow-hidden rounded-t">
+                    <Link
+                      to="/DetailsRecipe"
+                      className="relative block h-48 w-full overflow-hidden rounded-t"
+                    >
                       <img
                         alt="ecommerce"
                         className="block h-full w-full object-cover object-center cursor-pointer"
                         src="https://dummyimage.com/421x261"
                       />
-                    </a>
+                    </Link>
                     <div className="mt-4">
-                      <h3 className="text-xs tracking-widest text-gray-500">
+                      <h3 className="text-lg tracking-widest text-gray-500 font-bold">
                         {recipe.title}
                       </h3>
-                      <h2 className="title-font text-lg font-medium text-gray-900">
+                      <h2 className="title-font text-2sm font-medium text-gray-900">
                         {recipe.body}
                       </h2>
 
                       <p className="mt-1">{ago(new Date())}</p>
-                      <div className="flex  grid-cols-2 gap-4">
+                      {/* <div className="flex  grid-cols-2 gap-4">
                         <Link
                           to="/DetailsRecipe"
                           className="bg-yellow-300 rounded-lg m-2 shadow text-center text-white text-base font-semibold w-full py-3 mt-9 uppercase"
@@ -70,7 +73,7 @@ function DetailsComponents() {
                         >
                           Details
                         </button>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
