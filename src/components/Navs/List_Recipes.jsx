@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import DetailsRecipe from './DetailsRecipe'
-import { Route, Router } from 'react-router-dom'
+import { Route, Router, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import SearchForm from '../forms/SearchForm'
@@ -9,6 +9,7 @@ import ago from 's-ago'
 const apiURL = 'http://localhost:3000/api/v1/recipe'
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     async function getRecipes() {
@@ -42,6 +43,8 @@ function DetailsComponents() {
                     <Link
                       to="/DetailsRecipe"
                       className="relative block h-48 w-full overflow-hidden rounded-t"
+                      // onClick={<DetailsComponents id={recipe._id} />}
+                      onClick={() => navigate('recipes/' + recipe._id)}
                     >
                       <img
                         alt="ecommerce"
@@ -55,6 +58,7 @@ function DetailsComponents() {
                       </h3>
                       <h2 className="title-font text-2sm font-medium text-gray-900">
                         {recipe.body}
+                        {recipe._id}
                       </h2>
 
                       <p className="mt-1">{ago(new Date())}</p>
