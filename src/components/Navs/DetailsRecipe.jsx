@@ -1,38 +1,39 @@
 import React, { useEffect, useState } from 'react'
 import SearchForm from '../forms/SearchForm'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
 const apiURL = 'http://localhost:3000/api/v1/recipe'
 
 const DetailsRecipe = () => {
-  const [title, setTitle] = useState('')
-  const [time, setTime] = useState('')
-  const [ingridents, setIngridents] = useState('')
-  const [instruction, setInstruction] = useState('')
+  const [data, setData] = useState(null)
+  const { id } = useParams()
 
   useEffect(() => {
-    async function getRecipes() {
-      const result = await axios(apiURL)
-      setTitle([result.data])
-      setIngridents(result.data)
-      setTime(result.time)
-      setInstruction(result.data)
-
-      console.log(result.data)
+    const fetchData = async () => {
+      const response = await axios.get(`${apiURL}/${id}`)
+      setData(response.data)
     }
-    getRecipes()
-  }, [])
+    fetchData()
+  }, [id])
+
+  if (!data) {
+    return <div>Loading...</div>
+  }
 
   return (
-    <div className=" w-11/12 ml-20 rounded-xl">
+    <div className=" w-11/12  rounded-xl    ml-20 ">
       <br />
-      <div className=" grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 w-full ">
-        <div className="p-4 bg-white flex items-center justify-center">
-          <img
-            className=" w-full rounded-t-lg md:rounded-l-lg"
-            src="public/images/recipeIMG.jpg"
-            alt=""
-          />
+      <div className=" grid grid-cols-3 sm:grid-cols-1 lg:grid-cols-2 w-full  ">
+        <div className="p-4 bg-white ">
+          <div>
+            <img
+              className=" w-full rounded-t-lg "
+              src="https://dummyimage.com/421x261"
+              alt=""
+            />
+            <p className="text-center font-bold text-3xl "> {data.title}</p>
+          </div>
         </div>
         <div className="p-4 bg-white rounded ">
           <div>
@@ -41,15 +42,12 @@ const DetailsRecipe = () => {
               {/* <span className="font-bold uppercase">{details.titel}</span> */}
             </b>
             <div
-              className="m-8 p-8 grid  grid-cols-2 
-                     grid-flow-row gap-4 auto-rows-fr w-full"
+              className=" p-8 grid  grid-cols-2 
+                      gap-4 auto-rows-fr w-full md:grid-cols-2 sm:grid-cols-1"
             >
-              <div className="p-4 border ">
-                <h1 className="text-2xl font-bold text-center uppercase">
-                  {' '}
-                  ingredients
-                </h1>
-                <hr />
+              <div className="p-4  ">
+                <h1 className="text-2xl uppercase"> ingredients</h1>
+
                 <section>
                   <div className="">
                     <div className="grid grid-cols-2 gap-8 mt-8 md:mt-16 md:grid-cols-2">
@@ -156,28 +154,52 @@ const DetailsRecipe = () => {
                         1
                       </span>
                       <h3 className="font-medium leading-tight">Step</h3>
-                      <p className="text-sm">Step details here</p>
+                      <p className="text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem exercitationem porro fuga asperiores aperiam nemo
+                        aspernatur fugit facere voluptatum sint itaque, corrupti
+                        dolorem obcaecati quam repudiandae? Dolore debitis
+                        quidem quae.
+                      </p>
                     </li>
                     <li className="mb-10 ml-6">
                       <span className="absolute flex items-center justify-center w-8 h-8 bg-green-500 text-white hover:bg-green-700  rounded-full -left-4 ring-4 ring-white dark:ring-gray-300">
                         2
                       </span>
                       <h3 className="font-medium leading-tight">Step</h3>
-                      <p className="text-sm">Step details here</p>
+                      <p className="text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem exercitationem porro fuga asperiores aperiam nemo
+                        aspernatur fugit facere voluptatum sint itaque, corrupti
+                        dolorem obcaecati quam repudiandae? Dolore debitis
+                        quidem quae.
+                      </p>
                     </li>
                     <li className="mb-10 ml-6">
                       <span className="absolute flex items-center justify-center w-8 h-8 bg-green-500 text-white hover:bg-green-700  rounded-full -left-4 ring-4 ring-white dark:ring-gray-300">
                         3
                       </span>
                       <h3 className="font-medium leading-tight">Step 3</h3>
-                      <p className="text-sm">Step details here</p>
+                      <p className="text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem exercitationem porro fuga asperiores aperiam nemo
+                        aspernatur fugit facere voluptatum sint itaque, corrupti
+                        dolorem obcaecati quam repudiandae? Dolore debitis
+                        quidem quae.
+                      </p>
                     </li>
                     <li className="ml-6">
                       <span className="absolute flex items-center justify-center w-8 h-8 bg-green-500 text-white hover:bg-green-700  rounded-full -left-4 ring-4 ring-white dark:ring-gray-300">
                         n
                       </span>
                       <h3 className="font-medium leading-tight">Step n</h3>
-                      <p className="text-sm">Step details here</p>
+                      <p className="text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem exercitationem porro fuga asperiores aperiam nemo
+                        aspernatur fugit facere voluptatum sint itaque, corrupti
+                        dolorem obcaecati quam repudiandae? Dolore debitis
+                        quidem quae.
+                      </p>
                     </li>
                   </ol>
                 </div>
