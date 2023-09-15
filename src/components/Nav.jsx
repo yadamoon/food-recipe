@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div>
       <nav className=" bg-white p-5 ">
-        <ul className="flex justify-center  items-center space-x-4">
+        <ul className="flex justify-center  items-center space-x-4 uppercase">
           <li>
             <Link
               to="/"
@@ -36,6 +36,14 @@ const Nav = () => {
               className="text-md font-semibold text-gray-600 hover:text-gray-800"
             >
               Help
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Login"
+              className="text-md font-semibold text-gray-600 hover:text-gray-800"
+            >
+              Login
             </Link>
           </li>
         </ul>
