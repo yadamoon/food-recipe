@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import UseFormState from './UseStateForm'
 
 const apiURL = 'https://jsonplaceholder.typicode.com/posts'
 
@@ -13,7 +14,7 @@ function RegisterForm() {
     formState: { errors },
   } = useForm()
   const addRecipes = async (titel, descripition) => {
-    const obj = { titel, descripition, image }
+    const obj = { titel, descripition }
     // const { data: recipes } = await axios.post(apiURL, obj)
     // setNewRecipes(recipes)
     console.log(titel, descripition)
@@ -23,7 +24,7 @@ function RegisterForm() {
       <div className="w-1/3 items-center justify-center min-h-full bg-white p-4 rounded">
         <h1 className="text-4xl text-center font-bold">Register New Item</h1>
         <br />
-        <form>
+        <form className="space-y-2">
           <input
             {...register('titel', { required: 'enter Titel' })}
             className="p-4 border w-full rounded bg-gray-100"
@@ -31,9 +32,22 @@ function RegisterForm() {
           />
           <br />
           {errors.titel && (
-            <span className="text-red-400">{errors.titel.message}</span>
+            <span className="text-red-400 font-extrabold ">
+              {errors.titel.message}
+            </span>
           )}
+          <input
+            {...register('ingridunt', { required: 'Ingridunt' })}
+            className="p-4 border w-full rounded bg-gray-100"
+            placeholder="Enter Title"
+          />
           <br />
+          {errors.titel && (
+            <span className="text-red-400 font-extrabold ">
+              {errors.titel.message}
+            </span>
+          )}
+
           <textarea
             {...register('descripition', {
               required: 'descripition are empty please enter',
@@ -43,20 +57,11 @@ function RegisterForm() {
           />
           <br />
           {errors.descripition && (
-            <span className="text-red-300">{errors.descripition.message} </span>
+            <span className="text-red-300 font-extrabold">
+              {errors.descripition.message}{' '}
+            </span>
           )}
-          <br />
-          <br />
-          {/* <label htmlFor="img" className="w-full flex space-x-2">
-            Set Photo :
-            <input
-              type="file"
-              ref={register('image', { required: 'Enter IMG' })}
-              className="bg-gray-100 flex-auto"
-            />
-          </label> */}
-          <br />
-          <br />
+
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <button
               href="#"
