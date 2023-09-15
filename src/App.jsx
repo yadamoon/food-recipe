@@ -7,8 +7,8 @@ import Services from './components/Navs/Services'
 import Help from './components/Navs/Help'
 import RegisterForm from './components/forms/RegisterForm'
 import NotFound from './components/Navs/NotFound'
-
 import DetailsRecipe from './components/Navs/DetailsRecipe'
+import LoginPage from './components/forms/LoginPage'
 
 /*
   
@@ -25,9 +25,11 @@ function App() {
         <Route path="/Services" element={<Services />} />
         <Route path="/help" element={<Help />} />
         <Route path="/RegisterForm" element={<RegisterForm />} />
-        <Route path="DetailsRecipe" element={<DetailsRecipe />} />
+        <Route path="recipes/:id" element={<DetailsRecipe />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
       <FooterApp className="space-10" />
     </div>
   )
