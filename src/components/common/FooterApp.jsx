@@ -3,14 +3,15 @@ import React from 'react'
 const FooterApp = () => {
   return (
     <div className="">
-      <div class="flex items-end w-full min-h-screen bg-gray-300">
+      <br />
+      <div class="flex items-end w-full  bg-gray-300">
         <footer class="w-full text-gray-700 bg-gray-100 body-font">
-          <div class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
+          <div class="container flex flex-col flex-wrap  py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
             <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
               <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
                 <img
                   src="public/svg/cookware-svgrepo-com(2).svg"
-                  class="w-48  text-teal-500 fill-current"
+                  class="w-48  text-teal-500 "
                 />
               </a>
               <p class="mt-2 text-sm text-gray-500 uppercase">
