@@ -13,67 +13,85 @@ function RegisterForm() {
     handleSubmit,
     formState: { errors },
   } = useForm()
-  const addRecipes = async (titel, descripition) => {
-    const obj = { titel, descripition }
+  const addRecipes = async (title, description) => {
+    // const obj = { title, description , ingridunt }
     // const { data: recipes } = await axios.post(apiURL, obj)
     // setNewRecipes(recipes)
-    console.log(titel, descripition)
+    console.log(title, description, ingridunt)
   }
   return (
     <div className="flex justify-center py-6">
       <div className="w-1/3 items-center justify-center min-h-full bg-white p-4 rounded">
-        <h1 className="text-4xl text-center font-bold">Register New Item</h1>
+        <h1 className="text-4xl text-center font-bold">Register new Recipes</h1>
         <br />
         <form className="space-y-2">
-          <input
-            {...register('titel', { required: 'enter Titel' })}
-            className="p-4 border w-full rounded bg-gray-100"
-            placeholder="Enter Title"
-          />
-          <br />
-          {errors.titel && (
-            <span className="text-red-400 font-extrabold ">
-              {errors.titel.message}
-            </span>
-          )}
-          <input
-            {...register('ingridunt', { required: 'Ingridunt' })}
-            className="p-4 border w-full rounded bg-gray-100"
-            placeholder="Enter Title"
-          />
-          <br />
-          {errors.titel && (
-            <span className="text-red-400 font-extrabold ">
-              {errors.titel.message}
+          <div class="bg-white flex min-h-[60px] flex-col-reverse justify-center rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:shadow-inner">
+            <input
+              {...register('title', { required: 'Enter Title of recipe' })}
+              class="peer block w-full border-0 p-2 text-base text-gray-900 placeholder-gray-400 focus:ring-0"
+              placeholder="title"
+            />
+            <label
+              html="title"
+              class="block transform text-xs font-bold  text-gray-400 transition-opacity, duration-200 peer-placeholder-shown:h-0 peer-placeholder-shown:-translate-y-full peer-placeholder-shown:opacity-0"
+            >
+              Title
+            </label>
+          </div>
+          {errors.title && (
+            <span className="text-red-300 font-extrabold">
+              {errors.title.message}
             </span>
           )}
 
-          <textarea
-            {...register('descripition', {
-              required: 'descripition are empty please enter',
-            })}
-            placeholder="enter....."
-            className="p-4 w-full border rounded bg-gray-100"
-          />
-          <br />
-          {errors.descripition && (
+          <div class="bg-white flex min-h-[60px] flex-col-reverse justify-center rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:shadow-inner">
+            <input
+              {...register('description', {
+                required: 'Enter description of recipes',
+              })}
+              class="peer block w-full border-0 p-2 text-base text-gray-900 placeholder-gray-400 focus:ring-0"
+              placeholder="Description"
+            />
+            <label
+              html="Description"
+              class="block transform text-xs font-bold uppercase text-gray-400 transition-opacity, duration-200 peer-placeholder-shown:h-0 peer-placeholder-shown:-translate-y-full peer-placeholder-shown:opacity-0"
+            >
+              Description
+            </label>
+          </div>
+          {errors.description && (
             <span className="text-red-300 font-extrabold">
-              {errors.descripition.message}{' '}
+              {errors.description.message}{' '}
+            </span>
+          )}
+
+          <div class="bg-white flex min-h-[60px] flex-col-reverse justify-center rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:shadow-inner">
+            <input
+              {...register('ingridunt', {
+                required: 'Enter Ingridunts and steps ',
+              })}
+              class="peer block w-full border-0 p-2 text-base text-gray-900 placeholder-gray-400 focus:ring-0"
+              placeholder="Ingridunts"
+            />
+            <label
+              html="Ingridunts"
+              class="block transform text-xs font-bold uppercase text-gray-400 transition-opacity, duration-200 peer-placeholder-shown:h-0 peer-placeholder-shown:-translate-y-full peer-placeholder-shown:opacity-0"
+            >
+              Ingridunts
+            </label>
+          </div>
+          {errors.ingridunt && (
+            <span className="text-red-300 font-extrabold">
+              {errors.ingridunt.message}{' '}
             </span>
           )}
 
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <button
-              href="#"
-              class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              back
-            </button>
-            <button
-              class="text-sm font-semibold text-white border rounded p-2 bg-teal-600"
+              class="text-sm font-semibold text-white border rounded p-2 pl-12 pr-12 bg-teal-600"
               onClick={handleSubmit(addRecipes)}
             >
-              Save <span aria-hidden="true">&rarr;</span>
+              Add
             </button>
           </div>
         </form>
