@@ -7,6 +7,7 @@ import SearchForm from '../forms/SearchForm'
 import ago from 's-ago'
 
 const apiURL = 'http://localhost:3000/api/v1/recipe'
+
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])
   const navigate = useNavigate()
@@ -62,6 +63,7 @@ function DetailsComponents() {
                       </h2>
 
                       <p className="mt-1">{ago(new Date())}</p>
+                      <p className="font-thin">{recipe.duration}</p>
                       {/* <div className="flex  grid-cols-2 gap-4">
                         <Link
                           to="/DetailsRecipe"
