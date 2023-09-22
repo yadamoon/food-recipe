@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div>
       <nav className=" bg-white p-5 ">
-        <ul className="flex justify-center  items-center space-x-4 uppercase">
+        <ul className="flex w-full justify-center  sm:text-sm items-center space-x-4 uppercase">
           <li>
             <Link
               to="/"
@@ -27,7 +27,7 @@ const Nav = () => {
               to="/RegisterForm"
               className="text-md font-semibold text-gray-600 hover:text-gray-800"
             >
-              Add New Product
+              Add Recipe
             </Link>
           </li>
           <li>

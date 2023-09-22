@@ -19,6 +19,7 @@ function App() {
     <div className=" bg-gray-300 ">
       <HeaderApp />
       <Nav />
+      <br />
 
       <Routes className="pl-40 pr-40">
         <Route path="/" element={<DetailsComponents />} />

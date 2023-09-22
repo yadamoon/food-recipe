@@ -8,9 +8,11 @@ function LoginPage() {
 
     formState: { errors },
   } = useForm()
-  const isValidate = async (email, password) => console.log(emaillv, password)
+  const isValidate = async (email, password) => {
+    console.log(`${email} , ${password}`)
+  }
   return (
-    <div className="bg-white relative lg:py-20 ">
+    <div className="bg-white relative lg:py-20  flex-1 ">
       <div
         className="flex flex-col items-center justify-between pt-0 pr-10 pb-0 pl-10 mt-0 mr-auto mb-0 ml-auto max-w-7xl
         xl:px-5 lg:flex-row"

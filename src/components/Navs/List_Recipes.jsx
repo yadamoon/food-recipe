@@ -59,27 +59,9 @@ function DetailsComponents() {
                       </h3>
                       <h2 className="title-font text-2sm font-medium text-gray-900">
                         {recipe.body}
-                        {recipe._id}
                       </h2>
 
                       <p className="mt-1">{ago(new Date())}</p>
-                      <p className="font-thin">{recipe.duration}</p>
-                      {/* <div className="flex  grid-cols-2 gap-4">
-                        <Link
-                          to="/DetailsRecipe"
-                          className="bg-yellow-300 rounded-lg m-2 shadow text-center text-white text-base font-semibold w-full py-3 mt-9 uppercase"
-                        >
-                          Ingrident
-                        </Link>
-                        <br />
-                        <br />
-                        <button
-                          className="bg-teal-700 rounded-lg m-2 shadow text-center text-white text-base font-semibold w-full py-3 mt-9 uppercase"
-                          onClick={seeMore}
-                        >
-                          Details
-                        </button>
-                      </div> */}
                     </div>
                   </div>
                 </div>
