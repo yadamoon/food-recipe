@@ -3,13 +3,14 @@ import Nav from './components/Nav'
 import FooterApp from './components/common/FooterApp'
 import HeaderApp from './components/common/HeaderApp'
 import DetailsComponents from './components/Navs/List_Recipes'
-import Services from './components/Navs/Services'
+
 import Help from './components/Navs/Help'
-import RegisterForm from './components/forms/RegisterForm'
+
 import NotFound from './components/Navs/NotFound'
 import DetailsRecipe from './components/Navs/DetailsRecipe'
 import LoginPage from './components/forms/LoginPage'
 import Home from './components/Navs/Home'
+import Add_New_Recipe from './components/Navs/Add_New_Recipe'
 
 /*
   
@@ -24,7 +25,7 @@ function App() {
 
       <Routes className="pl-40 pr-40">
         <Route path="/" element={<Home />} />
-        <Route path="/Services" element={<Services />} />
+        <Route path="/Add_New_Recipe" element={<Add_New_Recipe />} />
         <Route path="/help" element={<Help />} />
         <Route path="/listRecipe" element={<DetailsComponents />} />
         <Route path="recipes/:id" element={<DetailsRecipe />} />
