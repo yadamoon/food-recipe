@@ -24,10 +24,10 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              to="/RegisterForm"
+              to="/listRecipe"
               className="text-md font-semibold text-gray-600 hover:text-gray-800"
             >
-              Add Recipe
+              Lists
             </Link>
           </li>
           <li>
