@@ -16,10 +16,10 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              to="/Services"
+              to="/Add_New_Recipe"
               className="text-md font-semibold text-gray-600 hover:text-gray-800"
             >
-              Services
+              Add
             </Link>
           </li>
           <li>
