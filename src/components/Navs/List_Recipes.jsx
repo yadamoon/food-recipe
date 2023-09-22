@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import SearchForm from '../forms/SearchForm'
 import ago from 's-ago'
+import { BASE_URL } from '../../config/config'
 
-const apiURL = 'http://localhost:3000/api/v1/recipe'
+const apiURL = BASE_URL + '/recipe'
 
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])

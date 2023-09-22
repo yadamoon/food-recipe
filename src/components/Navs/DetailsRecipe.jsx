@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import SearchForm from '../forms/SearchForm'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import { BASE_URL } from '../../config/config'
 
-const apiURL = 'http://localhost:3000/api/v1/recipe'
+const apiURL = BASE_URL + '/recipe'
 
 const DetailsRecipe = () => {
   const [data, setData] = useState(null)
