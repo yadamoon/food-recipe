@@ -9,6 +9,7 @@ import RegisterForm from './components/forms/RegisterForm'
 import NotFound from './components/Navs/NotFound'
 import DetailsRecipe from './components/Navs/DetailsRecipe'
 import LoginPage from './components/forms/LoginPage'
+import Home from './components/Navs/Home'
 
 /*
   
@@ -22,10 +23,10 @@ function App() {
       <br />
 
       <Routes className="pl-40 pr-40">
-        <Route path="/" element={<DetailsComponents />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/help" element={<Help />} />
-        <Route path="/RegisterForm" element={<RegisterForm />} />
+        <Route path="/listRecipe" element={<DetailsComponents />} />
         <Route path="recipes/:id" element={<DetailsRecipe />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
