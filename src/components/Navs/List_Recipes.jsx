@@ -43,7 +43,7 @@ function DetailsComponents() {
                 <div className=" flex flex-wrap">
                   <div className="">
                     <Link
-                      to={'recipes/' + recipe._id}
+                      to={'/recipes/' + recipe._id}
                       className="relative block h-48 w-full overflow-hidden rounded-t"
                       // onClick={<DetailsComponents id={recipe._id} />}
                       // onClick={() => navigate('recipes/' + recipe._id)}
