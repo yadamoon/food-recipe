@@ -11,6 +11,7 @@ import DetailsRecipe from './components/Navs/DetailsRecipe'
 import LoginPage from './components/forms/LoginPage'
 import Home from './components/Navs/Home'
 import Add_New_Recipe from './components/Navs/Add_New_Recipe'
+import Settings from './components/Navs/Settings'
 
 /*
   
@@ -30,6 +31,7 @@ function App() {
         <Route path="/listRecipe" element={<DetailsComponents />} />
         <Route path="recipes/:id" element={<DetailsRecipe />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
