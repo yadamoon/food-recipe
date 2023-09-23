@@ -16,34 +16,37 @@ const Nav = () => {
           </li>
           <li>
             <Link
+              to="/listRecipe"
+              className="text-md font-semibold text-gray-600 hover:text-gray-800"
+            >
+              Recipes
+            </Link>
+          </li>
+
+          <li>
+            <Link
               to="/Add_New_Recipe"
               className="text-md font-semibold text-gray-600 hover:text-gray-800"
             >
               Add
             </Link>
           </li>
+
           <li>
             <Link
-              to="/listRecipe"
+              to="/settings"
               className="text-md font-semibold text-gray-600 hover:text-gray-800"
             >
-              Lists
+              Settings
             </Link>
           </li>
+
           <li>
             <Link
               to="/help"
               className="text-md font-semibold text-gray-600 hover:text-gray-800"
             >
               Help
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/Login"
-              className="text-md font-semibold text-gray-600 hover:text-gray-800"
-            >
-              Login
             </Link>
           </li>
         </ul>
