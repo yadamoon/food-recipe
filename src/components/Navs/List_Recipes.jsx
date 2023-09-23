@@ -11,7 +11,11 @@ const apiURL = BASE_URL + '/recipe'
 
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])
+  const [currentPage, setCurrentPage] = useState(0)
+  const [totalPages, setTotalPages] = useState(0)
   const navigate = useNavigate()
+
+  const itemsPerPage = 12
 
   useEffect(() => {
     async function getRecipes() {
@@ -19,12 +23,19 @@ function DetailsComponents() {
       setRecipe(result.data)
 
       console.log(result.data)
+
+      setTotalPages(Math.ceil(response.data.length / itemsPerPage))
     }
     getRecipes()
   }, [])
-  const seeMore = () => {
-    setShow(!show)
+  const startIndex = currentPage * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  const subset = data.slice(startIndex, endIndex)
+
+  const handlePageChange = (selectedPage) => {
+    setCurrentPage(selectedPage.selected)
   }
+
   return (
     <div>
       <h1 className="text-3xl text-center font-extrabold text-teal-800">
@@ -66,7 +77,11 @@ function DetailsComponents() {
         </div>
       </div>
       <div className="flex justify-center space-y-2">
-        <Pagination />
+        <Pagination
+          pageCount={totalPages}
+          onPageChange={handlePageChange}
+          forcePage={currentPage}
+        />
       </div>
     </div>
   )
