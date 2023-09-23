@@ -96,7 +96,7 @@ export default function HeaderApp() {
           </div>
           <div className=" flex space-x-3 items-center">
             <img
-              src="public/svg/cookware-svgrepo-com(2).svg"
+              src="public/images/Screenshot from 2023-09-23 13-41-53.png"
               width={80}
               height={40}
               alt=""
@@ -268,12 +268,12 @@ export default function HeaderApp() {
             </svg>
           </div>
           <div className="flex flex-col gap-4 mt-4 w-80 mx-auto ">
-            <Link className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-teal-700 bg-indigo-600 bg-opacity-0 hover:opacity-100 duration-100 border border-teal-700 focus:outline-none focus:bg-teal-200 hover:bg-teal-200  justify-center items-center">
+            <Link className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm  border border-teal-700 focus:outline-none  justify-center items-center">
               Sign Up
             </Link>
             <Link
-              to="/login"
-              className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-white bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-700 focus:bg-indigo-600 hover:bg-teal-600 duration-150 justify-center items-center"
+              to={'/login'}
+              className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-white bg-teal-700  justify-center items-center"
             >
               Sign In
             </Link>
