@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { http } from '../../services/http/http'
 
 const Add_New_Recipe = () => {
   const {
@@ -18,8 +19,13 @@ const Add_New_Recipe = () => {
     console.log({ picture })
   }
 
-  const add = (title, time) => {
-    console.log(title, time)
+  const addRecipes = async ({ title, description, duration }) => {
+    const result = await http.request({
+      method: 'post',
+      url: 'recipe',
+      data: { title, description, duration },
+    })
+    console.log(result)
   }
   return (
     <div className="flex justify-center">
@@ -59,10 +65,10 @@ const Add_New_Recipe = () => {
             />
 
             <input
-              {...register('time', {
+              {...register('duration', {
                 required: 'Enter a Time ',
               })}
-              placeholder="Time"
+              placeholder="duration"
               className="border p-3 col-span-3 md:col-span-1"
             />
           </div>
@@ -76,27 +82,29 @@ const Add_New_Recipe = () => {
               )}
             </p>
             <p className="col-span-1 md:col-span-2 text-right ml-5">
-              {errors.time && (
-                <span className="text-red-700  ">{errors.time.message}</span>
+              {errors.duration && (
+                <span className="text-red-700  ">
+                  {errors.duration.message}
+                </span>
               )}
             </p>
           </div>
           <textarea
-            {...register('descrption', {
+            {...register('description', {
               required: 'Enter Descrption for the food please!',
             })}
             className="border w-full p-3"
             rows={3}
-            placeholder="Descrption"
+            placeholder="Description"
           />
           {errors.descrption && (
-            <span className="text-red-700  ">{errors.descrption.message}</span>
+            <span className="text-red-700  ">{errors.description.message}</span>
           )}
 
           <div className="space-y-3">
             <button
               className="border bg-teal-500 text-white  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded w-full md:w-auto"
-              onClick={handleSubmit(add)}
+              onClick={handleSubmit(addRecipes)}
             >
               Add
             </button>
