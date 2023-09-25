@@ -8,8 +8,7 @@ import { http } from './../../services/http/http'
 
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])
-  // const [currentPage, setCurrentPage] = useState(0)
-  // const [totalPages, setTotalPages] = useState(0)
+
   const navigate = useNavigate()
 
   // const itemsPerPage = 12
