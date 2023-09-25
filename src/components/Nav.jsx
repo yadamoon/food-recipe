@@ -1,7 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const Nav = () => {
+  const { signedIn } = useSelector((state) => state.auth)
+
   return (
     <div>
       <nav className=" bg-white p-5 ">
@@ -40,15 +43,16 @@ const Nav = () => {
               Settings
             </Link>
           </li>
-
-          <li>
-            <Link
-              to="/help"
-              className="text-md font-semibold text-gray-600 hover:text-gray-800"
-            >
-              Help
-            </Link>
-          </li>
+          {signedIn && (
+            <li>
+              <Link
+                to="/help"
+                className="text-md font-semibold text-gray-600 hover:text-gray-800"
+              >
+                Log Out
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </div>
