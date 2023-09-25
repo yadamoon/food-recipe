@@ -106,12 +106,18 @@ export default function HeaderApp() {
             </h1>
           </div>
           <div className="hidden sm:flex flex-row space-x-4">
-            <button className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 bg-gray-200 border border-teal-700 focus:outline-none focus:bg-teal-500 hover:bg-teal-300 hove:text-white duration-150 justify-center items-center">
+            <Link
+              className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 bg-gray-200 border border-teal-700 focus:outline-none focus:bg-teal-500 hover:bg-teal-300 hove:text-white duration-150 justify-center items-center"
+              to="/Add_New_Recipe"
+            >
               Sign Up
-            </button>
-            <button className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-white bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-teal-600 hover:bg-teal-600 duration-150 justify-center items-center">
+            </Link>
+            <Link
+              className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-white bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-teal-600 hover:bg-teal-600 duration-150 justify-center items-center"
+              to="/Login"
+            >
               Sign In
-            </button>
+            </Link>
           </div>
           {/* Burger Icon */}
           <div
@@ -268,11 +274,14 @@ export default function HeaderApp() {
             </svg>
           </div>
           <div className="flex flex-col gap-4 mt-4 w-80 mx-auto ">
-            <Link className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm  border border-teal-700 focus:outline-none  justify-center items-center">
+            <Link
+              className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm  border border-teal-700 focus:outline-none  justify-center items-center"
+              to="/Add_New_Recipe"
+            >
               Sign Up
             </Link>
             <Link
-              to={'/login'}
+              to="/Login"
               className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-white bg-teal-700  justify-center items-center"
             >
               Sign In
