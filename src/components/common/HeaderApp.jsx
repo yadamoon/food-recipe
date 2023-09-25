@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { setHide, setShow } from '../../store/slices/authSlice'
 
 export default function HeaderApp() {
   const [show, setshow] = useState(false)
+  const [showButton, setShowButton] = useState()
+  const { signedIn } = useSelector((state) => state.auth)
+
   return (
     <div className=" bg-gray-100 ">
       <nav className="2xl:container 2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4">
@@ -105,20 +110,22 @@ export default function HeaderApp() {
               food recipe
             </h1>
           </div>
-          <div className="hidden sm:flex flex-row space-x-4">
-            <Link
-              className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 bg-gray-200 border border-teal-700 focus:outline-none focus:bg-teal-500 hover:bg-teal-300 hove:text-white duration-150 justify-center items-center"
-              to="/Add_New_Recipe"
-            >
-              Sign Up
-            </Link>
-            <Link
-              className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-white bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-teal-600 hover:bg-teal-600 duration-150 justify-center items-center"
-              to="/Login"
-            >
-              Sign In
-            </Link>
-          </div>
+          {!signedIn && (
+            <div className="hidden sm:flex flex-row space-x-4">
+              <Link
+                className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 bg-gray-200 border border-teal-700 focus:outline-none focus:bg-teal-500 hover:bg-teal-300 hove:text-white duration-150 justify-center items-center"
+                to="/Add_New_Recipe"
+              >
+                Sign Up
+              </Link>
+              <Link
+                className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-white bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-teal-600 hover:bg-teal-600 duration-150 justify-center items-center"
+                to="/Login"
+              >
+                Sign In
+              </Link>
+            </div>
+          )}
           {/* Burger Icon */}
           <div
             id="bgIcon"
