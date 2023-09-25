@@ -114,7 +114,7 @@ export default function HeaderApp() {
             <div className="hidden sm:flex flex-row space-x-4">
               <Link
                 className="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 bg-gray-200 border border-teal-700 focus:outline-none focus:bg-teal-500 hover:bg-teal-300 hove:text-white duration-150 justify-center items-center"
-                to="/Add_New_Recipe"
+                to="/Register_New_Account"
               >
                 Sign Up
               </Link>
