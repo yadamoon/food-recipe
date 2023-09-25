@@ -23,18 +23,9 @@ function DetailsComponents() {
       setRecipe(result.data)
 
       console.log(result.data)
-
-      setTotalPages(Math.ceil(response.data.length / itemsPerPage))
     }
     getRecipes()
   }, [])
-  // const startIndex = currentPage * itemsPerPage
-  // const endIndex = startIndex + itemsPerPage
-  // const subset = data.slice(startIndex, endIndex)
-
-  // const handlePageChange = (selectedPage) => {
-  //   setCurrentPage(selectedPage.selected)
-  // }
 
   return (
     <div>
@@ -44,7 +35,7 @@ function DetailsComponents() {
 
       <SearchForm />
       <div className="">
-        <div className="  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 p-3 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 p-3 ">
           {recipes.map((recipe, index) => (
             <div
               className=" h-5/5 body-font bg-white text-gray-600 rounded-t"

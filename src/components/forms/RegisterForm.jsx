@@ -15,12 +15,12 @@ function RegisterForm() {
     formState: { errors },
   } = useForm()
   const addRecipes = async (title, description, ingridunt) => {
-    // const obj = { title, description , ingridunt }
-    // const { data: recipes } = await axios.post(apiURL, obj)
-    // setNewRecipes(recipes)
-
     axios
-      .post(apiURL, title, description, ingridunt)
+      .post(apiURL, {
+        title,
+        description,
+        ingridunt,
+      })
       .then((res) => {
         console.log(res)
       })
