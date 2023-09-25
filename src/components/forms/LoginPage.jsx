@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import auth from '../../services/http/auth'
 import { useDispatch } from 'react-redux'
 import { setStatus, setUser } from '../../store/slices/authSlice'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function LoginPage() {
   const [passwordType, setPasswordType] = useState('password')
@@ -80,6 +80,14 @@ function LoginPage() {
               Show Password
             </label>
           </div>
+          <div>
+            <a
+              href="forget-password.html"
+              class="mt-6 text-indigo-900 flex justify-end text-sm font-normal underline"
+            >
+              Forgot password?
+            </a>
+          </div>
           <div className="space-y-3">
             <div
               className="border bg-teal-500 uppercase text-center text-white w-full  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded md:w-auto "
@@ -88,16 +96,14 @@ function LoginPage() {
               log in
             </div>
           </div>
-          <div class="relative flex items-center mt-8">
-            <div class="border h-0 w-2/4 border-stone-300"></div>
-            <div class=" text-stone-300 px-4 text-sm font-normal">OR</div>
-            <div class=" border h-0 w-2/4 border-stone-300"></div>
+          <div className="relative flex items-center mt-8">
+            <div className="border h-0 w-2/4 border-stone-300"></div>
+            <div className=" text-stone-300 px-4 text-sm font-normal">OR</div>
+            <div className=" border h-0 w-2/4 border-stone-300"></div>
           </div>
-          <button class="border border-indigo-900 rounded-lg  text-center  text-indigo-900 bg-white text-base font-semibold w-full py-3 mt-9">
-            Signup now
-          </button>
-          <br />
-          <br />
+          <div className="border bg-gray-300 uppercase text-center text-black w-full  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded md:w-auto ">
+            <Link to="/Register_New_Account">Create New Acc </Link>
+          </div>
         </form>
       </div>
     </div>
