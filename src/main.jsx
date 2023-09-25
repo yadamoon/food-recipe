@@ -4,6 +4,9 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 
+import httpInit from './services/http/httpInit.js'
+httpInit()
+
 /**
  @tanstack/react-query @tanstack/react-query-devtools
  QueryCLient, QueryCLientProvider
