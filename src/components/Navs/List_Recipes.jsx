@@ -11,11 +11,11 @@ const apiURL = BASE_URL + '/recipe'
 
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])
-  const [currentPage, setCurrentPage] = useState(0)
-  const [totalPages, setTotalPages] = useState(0)
+  // const [currentPage, setCurrentPage] = useState(0)
+  // const [totalPages, setTotalPages] = useState(0)
   const navigate = useNavigate()
 
-  const itemsPerPage = 12
+  // const itemsPerPage = 12
 
   useEffect(() => {
     async function getRecipes() {
@@ -28,13 +28,13 @@ function DetailsComponents() {
     }
     getRecipes()
   }, [])
-  const startIndex = currentPage * itemsPerPage
-  const endIndex = startIndex + itemsPerPage
-  const subset = data.slice(startIndex, endIndex)
+  // const startIndex = currentPage * itemsPerPage
+  // const endIndex = startIndex + itemsPerPage
+  // const subset = data.slice(startIndex, endIndex)
 
-  const handlePageChange = (selectedPage) => {
-    setCurrentPage(selectedPage.selected)
-  }
+  // const handlePageChange = (selectedPage) => {
+  //   setCurrentPage(selectedPage.selected)
+  // }
 
   return (
     <div>
@@ -77,11 +77,7 @@ function DetailsComponents() {
         </div>
       </div>
       <div className="flex justify-center space-y-2">
-        <Pagination
-          pageCount={totalPages}
-          onPageChange={handlePageChange}
-          forcePage={currentPage}
-        />
+        <Pagination />
       </div>
     </div>
   )
