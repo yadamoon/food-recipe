@@ -2,12 +2,9 @@ import React, { useState, useEffect } from 'react'
 import DetailsRecipe from './DetailsRecipe'
 import { Route, Router, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 import SearchForm from '../forms/SearchForm'
 import ago from 's-ago'
-import { BASE_URL } from '../../config/config'
-
-const apiURL = BASE_URL + '/recipe'
+import { http } from './../../services/http/http'
 
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])
@@ -16,14 +13,14 @@ function DetailsComponents() {
   const navigate = useNavigate()
 
   // const itemsPerPage = 12
+  const getRecipes = async function () {
+    const result = await http.request({ url: 'recipe' })
+    setRecipe(result)
+
+    console.log(result)
+  }
 
   useEffect(() => {
-    async function getRecipes() {
-      const result = await axios(apiURL)
-      setRecipe(result.data)
-
-      console.log(result.data)
-    }
     getRecipes()
   }, [])
 
