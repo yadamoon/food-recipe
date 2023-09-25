@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import UseFormState from './UseStateForm'
+import { Link } from 'react-router-dom'
 
 import { http } from './../../services/http/http'
 
-function RegisterForm() {
+export default function RegisterForm() {
   const [newRecipes, setNewRecipes] = useState([])
 
   const {
@@ -20,86 +21,89 @@ function RegisterForm() {
     })
   }
   return (
-    <div className=" flex justify-center py-6">
-      <div className="flex flex-wrap w-1/3 items-center justify-center min-h-full bg-white p-4 rounded">
-        <h1 className="flex flex-wrap text-2xl text-center font-bold">
-          Register new Recipes
-        </h1>
-        <br />
-        <form
-          className="space-y-2 flex flex-wrap"
-          onSubmit={handleSubmit(addRecipes)}
-        >
-          <div class="bg-white flex min-h-[60px] flex-col-reverse justify-center rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:shadow-inner">
+    <div className="flex justify-center">
+      <div className=" bg-white mx-4 md:mx-0 w-full md:w-2/3 lg:w-1/3 rounded-xl h-auto p-6">
+        <div className="text-2xl">
+          <h1>Add New Recipe</h1>
+        </div>
+        <form className="w-full space-y-3">
+          {/* <div className="space-y-2">
             <input
-              {...register('title', { required: 'Enter Title of recipe' })}
-              class="peer block w-full border-0 p-2 text-base text-gray-900 placeholder-gray-400 focus:ring-0"
-              placeholder="title"
+              ref={fileInputRef}
+              type="file"
+              className="w-full hidden"
+              onChange={handleFileSelect}
             />
-            <label
-              html="title"
-              class="block transform text-xs font-bold  text-gray-400 transition-opacity, duration-200 peer-placeholder-shown:h-0 peer-placeholder-shown:-translate-y-full peer-placeholder-shown:opacity-0"
-            >
-              Title
-            </label>
-          </div>
-          {errors.title && (
-            <span className="text-red-300 font-extrabold">
-              {errors.title.message}
-            </span>
-          )}
 
-          <div class="bg-white flex min-h-[60px] flex-col-reverse justify-center rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:shadow-inner">
+            <div
+              className="flex space-x-2 items-center bg-gray-200 p-3 rounded cursor-pointer hover:opacity-75"
+              onClick={openFileDialog}
+            >
+              <div className="h-4 w-4 border rotate-45 border-gray-800"></div>
+              <div>Select food picture</div>
+            </div>
+            {submitCount > 0 && !picture && (
+              <span className="text-red-700 ">
+                Select a picture for the food please!
+              </span>
+            )}
+          </div> */}
+          <div className="grid grid-cols-2 gap-2">
             <input
-              {...register('description', {
-                required: 'Enter description of recipes',
+              {...register('username', {
+                required: 'Enter a Title for the food please!',
               })}
-              class="peer block w-full border-0 p-2 text-base text-gray-900 placeholder-gray-400 focus:ring-0"
-              placeholder="Description"
+              placeholder="userName"
+              className="border p-3 fcol-span-3 md:col-span-2 uppercase"
             />
-            <label
-              html="Description"
-              class="block transform text-xs font-bold uppercase text-gray-400 transition-opacity, duration-200 peer-placeholder-shown:h-0 peer-placeholder-shown:-translate-y-full peer-placeholder-shown:opacity-0"
-            >
-              Description
-            </label>
-          </div>
-          {errors.description && (
-            <span className="text-red-300 font-extrabold">
-              {errors.description.message}{' '}
-            </span>
-          )}
 
-          <div class="bg-white flex min-h-[60px] flex-col-reverse justify-center rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:shadow-inner">
             <input
-              {...register('ingridunt', {
-                required: 'Enter Ingridunts and steps ',
+              {...register('firstName', {
+                required: 'Enter a Time ',
               })}
-              class="peer block w-full border-0 p-2 text-base text-gray-900 placeholder-gray-400 focus:ring-0"
-              placeholder="Ingridunts"
+              placeholder="first Name"
+              className="border p-3 col-span-3 md:col-span-1 uppercase"
             />
-            <label
-              html="Ingridunts"
-              class="block transform text-xs font-bold uppercase text-gray-400 transition-opacity, duration-200 peer-placeholder-shown:h-0 peer-placeholder-shown:-translate-y-full peer-placeholder-shown:opacity-0"
-            >
-              Ingridunts
-            </label>
+            <input
+              {...register('lastName', {
+                required: 'Enter a Time ',
+              })}
+              placeholder="last name "
+              className="border p-3 col-span-3 md:col-span-1 uppercase"
+            />
+            <input
+              {...register('password', {
+                required: 'Enter a Time ',
+              })}
+              placeholder="password "
+              className="border p-3 col-span-3 md:col-span-1 uppercase"
+            />
+            <input
+              {...register('confiremPassword', {
+                required: 'Enter a Time ',
+              })}
+              placeholder="confirme password "
+              className="border p-3 col-span-3 md:col-span-1 uppercase"
+            />
           </div>
-          {errors.ingridunt && (
-            <span className="text-red-300 font-extrabold">
-              {errors.ingridunt.message}{' '}
-            </span>
-          )}
 
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <button class="text-sm font-semibold text-white border rounded p-2 pl-12 pr-12 bg-teal-600">
-              Add
+          <div className=" grid grid-cols-2 gap-3space-y-3">
+            <button className="border bg-red-500 text-white  pl-20 pr-20 pt-3 pb-2 hover:bg-red-600 hover:text-white rounded w-full md:w-auto">
+              Cancel
+            </button>
+            <button className="border bg-teal-500 text-white  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded w-full md:w-auto">
+              Register
             </button>
           </div>
+          <br />
+          <br />
         </form>
       </div>
+
+      {/* //!? from comonents shop */}
+      {/* <!-- component --> */}
+
+      {/* {} */}
     </div>
   )
 }
-
-export default RegisterForm
