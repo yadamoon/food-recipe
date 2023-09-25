@@ -2,8 +2,9 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import UseFormState from './UseStateForm'
+import { BASE_URL } from '../../config/config'
 
-const apiURL = 'https://jsonplaceholder.typicode.com/posts'
+const apiURL = BASE_URL + '/recipe'
 
 function RegisterForm() {
   const [newRecipes, setNewRecipes] = useState([])
@@ -17,6 +18,15 @@ function RegisterForm() {
     // const obj = { title, description , ingridunt }
     // const { data: recipes } = await axios.post(apiURL, obj)
     // setNewRecipes(recipes)
+
+    axios
+      .post(apiURL, title, description, ingridunt)
+      .then((res) => {
+        console.log(res)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
     console.log(title, description, ingridunt)
   }
   return (
@@ -26,7 +36,10 @@ function RegisterForm() {
           Register new Recipes
         </h1>
         <br />
-        <form className="space-y-2 flex flex-wrap">
+        <form
+          className="space-y-2 flex flex-wrap"
+          onSubmit={handleSubmit(addRecipes)}
+        >
           <div class="bg-white flex min-h-[60px] flex-col-reverse justify-center rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:shadow-inner">
             <input
               {...register('title', { required: 'Enter Title of recipe' })}
@@ -89,10 +102,7 @@ function RegisterForm() {
           )}
 
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <button
-              class="text-sm font-semibold text-white border rounded p-2 pl-12 pr-12 bg-teal-600"
-              onClick={handleSubmit(addRecipes)}
-            >
+            <button class="text-sm font-semibold text-white border rounded p-2 pl-12 pr-12 bg-teal-600">
               Add
             </button>
           </div>
