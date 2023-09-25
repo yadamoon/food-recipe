@@ -1,10 +1,8 @@
-import axios from 'axios'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import UseFormState from './UseStateForm'
-import { BASE_URL } from '../../config/config'
 
-const apiURL = BASE_URL + '/recipe'
+import { http } from './../../services/http/http'
 
 function RegisterForm() {
   const [newRecipes, setNewRecipes] = useState([])
@@ -15,19 +13,11 @@ function RegisterForm() {
     formState: { errors },
   } = useForm()
   const addRecipes = async (title, description, ingridunt) => {
-    axios
-      .post(apiURL, {
-        title,
-        description,
-        ingridunt,
-      })
-      .then((res) => {
-        console.log(res)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-    console.log(title, description, ingridunt)
+    const result = await http.request({
+      method: 'post',
+      url: 'recipe',
+      data: { title, description, ingridunt },
+    })
   }
   return (
     <div className=" flex justify-center py-6">
