@@ -15,31 +15,42 @@ function LoginPage() {
     <div className="flex justify-center">
       <div className=" bg-white mx-4 md:mx-0 w-full md:w-2/3 lg:w-1/3 rounded-xl h-auto p-6">
         <div className="text-2xl">
-          <h1>Add New Recipe</h1>
+          <h1>LOGIN</h1>
         </div>
         <form className="w-full space-y-3">
-          <div>
+          <div className="grid grid-cols-1 gap-2">
             <input
-              ref={fileInputRef}
-              type="file"
-              className="w-full hidden"
-              onChange={handleFileSelect}
+              {...register('username', {
+                required: 'Enter a Title for the food please!',
+              })}
+              placeholder="username"
+              className="border p-3 font-bold col-span-3 md:col-span-2"
             />
-          </div>
-          <div>
+            {errors.username && (
+              <span className="text-red-700 col-span-1 md:col-span-2 ">
+                {errors.username.message}
+              </span>
+            )}
             <input
-              ref={fileInputRef}
-              type="file"
-              className="w-full hidden"
-              onChange={handleFileSelect}
+              {...register('password', {
+                required: 'Enter a Title for the food please!',
+              })}
+              placeholder="password"
+              className="border p-3 font-bold col-span-3 md:col-span-2"
             />
+            {errors.password && (
+              <span className="text-red-700 col-span-1 md:col-span-2 ">
+                {errors.password.message}
+              </span>
+            )}
           </div>
-          <div className="space-y-3">
+
+          <div className="space-y-3 text-center">
             <button
-              className="border bg-teal-500 text-white  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded w-full md:w-auto"
-              onClick={handleSubmit(add)}
+              className="border bg-teal-500 text-white  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded w-full md:w-auto "
+              onClick={handleSubmit(isValidate)}
             >
-              Login
+              Add
             </button>
           </div>
           <br />
