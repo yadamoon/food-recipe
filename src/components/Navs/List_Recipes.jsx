@@ -5,9 +5,48 @@ import { Link } from 'react-router-dom'
 import SearchForm from '../forms/SearchForm'
 import ago from 's-ago'
 import { http } from './../../services/http/http'
+import ReactPaginate from 'react-paginate'
+
+function RCPaginate({ items, itemsPerPage, setter }) {
+  const [itemOffset, setItemOffset] = useState(0)
+  const endOffset = itemOffset + itemsPerPage
+
+  const currentItems = items.slice(itemOffset, endOffset)
+  useEffect(() => {
+    setter(currentItems)
+  }, [itemOffset, endOffset])
+
+  const pageCount = Math.ceil(items.length / itemsPerPage)
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % items.length
+    setItemOffset(newOffset)
+  }
+
+  return (
+    <div className="flex justify-center">
+      <ReactPaginate
+        containerClassName="flex space-x-4 items-center bg-white p-2 px-4 justify-center rounded"
+        nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
+        previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
+        activeClassName=" text-white rounded-lg bg-gray-500"
+        // pageClassName="bg-white py-1 px-2 text-sm rounded border text-gray-500  hover:text-gray-500 p-2  dark:text-gray-200 dark:hover:bg-gray-300 dark:hover:text-white"
+        // pageLinkClassName=" py-1 px-1.5 text-sm rounded-lg border   dark:hover:bg-gray-400 hover:text-white"
+        pageClassName=" py-1 px-1.5 text-sm rounded-lg border   dark:hover:bg-gray-400 hover:text-white"
+        breakLabel="..."
+        nextLabel="next"
+        onPageChange={handlePageClick}
+        initialPage={0}
+        pageCount={pageCount}
+        previousLabel="previous"
+        renderOnZeroPageCount={null}
+      />
+    </div>
+  )
+}
 
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])
+  const [recipesDisplayed, setRecipesDisplayed] = useState([])
 
   const navigate = useNavigate()
 
@@ -32,7 +71,7 @@ function DetailsComponents() {
       <SearchForm />
       <div className="">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 p-3 ">
-          {recipes.map((recipe, index) => (
+          {recipesDisplayed.map((recipe, index) => (
             <div
               className=" h-5/5 body-font bg-white text-gray-600 rounded-t"
               key={recipe.id}
@@ -63,8 +102,15 @@ function DetailsComponents() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center space-y-2">
-        <Pagination />
+      <div className="space-y-2">
+        {/* <Pagination /> */}
+        {recipes.length > 4 && (
+          <RCPaginate
+            items={recipes}
+            itemsPerPage={4}
+            setter={setRecipesDisplayed}
+          />
+        )}
       </div>
     </div>
   )
