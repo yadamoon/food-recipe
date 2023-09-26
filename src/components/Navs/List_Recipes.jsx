@@ -84,7 +84,12 @@ function DetailsComponents() {
                   <img
                     alt="recipe"
                     className="block h-full w-full object-cover object-center cursor-pointer hover:opacity-75"
-                    src="public/images/spageti.png"
+                    src={
+                      recipe.image
+                        ? 'http://localhost:3000/uploads/recipes/' +
+                          recipe.image
+                        : 'public/images/spageti.png'
+                    }
                   />
                 </Link>
                 <div className="mt-4 w-full ml-2">
