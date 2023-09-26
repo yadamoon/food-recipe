@@ -81,12 +81,12 @@ function LoginPage() {
             </label>
           </div>
           <div>
-            <a
-              href="forget-password.html"
+            <Link
+              to="/ForgetPassword"
               class="mt-6 text-indigo-900 flex justify-end text-sm font-normal underline"
             >
               Forgot password?
-            </a>
+            </Link>
           </div>
           <div className="space-y-3">
             <div
