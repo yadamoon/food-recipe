@@ -28,10 +28,10 @@ function RCPaginate({ items, itemsPerPage, setter }) {
         containerClassName="flex space-x-4 items-center bg-white p-2 px-4 justify-center rounded"
         nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
         previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
-        activeClassName=" text-white rounded-lg bg-gray-500"
+        activeClassName=" text-white bg-teal-700 border-0"
         // pageClassName="bg-white py-1 px-2 text-sm rounded border text-gray-500  hover:text-gray-500 p-2  dark:text-gray-200 dark:hover:bg-gray-300 dark:hover:text-white"
         // pageLinkClassName=" py-1 px-1.5 text-sm rounded-lg border   dark:hover:bg-gray-400 hover:text-white"
-        pageClassName=" py-1 px-1.5 text-sm rounded-lg border   dark:hover:bg-gray-400 hover:text-white"
+        pageClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
         breakLabel="..."
         nextLabel="next"
         onPageChange={handlePageClick}
