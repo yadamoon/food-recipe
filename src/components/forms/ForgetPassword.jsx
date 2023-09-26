@@ -13,8 +13,8 @@ export default function ForgetPassword() {
     <>
       <div className="flex justify-center">
         <div className=" bg-white mx-4 md:mx-0 w-full md:w-2/3 lg:w-1/3 rounded-xl h-auto p-6">
-          <div className="text-2xl">
-            <h1>Forget password</h1>
+          <div className="text-2xl space-y-2">
+            <h1 className="space-y-2 font-bold">Forget password</h1>
           </div>
           <form className="w-full space-y-3">
             <div className="grid grid-cols-1 gap-2">
