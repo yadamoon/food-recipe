@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import DetailsRecipe from './DetailsRecipe'
-import { Route, Router, useNavigate } from 'react-router-dom'
+
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import SearchForm from '../forms/SearchForm'
 import ago from 's-ago'
@@ -29,8 +29,6 @@ function RCPaginate({ items, itemsPerPage, setter }) {
         nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
         previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
         activeLinkClassName=" text-white bg-teal-700 border-0"
-        // pageClassName="bg-white py-1 px-2 text-sm rounded border text-gray-500  hover:text-gray-500 p-2  dark:text-gray-200 dark:hover:bg-gray-300 dark:hover:text-white"
-        // pageLinkClassName=" py-1 px-1.5 text-sm rounded-lg border   dark:hover:bg-gray-400 hover:text-white"
         pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
         breakLabel="..."
         nextLabel="next"
@@ -51,12 +49,8 @@ function DetailsComponents() {
 
   const navigate = useNavigate()
 
-  const SearchHandle = (data) => {
-    console
-  }
   const [recipesFiltered, setRecipesFiltered] = useState([])
 
-  // const itemsPerPage = 12
   const getRecipes = async function () {
     const result = await http.request({ url: 'recipe' })
     setRecipe(result)
@@ -115,7 +109,6 @@ function DetailsComponents() {
         </div>
       </div>
       <div className="space-y-2">
-        {/* <Pagination /> */}
         {recipes.length > 4 && (
           <RCPaginate
             items={recipesFiltered}
@@ -129,71 +122,3 @@ function DetailsComponents() {
 }
 
 export default DetailsComponents
-
-export function Pagination() {
-  return (
-    <div class="max-w-2xl mx-auto ">
-      <nav>
-        <ul class="inline-flex -space-x-px">
-          <li>
-            <a
-              href="#"
-              class="bg-white border border-gray-300 text-gray-500  hover:text-gray-700 ml-0 rounded-l-lg leading-tight py-2 px-3   dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >
-              Previous
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >
-              1
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3   dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >
-              2
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              aria-current="page"
-              class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >
-              3
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >
-              4
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >
-              5
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 rounded-r-lg leading-tight py-2 px-3  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >
-              Next
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  )
-}
