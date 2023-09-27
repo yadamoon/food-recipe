@@ -14,7 +14,7 @@ function RCPaginate({ items, itemsPerPage, setter }) {
   const currentItems = items.slice(itemOffset, endOffset)
   useEffect(() => {
     setter(currentItems)
-  }, [itemOffset, endOffset])
+  }, [itemOffset, endOffset, items])
 
   const pageCount = Math.ceil(items.length / itemsPerPage)
   const handlePageClick = (event) => {
@@ -28,10 +28,10 @@ function RCPaginate({ items, itemsPerPage, setter }) {
         containerClassName="flex space-x-4 items-center bg-white p-2 px-4 justify-center rounded"
         nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
         previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
-        activeClassName=" text-white bg-teal-700 border-0"
+        activeLinkClassName=" text-white bg-teal-700 border-0"
         // pageClassName="bg-white py-1 px-2 text-sm rounded border text-gray-500  hover:text-gray-500 p-2  dark:text-gray-200 dark:hover:bg-gray-300 dark:hover:text-white"
         // pageLinkClassName=" py-1 px-1.5 text-sm rounded-lg border   dark:hover:bg-gray-400 hover:text-white"
-        pageClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
+        pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
         breakLabel="..."
         nextLabel="next"
         onPageChange={handlePageClick}
@@ -54,11 +54,13 @@ function DetailsComponents() {
   const SearchHandle = (data) => {
     console
   }
+  const [recipesFiltered, setRecipesFiltered] = useState([])
 
   // const itemsPerPage = 12
   const getRecipes = async function () {
     const result = await http.request({ url: 'recipe' })
     setRecipe(result)
+    setRecipesFiltered(result)
 
     console.log(result)
   }
@@ -73,7 +75,7 @@ function DetailsComponents() {
         Our Food Recipes
       </h1>
 
-      <SearchForm recipes={recipes} />
+      <SearchForm recipes={recipes} setter={setRecipesFiltered} />
       <div className="">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 p-3 ">
           {recipesDisplayed.map((recipe, index) => (
@@ -116,7 +118,7 @@ function DetailsComponents() {
         {/* <Pagination /> */}
         {recipes.length > 4 && (
           <RCPaginate
-            items={recipes}
+            items={recipesFiltered}
             itemsPerPage={4}
             setter={setRecipesDisplayed}
           />
