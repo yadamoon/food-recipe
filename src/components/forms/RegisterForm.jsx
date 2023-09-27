@@ -11,14 +11,28 @@ export default function RegisterForm() {
   const {
     register,
     handleSubmit,
+
     formState: { errors },
-  } = useForm()
+    reset,
+  } = useForm({
+    defaultValues: {
+      username: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      confiremPassword: '',
+    },
+  })
   const addNewUser = async ({ username, firstName, lastName, password }) => {
     const result = await http.request({
       method: 'post',
       url: 'users',
       data: { username, firstName, lastName, password },
     })
+    if (!result.isError) {
+      reset()
+    }
     console.log(result)
   }
 
