@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 
-const SearchForm = (recipes) => {
+const SearchForm = ({ recipes, setter }) => {
   const [search, setSearch] = useState()
 
-  const SearchHandel = ({ recipes }) => {
+  const SearchHandel = () => {
     console.log('Hello')
     console.log(recipes)
     console.log(search)
-    return recipes.filter((item)=>
-    keys.some(key => item[key].toLowerCase().includes(search))
+    const recipesFiltered = recipes.filter((item) =>
+      item.title.toLowerCase().includes(search.toLowerCase())
     )
+    setter(recipesFiltered)
   }
   return (
     <div class=" flex justify-center">
