@@ -30,8 +30,12 @@ const DetailsRecipe = () => {
           <div className="col-span-3 lg:col-span-1">
             <div className="col-span-3 ">
               <img
-                className=" w-full rounded-t-lg "
-                src="https://dummyimage.com/421x261"
+                className=" w-full rounded-t-lg hover:opacity-75 "
+                src={
+                  data.image
+                    ? 'http://localhost:3000/uploads/recipes/' + data.image
+                    : 'public/images/spageti.png'
+                }
                 alt=""
               />
               <p className="text-center font-bold text-3xl "> {data.title}</p>
