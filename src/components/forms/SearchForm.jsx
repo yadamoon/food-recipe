@@ -4,9 +4,6 @@ const SearchForm = ({ recipes, setter }) => {
   const [search, setSearch] = useState()
 
   const SearchHandel = () => {
-    console.log('Hello')
-    console.log(recipes)
-    console.log(search)
     const recipesFiltered = recipes.filter((item) =>
       item.title.toLowerCase().includes(search.toLowerCase())
     )
