@@ -4,7 +4,8 @@ import auth from '../../services/http/auth'
 import { useDispatch } from 'react-redux'
 import { setStatus, setUser } from '../../store/slices/authSlice'
 import { Link, useNavigate } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify'
+
+import { toast } from 'react-toastify'
 
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -27,10 +28,6 @@ function LoginPage() {
       password: '',
     },
   })
-  const notify = () => {
-    toast('This is a toast notification !')
-    console.log('hello world')
-  }
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -57,6 +54,9 @@ function LoginPage() {
     }
     setPasswordType('password')
   }
+
+  const notify = () => toast('Wow so easy!')
+
   return (
     <div className="flex justify-center">
       <div className=" bg-white mx-4 md:mx-0 w-full md:w-2/3 lg:w-1/3 rounded-xl h-auto p-6">
@@ -126,6 +126,8 @@ function LoginPage() {
           </div>
         </form>
       </div>
+
+      <button onClick={notify}>notify me</button>
     </div>
   )
 }
