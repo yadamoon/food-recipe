@@ -14,14 +14,13 @@ import Add_New_Recipe from './components/Navs/Add_New_Recipe'
 import Settings from './components/Navs/Settings'
 import RegisterForm from './components/forms/RegisterForm'
 import ForgetPassword from './components/forms/ForgetPassword'
-
-/*
-  
-*/
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   return (
     <div className=" bg-gray-300 ">
+      <ToastContainer />
       <HeaderApp />
       <Nav />
       <br />
