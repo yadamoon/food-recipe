@@ -45,7 +45,6 @@ function RCPaginate({ items, itemsPerPage, setter }) {
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])
   const [recipesDisplayed, setRecipesDisplayed] = useState([])
-  const [search, setSearch] = useState()
 
   const navigate = useNavigate()
 
