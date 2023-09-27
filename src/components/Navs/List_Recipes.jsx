@@ -47,8 +47,13 @@ function RCPaginate({ items, itemsPerPage, setter }) {
 function DetailsComponents() {
   const [recipes, setRecipe] = useState([])
   const [recipesDisplayed, setRecipesDisplayed] = useState([])
+  const [search, setSearch] = useState()
 
   const navigate = useNavigate()
+
+  const SearchHandle = (data) => {
+    console
+  }
 
   // const itemsPerPage = 12
   const getRecipes = async function () {
@@ -68,7 +73,7 @@ function DetailsComponents() {
         Our Food Recipes
       </h1>
 
-      <SearchForm />
+      <SearchForm recipes={recipes} />
       <div className="">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 p-3 ">
           {recipesDisplayed.map((recipe, index) => (
