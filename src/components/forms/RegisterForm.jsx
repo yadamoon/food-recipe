@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom'
 import { http } from './../../services/http/http'
 
 export default function RegisterForm() {
-  const [newRecipes, setNewRecipes] = useState([])
-
   const {
     register,
     handleSubmit,
@@ -136,11 +134,6 @@ export default function RegisterForm() {
           <br />
         </form>
       </div>
-
-      {/* //!? from comonents shop */}
-      {/* <!-- component --> */}
-
-      {/* {} */}
     </div>
   )
 }
