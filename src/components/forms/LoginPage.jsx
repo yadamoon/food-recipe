@@ -5,7 +5,13 @@ import { useDispatch } from 'react-redux'
 import { setStatus, setUser } from '../../store/slices/authSlice'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
+
 import 'react-toastify/dist/ReactToastify.css'
+
+// minified version is also included
+// import 'react-toastify/dist/ReactToastify.min.css';
+
+// toast.configure()
 
 function LoginPage() {
   const [passwordType, setPasswordType] = useState('password')
@@ -21,6 +27,10 @@ function LoginPage() {
       password: '',
     },
   })
+  const notify = () => {
+    toast('This is a toast notification !')
+    console.log('hello world')
+  }
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -34,7 +44,7 @@ function LoginPage() {
       dispatch(setStatus({ status: true }))
       dispatch(setUser({ user: result.user }))
       navigate('/')
-      toast('Wow so easy!')
+      toast.success('Succefullys')
       reset()
     } else {
       console.log({ error: result.error })
