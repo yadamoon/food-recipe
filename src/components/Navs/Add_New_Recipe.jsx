@@ -7,24 +7,40 @@ const Add_New_Recipe = () => {
     register,
     handleSubmit,
     formState: { errors, submitCount },
-  } = useForm()
+    reset,
+  } = useForm({
+    defaultValues: {
+      title: '',
+      description: '',
+      duration: '',
+    },
+  })
   const fileInputRef = useRef()
-  const [picture, setPicture] = useState()
+  const [image, setImage] = useState()
   const openFileDialog = () => {
     fileInputRef.current.click()
   }
 
   const handleFileSelect = (event) => {
-    setPicture(event.target.files[0])
-    console.log({ picture })
+    setImage(event.target.files[0])
+    console.log({ image })
   }
 
-  const addRecipes = async ({ title, description, duration }) => {
-    const result = await http.request({
+  const addRecipes = async (item) => {
+    const data = new FormData()
+    const keys = Object.keys(item)
+    data.append('picture', image)
+    keys.forEach((key) => data.append(key, item[key]))
+
+    console.log(image)
+    const result = await http.upload({
       method: 'post',
       url: 'recipe',
-      data: { title, description, duration },
+      data,
     })
+    if (!result.isError) {
+      reset()
+    }
     console.log(result)
   }
   return (
@@ -49,7 +65,7 @@ const Add_New_Recipe = () => {
               <div className="h-4 w-4 border rotate-45 border-gray-800"></div>
               <div>Select food picture</div>
             </div>
-            {submitCount > 0 && !picture && (
+            {submitCount > 0 && !image && (
               <span className="text-red-700 ">
                 Select a picture for the food please!
               </span>
@@ -113,11 +129,6 @@ const Add_New_Recipe = () => {
           <br />
         </form>
       </div>
-
-      {/* //!? from comonents shop */}
-      {/* <!-- component --> */}
-
-      {/* {} */}
     </div>
   )
 }
