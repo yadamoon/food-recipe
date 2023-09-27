@@ -12,7 +12,13 @@ function LoginPage() {
     handleSubmit,
 
     formState: { errors },
-  } = useForm()
+    reset,
+  } = useForm({
+    defaultValues: {
+      username: '',
+      password: '',
+    },
+  })
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -26,6 +32,7 @@ function LoginPage() {
       dispatch(setStatus({ status: true }))
       dispatch(setUser({ user: result.user }))
       navigate('/')
+      reset()
     } else {
       console.log({ error: result.error })
     }
