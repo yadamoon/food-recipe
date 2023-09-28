@@ -55,7 +55,7 @@ function LoginPage() {
     setPasswordType('password')
   }
 
-  const notify = () => toast('Wow so easy!')
+  const notify = () => toast.info('Succefullys')
 
   return (
     <div className="flex justify-center">
