@@ -10,8 +10,8 @@ import ReactPaginate from 'react-paginate'
 function RCPaginate({ items, itemsPerPage, setter }) {
   const [itemOffset, setItemOffset] = useState(0)
   const endOffset = itemOffset + itemsPerPage
-
   const currentItems = items.slice(itemOffset, endOffset)
+
   useEffect(() => {
     setter(currentItems)
   }, [itemOffset, endOffset, items])
