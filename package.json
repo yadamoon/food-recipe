@@ -18,6 +18,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.4",
     "react-paginate": "^8.2.0",
+    "react-rating": "^2.0.5",
     "react-redux": "^8.1.2",
     "react-toastify": "^8.0.0",
     "s-ago": "^2.2.0",
