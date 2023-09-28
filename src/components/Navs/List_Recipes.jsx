@@ -6,6 +6,7 @@ import SearchForm from '../forms/SearchForm'
 import ago from 's-ago'
 import { http } from './../../services/http/http'
 import ReactPaginate from 'react-paginate'
+import RatingWithText from '../forms/RatingWithText'
 
 function RCPaginate({ items, itemsPerPage, setter }) {
   const [itemOffset, setItemOffset] = useState(0)
@@ -65,7 +66,7 @@ function DetailsComponents() {
   return (
     <div>
       <h1 className="text-3xl text-center font-extrabold text-teal-800">
-        Our Food Recipes
+        Our Popular Food
       </h1>
 
       <SearchForm recipes={recipes} setter={setRecipesFiltered} />
@@ -101,6 +102,7 @@ function DetailsComponents() {
                   </h2>
 
                   <p className="from-neutral-400 text-sm ">{ago(new Date())}</p>
+                  <RatingWithText />
                 </div>
               </div>
             </div>
