@@ -6,8 +6,7 @@ import SearchForm from '../forms/SearchForm'
 import ago from 's-ago'
 import { http } from './../../services/http/http'
 import ReactPaginate from 'react-paginate'
-import RatingWithText from '../forms/RatingWithText'
-
+import Rate from '../Rating/Rate'
 function RCPaginate({ items, itemsPerPage, setter }) {
   const [itemOffset, setItemOffset] = useState(0)
   const endOffset = itemOffset + itemsPerPage
@@ -102,7 +101,7 @@ function DetailsComponents() {
                   </h2>
 
                   <p className="from-neutral-400 text-sm ">{ago(new Date())}</p>
-                  <RatingWithText />
+                  <Rate />
                 </div>
               </div>
             </div>
