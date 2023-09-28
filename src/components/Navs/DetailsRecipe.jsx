@@ -25,7 +25,6 @@ const DetailsRecipe = () => {
   return (
     <div className="flex justify-center">
       <div className=" bg-white mx-4  md:mx-0 rounded-xl h-auto p-6 ">
-        {/* <div className="h-10 sm:bg-red-500 md:bg-green-600 lg:bg-blue-500"></div> */}
         <div className="grid grid-cols-3 gap-3">
           <div className="col-span-3 lg:col-span-1">
             <div className="col-span-3 ">
