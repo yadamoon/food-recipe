@@ -23,7 +23,7 @@ function App() {
       <ToastContainer />
       <HeaderApp />
       <Nav />
-
+      <br />
       <Routes className="pl-40 pr-40">
         <Route path="/" element={<Home />} />
         <Route path="/Add_New_Recipe" element={<Add_New_Recipe />} />
