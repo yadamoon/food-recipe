@@ -16,12 +16,6 @@ let Rate = () => {
               setRating(currentRating)
             }}
           >
-            {/* <input
-              type="radio"
-              name="rating"
-              value={currentRating}
-              
-            /> */}
             <FaStar
               key={index}
               size={20}
