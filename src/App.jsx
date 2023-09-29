@@ -16,6 +16,7 @@ import RegisterForm from './components/forms/RegisterForm'
 import ForgetPassword from './components/forms/ForgetPassword'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Contact from './components/Navs/Contact'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="recipes/:id" element={<DetailsRecipe />} />
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="ForgetPassword" element={<ForgetPassword />} />
         <Route path="/Register_New_Account" element={<RegisterForm />} />
         <Route path="*" element={<NotFound />} />
