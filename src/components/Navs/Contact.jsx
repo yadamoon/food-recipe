@@ -3,28 +3,43 @@ import React from 'react'
 const Contact = () => {
   return (
     <div className="flex justify-center">
-      <div className="">
-        <h1>Contact Us</h1>
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 w-2/3">
-        <div className=" h-auto body-font bg-white text-gray-600 rounded-t text-center">
+        <div className=" h-auto body-font bg-white text-gray-600 rounded-t space-y-3 text-center">
+          <img
+            src="public/svg/call-svgrepo-com.svg"
+            width={80}
+            height={80}
+            alt=""
+          />
           <h1 className="text-2xl text-center text-teal-800"> Call Us</h1>
           <p>+251-932380202</p>
         </div>
-        <div className=" h-28  body-font bg-white text-gray-600 rounded-t">
+        <div className=" h-auto  body-font bg-white text-gray-600 rounded-t space-y-3">
+          <img
+            src="public/svg/chat-round-line-svgrepo-com.svg"
+            width={80}
+            height={80}
+            alt=""
+          />
           <h1 className="text-2xl text-center text-teal-800"> Chat Live</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem</p>
           <button className="border rounded bg-green-800 text-white justify-center">
             Chat Live
           </button>
         </div>
-        <div className=" h-5/5 body-font bg-white text-gray-600 rounded-t">
+        <div className=" h-auto body-font bg-white text-gray-600 rounded-t space-y-3">
+          <img
+            src="public/svg/ask-svgrepo-com.svg"
+            width={80}
+            height={80}
+            alt=""
+          />
           <h1 className="text-2xl text-center text-teal-800">
             {' '}
             Ask a Question
           </h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum</p>
-          <button className="border rounded bg-green-800 text-white ">
+          <button className="border rounded bg-green-800 text-white">
             Chat Live
           </button>
         </div>
