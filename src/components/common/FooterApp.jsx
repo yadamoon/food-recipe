@@ -10,7 +10,7 @@ const FooterApp = () => {
             <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
               <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
                 <img
-                  src="public/svg/cookware-svgrepo-com(2).svg"
+                  src="public/svg/western-food-1-svgrepo-com.svg"
                   class="w-48  text-teal-500 "
                 />
               </a>
