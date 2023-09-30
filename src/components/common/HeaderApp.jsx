@@ -101,7 +101,7 @@ export default function HeaderApp() {
           </div>
           <div className=" flex space-x-3 items-center">
             <img
-              src="public/images/Screenshot from 2023-09-23 13-41-53.png"
+              src="public/svg/western-food-1-svgrepo-com.svg"
               width={80}
               height={40}
               alt=""
