@@ -9,7 +9,7 @@ const FooterApp = () => {
           <div className="w-full h-screen">
             <div className=" h-96"></div>
             <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
-              <div className="w-full shadow rounded p-8 sm:p-12 -mt-72">
+              <div className="w-full shadow p-8 sm:p-12 -mt-72">
                 <p className="text-3xl font-bold leading-7 text-center text-black">
                   Contact me
                 </p>
@@ -47,7 +47,7 @@ const FooterApp = () => {
                   </div>
                   <div>
                     <div className="w-full flex flex-col mt-8">
-                      <label className="font-semibold leading-none text-gray-300">
+                      <label className="font-semibold leading-none text-gray-600">
                         Message
                       </label>
                       <textarea
