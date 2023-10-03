@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import auth from '../../services/http/auth'
 
 const Settings = () => {
   const contents = [
@@ -17,6 +18,9 @@ const Settings = () => {
   ]
   const [activeMenu, setActiveMenu] = useState(0)
   const ActiveContent = contents[activeMenu].content
+  const handlLogout = () => {
+    auth.signOut()
+  }
   return (
     <div className="hidden space-y-6 p-10 pb-16 md:block bg-white">
       <div className="space-y-0.5">
@@ -45,6 +49,7 @@ const Settings = () => {
 
         <ActiveContent />
       </div>
+      <button onClick={handlLogout}>logout</button>
     </div>
   )
 }
