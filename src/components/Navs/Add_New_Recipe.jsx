@@ -26,6 +26,7 @@ const Add_New_Recipe = () => {
     setImage(event.target.files[0])
     console.log({ image })
     setPictureUrl(URL.createObjectURL(event.target.files[0]))
+    const [message, setMessage] = useState('')
   }
 
   const addRecipes = async (item) => {
@@ -52,48 +53,79 @@ const Add_New_Recipe = () => {
           <h1>Add New Recipe</h1>
         </div>
         <form className="w-full space-y-3">
-          <div className="space-y-2">
-            <div className="flex justify-center">
-              <div></div>
-              <div
-                className={
-                  'bg-gray-100 rounded-full w-24 h-24 flex items-center justify-center relative' +
-                  (pictureUrl ? '' : ' p-3')
-                }
-                onClick={openFileDialog}
-              >
-                {!pictureUrl && (
-                  <i className="fa fa-user-o" style={{ fontSize: 32 }}></i>
-                )}
-                {pictureUrl && (
-                  <img
-                    src={pictureUrl}
-                    className="w-full h-full rounded-full"
-                  />
-                )}
+          <div className="flex justify-center w-full">
+            <div
+              className={
+                'bg-gray-100  w-full h-52 flex items-center justify-center relative z-0 group' +
+                (pictureUrl ? '' : ' p-3')
+              }
+            >
+              {!pictureUrl && (
+                // <i className="fa fa-user-o" style={{ fontSize: 32 }}></i>
                 <div
-                  className="absolute right-0 bottom-0 rounded-full bg-blue-1 text-white w-8 h-8 flex items-center justify-center cursor-pointer hover:opacity-75"
+                  className="w-6 h-6  hover:bg-teal-700 hover:text-white rounded  text-black  "
                   onClick={openFileDialog}
                 >
                   {' '}
-                  <i className="fa fa-pencil"></i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+                    />
+                  </svg>
                 </div>
-              </div>
+              )}
+              {pictureUrl && (
+                <>
+                  <img src={pictureUrl} className="w-full h-full z-10" />
+                  <div className="absolute top-0 left-0 right-0 bottom-0 items-center justify-center z-30 hidden group-hover:flex">
+                    <div
+                      className="px-2 text-sm py-1 rounded-full cursor-pointer bg-teal-700 text-white opacity-100"
+                      onClick={openFileDialog}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="absolute top-0 left-0 right-0 bottom-0 z-20 bg-black opacity-60 hidden group-hover:block"></div>
+                </>
+              )}
+
+              <input
+                ref={fileInputRef}
+                type="file"
+                className="w-full hidden"
+                onChange={handleFileSelect}
+              />
+
+              {submitCount > 0 && !image && (
+                <span className="text-red-700 ">
+                  Select a picture for the food please!
+                </span>
+              )}
             </div>
-
-            <input
-              ref={fileInputRef}
-              type="file"
-              className="w-full hidden"
-              onChange={handleFileSelect}
-            />
-
-            {submitCount > 0 && !image && (
-              <span className="text-red-700 ">
-                Select a picture for the food please!
-              </span>
-            )}
           </div>
+
           <div className="grid grid-cols-3 gap-2">
             <input
               {...register('title', {
