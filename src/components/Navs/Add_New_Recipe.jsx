@@ -54,11 +54,13 @@ const Add_New_Recipe = () => {
         <form className="w-full space-y-3">
           <div className="space-y-2">
             <div className="flex justify-center">
+              <div></div>
               <div
                 className={
                   'bg-gray-100 rounded-full w-24 h-24 flex items-center justify-center relative' +
                   (pictureUrl ? '' : ' p-3')
                 }
+                onClick={openFileDialog}
               >
                 {!pictureUrl && (
                   <i className="fa fa-user-o" style={{ fontSize: 32 }}></i>
@@ -78,6 +80,7 @@ const Add_New_Recipe = () => {
                 </div>
               </div>
             </div>
+
             <input
               ref={fileInputRef}
               type="file"
@@ -85,13 +88,6 @@ const Add_New_Recipe = () => {
               onChange={handleFileSelect}
             />
 
-            <div
-              className="flex space-x-2 items-center bg-gray-200 p-3 rounded cursor-pointer hover:opacity-75"
-              onClick={openFileDialog}
-            >
-              <div className="h-4 w-4 border rotate-45 border-gray-800"></div>
-              <div>Select food picture</div>
-            </div>
             {submitCount > 0 && !image && (
               <span className="text-red-700 ">
                 Select a picture for the food please!
