@@ -36,6 +36,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="ForgetPassword" element={<ForgetPassword />} />
         <Route path="/Register_New_Account" element={<RegisterForm />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
 
