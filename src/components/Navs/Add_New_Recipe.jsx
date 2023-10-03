@@ -17,13 +17,15 @@ const Add_New_Recipe = () => {
   })
   const fileInputRef = useRef()
   const [image, setImage] = useState()
-  const openFileDialog = () => {
+  const [pictureUrl, setPictureUrl] = useState()
+  const openFileDialog = (event) => {
     fileInputRef.current.click()
   }
 
   const handleFileSelect = (event) => {
     setImage(event.target.files[0])
     console.log({ image })
+    setPictureUrl(URL.createObjectURL(event.target.files[0]))
   }
 
   const addRecipes = async (item) => {
@@ -51,6 +53,31 @@ const Add_New_Recipe = () => {
         </div>
         <form className="w-full space-y-3">
           <div className="space-y-2">
+            <div className="flex justify-center">
+              <div
+                className={
+                  'bg-gray-100 rounded-full w-24 h-24 flex items-center justify-center relative' +
+                  (pictureUrl ? '' : ' p-3')
+                }
+              >
+                {!pictureUrl && (
+                  <i className="fa fa-user-o" style={{ fontSize: 32 }}></i>
+                )}
+                {pictureUrl && (
+                  <img
+                    src={pictureUrl}
+                    className="w-full h-full rounded-full"
+                  />
+                )}
+                <div
+                  className="absolute right-0 bottom-0 rounded-full bg-blue-1 text-white w-8 h-8 flex items-center justify-center cursor-pointer hover:opacity-75"
+                  onClick={openFileDialog}
+                >
+                  {' '}
+                  <i className="fa fa-pencil"></i>
+                </div>
+              </div>
+            </div>
             <input
               ref={fileInputRef}
               type="file"
