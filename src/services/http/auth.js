@@ -14,5 +14,10 @@ const auth = {
       return { isError: true, error: err }
     }
   },
+  signOut() {
+    apiService.removeHeader()
+    tokenService.removeToken()
+    console.log('logout')
+  },
 }
 export default auth
