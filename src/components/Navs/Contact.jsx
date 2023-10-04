@@ -2,64 +2,87 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className="flex ">
-      <div>
-        <h1 className="">Contact US</h1>
-      </div>
-      <br />
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 w-2/3">
-          <div className=" h-auto body-font bg-gray-100 text-gray-600 rounded-t space-y-3 text-center">
-            <img
-              src="public/svg/call-svgrepo-com.svg"
-              width={60}
-              height={20}
-              alt="call"
-              className="flex justify-center"
-            />
-            <h1 className="text-2xl text-center text-teal-800 font-bold">
-              {' '}
-              Call Us
-            </h1>
-            <p>+251-932380202</p>
+    <div className="flex w-full text-center justify-center ">
+      <div className="grid grid-cols-1   md:grid-cols-1 lg:grid-cols-3 gap-8  p-3 w-full ">
+        <div className=" h-5/5 body-font bg-white text-gray-600 rounded-t">
+          <div className=" flex justify-center">
+            <div className="mt-4 w-full ">
+              <div>
+                <img
+                  src="public/svg/chat-round-line-svgrepo-com.svg"
+                  width={20}
+                  height={20}
+                  alt=""
+                  className="justify-center"
+                />
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur explicabo, repellendus repellat quasi architecto
+                dignissimos officia? Soluta vel tempore, animi corporis, libero
+                debitis asperiores iusto neque saepe voluptatem illo et.
+              </p>
+              <div className="title-font text-white  font-medium bg-teal-700 p-2 rounded-xl w-2/3 mx-20 hover:bg-teal-800 ">
+                Chat Live
+              </div>
+            </div>
           </div>
-          <div className=" h-auto  body-font bg-gray-100 text-gray-600 rounded-t space-y-3">
-            <img
-              src="public/svg/chat-round-line-svgrepo-com.svg"
-              width={60}
-              height={20}
-              alt=""
-            />
-            <h1 className="text-2xl text-center text-teal-800 font-bold">
-              {' '}
-              Chat Live
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-            </p>
-            <button className="border rounded bg-green-800 text-white justify-center">
-              Chat Live
-            </button>
+        </div>
+
+        <div className=" h-5/5 body-font bg-white text-gray-600 rounded-t">
+          <div className="">
+            <div className="mt-4 w-full ml-2">
+              <div>
+                <img
+                  src="public/svg/call-svgrepo-com.svg"
+                  width={20}
+                  height={20}
+                  alt=""
+                />
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur explicabo, repellendus repellat quasi architecto
+                dignissimos officia? Soluta vel tempore,
+              </p>
+              <spa>
+                <address>+251932380202</address>
+              </spa>
+              <div className="title-font text-white  font-medium bg-teal-700 p-2 rounded-xl w-2/3 mx-20 hover:bg-teal-800 ">
+                Call now{' '}
+              </div>
+            </div>
           </div>
-          <div className=" h-auto body-font bg-gray-100 text-gray-600 rounded-t space-y-3">
-            <img
-              src="public/svg/ask-svgrepo-com.svg"
-              width={60}
-              height={20}
-              alt=""
-            />
-            <h1 className="text-2xl text-center text-teal-800 font-bold">
-              Ask a Question
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-            </p>
-            <button className="border rounded bg-green-800 text-white">
-              Chat Live
-            </button>
+        </div>
+
+        <div className=" h-5/5 body-font bg-white text-gray-600 rounded-t">
+          <div className="">
+            <div className="mt-4 w-full ml-2  ">
+              <div>
+                <img
+                  src="public/svg/ask-svgrepo-com.svg"
+                  width={20}
+                  height={20}
+                  alt=""
+                  className="justify-center"
+                />
+              </div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur explicabo, repellendus repellat quasi architecto
+                dignissimos officia? Soluta vel tempore, animi corporis, libero
+                debitis asperiores iusto neque saepe voluptatem illo et.
+              </p>
+              <div className="title-font text-white  font-medium bg-teal-700 p-2 rounded-xl w-2/3 mx-20 hover:bg-teal-800 ">
+                Ask Me !
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* </div>s
+      </div> */}
     </div>
   )
 }
