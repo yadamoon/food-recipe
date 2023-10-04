@@ -31,7 +31,7 @@ const Help = () => {
             <div className="z-20 flex items-center order-1 bg-teal-800 shadow-xl w-8 h-8 rounded-full">
               <h1 className="mx-auto text-white font-semibold text-lg">2</h1>
             </div>
-            <div className="order-1 bg-teal-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-teal-700 rounded-lg shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
               <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -67,7 +67,7 @@ const Help = () => {
             <div className="z-20 flex items-center order-1 bg-teal-800 shadow-xl w-8 h-8 rounded-full">
               <h1 className="mx-auto text-white font-semibold text-lg">4</h1>
             </div>
-            <div className="order-1 bg-teal-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-teal-700 rounded-lg shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
               <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
