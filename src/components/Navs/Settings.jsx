@@ -49,7 +49,12 @@ const Settings = () => {
 
         <ActiveContent />
       </div>
-      <button onClick={handlLogout}>logout</button>
+      <button
+        className="hover:text-white hover:bg-teal-700 inline-flex items-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50  h-9 px-4 py-2 justify-start w-auto border"
+        onClick={handlLogout}
+      >
+        logout
+      </button>
     </div>
   )
 }
