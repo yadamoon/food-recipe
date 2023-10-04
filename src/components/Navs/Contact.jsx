@@ -80,9 +80,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      {/* </div>s
-      </div> */}
     </div>
   )
 }
