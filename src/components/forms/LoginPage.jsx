@@ -5,8 +5,7 @@ import { useDispatch } from 'react-redux'
 import { setStatus, setUser } from '../../store/slices/authSlice'
 import { Link, useNavigate } from 'react-router-dom'
 
-import { toast } from 'react-toastify'
-
+import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 // minified version is also included
@@ -43,6 +42,7 @@ function LoginPage() {
       navigate('/')
       toast.success('Succefullys')
       reset()
+      handleLoginSuccessful()
     } else {
       console.log({ error: result.error })
     }
@@ -53,6 +53,16 @@ function LoginPage() {
       return
     }
     setPasswordType('password')
+  }
+  const handleLoginSuccessful = () => {
+    // Perform login logic here
+
+    // If login is successful
+    toast.success('Login successful!', {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 3000, // Auto close after 3 seconds
+      hideProgressBar: true,
+    })
   }
 
   const notify = () => toast.info('Succefullys')
