@@ -3,13 +3,12 @@ import React from 'react'
 export default function Home() {
   return (
     <div className="spacey-10">
-      HomePage ossorigin="anonymous"
-      <div className="bg-gradient-to-br from-indigo-900 to-green-900 min-h-screen overflow-auto">
+      <div className="bg-gradient-to-br from-gray-400 to-gray-200 min-h-screen overflow-auto">
         <div className="container max-w-5xl mx-auto px-4">
           <div className="w-4/5">
             <h1 className="mt-32 text-white text-6xl font-bold">
               The fastest, most secure dev environment <br />
-              <span className="text-blue-400">on the planet.</span>
+              <span className="text-gray-600">on the planet.</span>
             </h1>
           </div>
           <div className="w-5/6 my-10 ml-6">
