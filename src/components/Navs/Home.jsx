@@ -26,7 +26,7 @@ export default function Home() {
             <div className="shadow-2xl w-96 h-96 rounded-full -mt-96 bg-teal-200"></div>
             <div className="shadow-xl w-80 h-80 rounded-full ml-8 -mt-96 bg-teal-400"></div>
           </div>
-          <div className="text-gray-500 relative space-y-20">
+          {/* <div className="text-gray-500 relative space-y-20">
             <h3 className="text-uppercase font-semibold">
               Frameworks & Libraries
             </h3>
@@ -97,7 +97,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

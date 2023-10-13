@@ -8,15 +8,15 @@ const Nav = () => {
 
   return (
     <div className="">
-      <div>
-        <div className=" bg-white rounded "></div>
-        <div className=" xl:mx-0 h-12   bg-white shadow rounded">
-          <ul className="flex border-b px-5  justify-end  ">
+      <div className="">
+        <div className=" bg-white rounded flex-auto "></div>
+        <div className="  h-12   bg-white grid  ">
+          <ul className="flex  justify-end  grid-cols-4 md:grid-cols-1 lg:grid-cols-1 sm:grid-cols-1  ">
             <li
               onClick={() => setActiveStatus(1)}
               className={
                 activeStatus == 1
-                  ? 'text-sm border-teal-700 pt-3 rounded-t text-teak-700 mr-12'
+                  ? 'text-sm border-teal-700 pt-3 rounded-t text-teal-700 mr-12 col-span-1'
                   : 'text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-teal-700 cursor-pointer'
               }
             >
@@ -40,10 +40,7 @@ const Nav = () => {
                     <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
                   </svg>
                 </span>
-                <span className="ml-1 font-normal">
-                  {/* {activeStatus == 1 ? 'Active' : 'Inactive'} */}
-                  Home
-                </span>
+                <span className="ml-1 flex font-normal">Home</span>
               </Link>
               {activeStatus == 1 && (
                 <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -55,7 +52,7 @@ const Nav = () => {
                 onClick={() => setActiveStatus(2)}
                 className={
                   activeStatus == 2
-                    ? 'text-sm border-teal-700 pt-3 rounded-t text-teal-700 mr-12'
+                    ? 'text-sm border-teal-700 pt-3 rounded-t text-teal-700 mr-12 col-span-1'
                     : 'text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-teal-700 cursor-pointer'
                 }
               >
@@ -87,7 +84,7 @@ const Nav = () => {
                       </g>
                     </svg>
                   </span>
-                  <span className="ml-1 font-normal">
+                  <span className="ml-1 flex font-normal">
                     {/* {activeStatus == 3 ? 'Active' : 'Inactive'} */}
                     Recipes
                   </span>
@@ -141,7 +138,7 @@ const Nav = () => {
                     </g>
                   </svg>
                 </span>
-                <span className="ml-1 font-normal">
+                <span className="ml-1  flex font-normal">
                   {/* {activeStatus == 2 ? 'Active' : 'Inactive'} */}
                   contact
                 </span>
@@ -195,7 +192,7 @@ const Nav = () => {
                       </g>
                     </svg>
                   </span>
-                  <span className="ml-1 font-normal">
+                  <span className="ml-1 flex font-normal">
                     {/* {activeStatus == 3 ? 'Active' : 'Inactive'} */}
                     Settings
                   </span>
@@ -243,7 +240,7 @@ const Nav = () => {
                       </g>
                     </svg>
                   </span>
-                  <span className="ml-1 font-normal">
+                  <span className="ml-1 flex font-normal">
                     {/* {activeStatus == 3 ? 'Active' : 'Inactive'} */}
                     Add
                   </span>
@@ -309,7 +306,7 @@ const Nav = () => {
                     </g>
                   </svg>
                 </span>
-                <span className="ml-1 font-normal">
+                <span className="ml-1 flex font-normal">
                   {/* {activeStatus == 3 ? 'Active' : 'Inactive'} */}
                   Help
                 </span>
