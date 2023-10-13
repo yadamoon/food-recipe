@@ -76,9 +76,9 @@ const Nav = () => {
       </nav> */}
 
       <div>
-        <div className=" bg-white rounded"></div>
+        <div className=" bg-white rounded "></div>
         <div className=" xl:mx-0 h-12   bg-white shadow rounded">
-          <ul className="flex border-b px-5">
+          <ul className="flex border-b px-5  justify-end ">
             <li
               onClick={() => setActiveStatus(1)}
               className={
