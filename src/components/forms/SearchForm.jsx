@@ -15,7 +15,7 @@ const SearchForm = ({ recipes, setter }) => {
         <div class="md:col-span-3 lg:col-span-3 col-span-3 g">
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Find Your Tasty and Healthy Food ..."
             className="w-full p-3 rounded-l "
             onChange={(e) => {
               setSearch(e.target.value)
