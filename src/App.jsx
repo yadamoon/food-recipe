@@ -17,11 +17,22 @@ import ForgetPassword from './components/forms/ForgetPassword'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Contact from './components/Navs/Contact'
+import { useState } from 'react'
+import ReactLoading from 'react-loading'
 
 function App() {
+  const [isLoging, setIsLoding] = useState(false)
+
   return (
     <div className=" bg-gray-300 ">
       <ToastContainer />
+
+      <ReactLoading
+        type="spinningBubbles"
+        color="#0000FF"
+        height={100}
+        width={50}
+      />
       <HeaderApp />
       <Nav />
       <br />

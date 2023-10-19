@@ -4,9 +4,7 @@ export default function Home() {
   return (
     <div className="spacey-10">
       <FoodForHealthy />
-      {/* //popular video */}
       <PopularVideo />
-
       <Sub />
     </div>
   )
