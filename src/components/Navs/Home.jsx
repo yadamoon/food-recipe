@@ -119,11 +119,6 @@ export const PopularVideo = () => {
           {popularVideo.map((foods) => (
             <div key={foods.id} className="relative group">
               <img src={foods.img} alt={foods.alt} className="  " />
-              <img
-                src="public/images/video-svgrepo-com.svg"
-                alt="video"
-                className="lg:hidden block w-full "
-              />
               <div className=" flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full" />
               <div className=" absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100">
                 <svg
@@ -156,7 +151,7 @@ export const PopularVideo = () => {
                   />
                 </svg>
               </div>
-              <p>{foods.title}</p>{' '}
+              <p className="text-center font-bold">{foods.title}</p>{' '}
             </div>
           ))}
         </div>
