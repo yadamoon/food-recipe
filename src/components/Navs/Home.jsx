@@ -18,10 +18,10 @@ export const Sub = () => {
       <div className="p-6 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white">
         <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative h-auto flex items-center justify-center">
           <img
-            src="https://cdn.tuk.dev/assets/components/26May-update/newsletter-1.png"
+            src="public/images/email-14-svgrepo-com.svg"
             alt="Envelope with a newsletter"
             role="img"
-            className="h-full xl:w-full lg:w-1/2 w-full "
+            className="w-2/3 "
           />
         </div>
         <div className="w-full xl:w-1/2 xl:pl-40 xl:py-28 ">
@@ -79,29 +79,24 @@ export const FoodForHealthy = () => {
 
 export const PopularVideo = () => {
   return (
-    <div className="  bg-gradient-to-br p-6 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch bg-white  min-h-screen overflow-auto">
+    <div className="  bg-gradient-to-br p-6 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch bg-white   overflow-auto">
       {/* //!? from tilawind Componenets */}
       <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
         <div className=" text-center">
           <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800 md:w-full w-9/12 mx-auto">
-            Follow Us on Instagram
+            Popular videos
           </h2>
-          <p className=" font-normal text-base leading-6 text-gray-600 mt-4 lg:w-5/12 md:w-9/12 mx-auto">
-            Follow us on instagram @
-            <span className="underline cursor-pointer">followuspleaseee</span>{' '}
-            and tag us to get featured on our timeline
-          </p>
         </div>
         <div className=" grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:grap-8 md:gap-6 gap-4 mt-10">
           <div className="relative group">
             <img
-              src="https://i.ibb.co/QHS8Ngp/pexels-alana-sousa-3294250-1.png"
-              alt="A picture of a sitting dog"
-              className=" lg:block hidden w-full "
+              src="public/images/Screenshot from 2023-09-23 13-54-15.png"
+              alt="some food"
+              className="  "
             />
             <img
-              src="https://i.ibb.co/mNPBgQN/pexels-alana-sousa-3294250-1-1.png"
-              alt="A picture of a sitting dog"
+              src="public/images/video-svgrepo-com.svg"
+              alt="video"
               className="lg:hidden block w-full "
             />
             <div className=" flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full" />
@@ -139,8 +134,8 @@ export const PopularVideo = () => {
           </div>
           <div className="relative group">
             <img
-              src="https://i.ibb.co/T8jgRy3/pexels-leah-kelley-1449667-1.png"
-              alt="Smiling Girl"
+              src="public/images/bur.png"
+              alt="some food"
               className=" lg:block hidden w-full "
             />
             <img
@@ -183,8 +178,8 @@ export const PopularVideo = () => {
           </div>
           <div className="relative group">
             <img
-              src="https://i.ibb.co/F3dzNWD/pexels-spencer-selover-775358-1.png"
-              alt="Men Posing"
+              src="public/images/bur.png"
+              alt="some food"
               className=" lg:block hidden w-full "
             />
             <img
@@ -227,8 +222,8 @@ export const PopularVideo = () => {
           </div>
           <div className="relative group">
             <img
-              src="https://i.ibb.co/DwcwgDP/pexels-chevanon-photography-1108099-1.png"
-              alt="2 puppies"
+              src="public/images/bur.png"
+              alt="some food"
               className=" lg:block hidden w-full "
             />
             <img
