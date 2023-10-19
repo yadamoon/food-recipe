@@ -20,7 +20,7 @@ export default function HeaderApp() {
               height={40}
               alt=""
             />
-            <h1 className=" font-normal text-3xl leading-6 text-gray-800 uppercase">
+            <h1 className=" text-3xl leading-6 text-teal-800 uppercase font-thin">
               food recipe
             </h1>
           </div>
