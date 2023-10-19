@@ -8,11 +8,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-// minified version is also included
-// import 'react-toastify/dist/ReactToastify.min.css';
-
-// toast.configure()
-
 function LoginPage() {
   const [passwordType, setPasswordType] = useState('password')
   const {
