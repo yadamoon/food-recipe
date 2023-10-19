@@ -110,8 +110,8 @@ export const PopularVideo = () => {
       {/* //!? from tilawind Componenets */}
       <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
         <div className=" text-center">
-          <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800 md:w-full w-9/12 mx-auto">
-            Popular videos {popularVideo.title}
+          <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-teal-800 md:w-full w-9/12 mx-auto">
+            Popular videos
           </h2>
         </div>
 
@@ -119,7 +119,6 @@ export const PopularVideo = () => {
           {popularVideo.map((foods) => (
             <div key={foods.id} className="relative group">
               <img src={foods.img} alt={foods.alt} className="  " />
-
               <img
                 src="public/images/video-svgrepo-com.svg"
                 alt="video"
@@ -157,6 +156,7 @@ export const PopularVideo = () => {
                   />
                 </svg>
               </div>
+              <p>{foods.title}</p>{' '}
             </div>
           ))}
         </div>
