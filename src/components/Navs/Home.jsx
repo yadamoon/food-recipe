@@ -71,6 +71,10 @@ export const FoodForHealthy = () => {
             esse est neque debitis reiciendis autem officiis libero ducimus
             fugiat?
           </p>
+
+          <button className="bg-teal-600 text-white p-2 rounded space-y-6">
+            Get Startd
+          </button>
         </div>
       </div>
     </>
