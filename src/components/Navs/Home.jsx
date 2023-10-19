@@ -54,22 +54,22 @@ export const FoodForHealthy = () => {
       <div className="p-6 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white">
         <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative h-auto flex items-center justify-center">
           <img
-            src="public/images/burger.png"
+            src="public/images/test.png"
             alt="Envelope with a newsletter"
             role="img"
-            className="h-full xl:w-full lg:w-1/2 w-full bg-white rounded-2xl "
+            className="h-2/3 xl:w-full lg:w-1/2 w-full bg-white rounded-2xl "
           />
         </div>
         <div className="w-full xl:w-1/2 xl:pl-40 xl:py-28 ">
           <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold leading-10 text-teal-800 mb-4 text-center xl:text-left md:mt-0 mt-4">
-            Subscribe
+            Eat Healthy <br />
+            Live Healthy
           </h1>
           <p className="text-base leading-normal text-gray-600 text-center xl:text-left">
-            Whether article spirits new her covered hastily sitting her. Money
-            witty books nor son add. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Quae nesciunt asperiores pariatur, non a similique
-            nisi id excepturi quaerat quibusdam impedit iusto eos harum
-            voluptatibus. Iusto tempore facere doloremque perferendis!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aperiam
+            atque a laborum? Facere eligendi vitae tenetur at doloremque, sequi
+            esse est neque debitis reiciendis autem officiis libero ducimus
+            fugiat?
           </p>
         </div>
       </div>
@@ -79,7 +79,7 @@ export const FoodForHealthy = () => {
 
 export const PopularVideo = () => {
   return (
-    <div className="  bg-gradient-to-br p-6 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch from-gray-100 to-gray-200 min-h-screen overflow-auto">
+    <div className="  bg-gradient-to-br p-6 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch bg-white  min-h-screen overflow-auto">
       {/* //!? from tilawind Componenets */}
       <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
         <div className=" text-center">
