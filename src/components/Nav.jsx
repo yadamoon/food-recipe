@@ -38,7 +38,7 @@ const Nav = () => {
                   <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
                 </svg>
               </span>
-              {/* <span className="ml-1 flex font-normal">Home</span> */}
+              <span className=" hidden ml-1  md:block  font-normal">Home</span>
             </Link>
             {activeStatus == 1 && (
               <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -136,10 +136,7 @@ const Nav = () => {
                   </g>
                 </svg>
               </span>
-              {/* <span className="ml-1  flex font-normal">
-              
-                contact
-              </span> */}
+              <span className=" hidden ml-1 md:block font-normal">contact</span>
             </Link>
             {activeStatus == 3 && (
               <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -190,10 +187,9 @@ const Nav = () => {
                     </g>
                   </svg>
                 </span>
-                {/* <span className="ml-1 flex font-normal">
-                
+                <span className="hidden ml-1 md:block  font-normal">
                   Settings
-                </span> */}
+                </span>
               </Link>
               {activeStatus == 4 && (
                 <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -238,10 +234,7 @@ const Nav = () => {
                     </g>
                   </svg>
                 </span>
-                {/* <span className="ml-1 flex font-normal">
-               
-                  Add
-                </span> */}
+                <span className="hidden ml-1 md:block  font-normal">Add</span>
               </Link>
               {activeStatus == 5 && (
                 <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -304,7 +297,7 @@ const Nav = () => {
                   </g>
                 </svg>
               </span>
-              {/* <span className="ml-1  font-normal md:hidden lg:hidde">Help</span> */}
+              <span className="hidden  ml-1 md:block  font-normal ">Help</span>
             </Link>
             {activeStatus == 6 && (
               <div className="w-full h-1 bg-teal-700 rounded-t-md" />
