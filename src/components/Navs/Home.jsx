@@ -104,7 +104,7 @@ export const PopularVideo = () => {
   ]
 
   return (
-    <div className="  bg-gradient-to-br p-6 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch bg-white   overflow-auto">
+    <div className="  bg-gradient-to-br p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch bg-white   overflow-auto">
       {/* //!? from tilawind Componenets */}
       <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
         <div className=" text-center">
