@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <div className=" ">
       <div className="bg-white ">
-        <ul className=" flex justify-end lg:red-400 md:justify-center">
+        <ul className=" flex lg:red-400 justify-end w-full">
           <li
             onClick={() => setActiveStatus(1)}
             className={
