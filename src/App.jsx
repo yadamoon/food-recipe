@@ -17,41 +17,54 @@ import ForgetPassword from './components/forms/ForgetPassword'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Contact from './components/Navs/Contact'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ReactLoading from 'react-loading'
 
 function App() {
-  const [isLoging, setIsLoding] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 5000)
 
+    return () => clearTimeout(timer)
+  }, [])
   return (
     <div className=" bg-gray-300 ">
+      {isLoading ? (
+        <div className="flex justify-center items-center w-full h-screen bg-white">
+          <ReactLoading
+            type="spinningBubbles"
+            color="#FFFFF"
+            height={100}
+            width={50}
+          />
+        </div>
+      ) : (
+        <div>
+          {' '}
+          <HeaderApp />
+          <Nav />
+          <br />
+          <Routes className="pl-40 pr-40">
+            <Route path="/" element={<Home />} />
+            <Route path="/Add_New_Recipe" element={<Add_New_Recipe />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/listRecipe" element={<DetailsComponents />} />
+            <Route path="recipes/:id" element={<DetailsRecipe />} />
+            <Route path="/Login" element={<LoginPage />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="ForgetPassword" element={<ForgetPassword />} />
+            <Route path="/Register_New_Account" element={<RegisterForm />} />
+
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <FooterApp className="space-10" />
+        </div>
+      )}
+
       <ToastContainer />
-
-      <ReactLoading
-        type="spinningBubbles"
-        color="#0000FF"
-        height={100}
-        width={50}
-      />
-      <HeaderApp />
-      <Nav />
-      <br />
-      <Routes className="pl-40 pr-40">
-        <Route path="/" element={<Home />} />
-        <Route path="/Add_New_Recipe" element={<Add_New_Recipe />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/listRecipe" element={<DetailsComponents />} />
-        <Route path="recipes/:id" element={<DetailsRecipe />} />
-        <Route path="/Login" element={<LoginPage />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="ForgetPassword" element={<ForgetPassword />} />
-        <Route path="/Register_New_Account" element={<RegisterForm />} />
-
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-
-      <FooterApp className="space-10" />
     </div>
   )
 }
