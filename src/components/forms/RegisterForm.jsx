@@ -45,7 +45,7 @@ export default function RegisterForm() {
                 required: 'Enter a Title for the food please!',
               })}
               placeholder="USERNAME"
-              className="border p-3 col-span-1 md:col-span-1 "
+              className="border p-3 col-span-1 md:col-span-1 lowercase"
             />
             {errors.username && (
               <span className="text-red-700 col-span-1 ">
@@ -58,7 +58,7 @@ export default function RegisterForm() {
                 required: 'Enter First Name ',
               })}
               placeholder="FIRSR NAME"
-              className="border p-3 col-span-1 md:col-span-1 "
+              className="border p-3 col-span-1 md:col-span-1 lowercase "
             />
             {errors.firstname && (
               <span className="text-red-700 col-span-1 ">
@@ -70,7 +70,7 @@ export default function RegisterForm() {
                 required: 'Enter Last Name ',
               })}
               placeholder="LAST NAME "
-              className="border p-3 col-span-3 md:col-span-1 "
+              className="border p-3 col-span-3 md:col-span-1 lowercase"
             />
             {errors.lastname && (
               <span className="text-red-700 col-span-1  ">
@@ -85,12 +85,12 @@ export default function RegisterForm() {
                   message: 'Enter Your  Email',
                 },
                 pattern: {
-                  value: /[@#$%&]/,
+                  value: /[@]/,
                   message: 'Enter at least one special character',
                 },
               })}
-              placeholder="EMAIL"
-              className="border p-3 col-span-1 md:col-span-1 "
+              placeholder="Email"
+              className="border p-3 col-span-1 md:col-span-1 lowercase"
             />
             {errors.email && (
               <span className="text-red-700 col-span-1 ">
@@ -102,8 +102,8 @@ export default function RegisterForm() {
               {...register('password', {
                 required: 'Enter Password',
               })}
-              placeholder="PASSWORD "
-              className="border p-3 col-span-3 md:col-span-1 "
+              placeholder="Password "
+              className="border p-3 col-span-3 md:col-span-1 lowercase "
             />
             {errors.password && (
               <span className="text-red-700 col-span-1">
@@ -115,7 +115,7 @@ export default function RegisterForm() {
                 required: 'Password and Confirm Password Field do not match ',
               })}
               placeholder="CONFIRME PASSWORD "
-              className="border p-3 col-span-3 md:col-span-1 "
+              className="border p-3 col-span-3 md:col-span-1 lowercase "
             />
             {errors.confiremPassword && (
               <span className="text-red-700 col-span-1  ">
@@ -123,7 +123,7 @@ export default function RegisterForm() {
               </span>
             )}
 
-            <div className="border p-2 flex flex-col items-stretch space-y-1">
+            {/* <div className="border p-2 flex flex-col items-stretch space-y-1">
               <input
                 {...register('npassword', {
                   required: {
@@ -163,7 +163,7 @@ export default function RegisterForm() {
                   {errors.npassword.message}
                 </span>
               )}
-            </div>
+            </div> */}
           </div>
 
           <div className=" grid grid-cols-2 gap-3 space-y-3">
