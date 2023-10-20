@@ -42,7 +42,12 @@ export default function RegisterForm() {
           <div className="grid grid-cols-1 gap-2">
             <input
               {...register('username', {
-                required: 'Enter a Title for the food please!',
+                required: {
+                  value: true,
+                  message: 'Enter username!',
+                },
+                minLength: { value: 6, message: 'min length are at least 6' },
+                maxLength: { value: 32, message: 'max length are at least 32' },
               })}
               placeholder="USERNAME"
               className="border p-3 col-span-1 md:col-span-1 lowercase"
@@ -55,7 +60,9 @@ export default function RegisterForm() {
 
             <input
               {...register('firstname', {
-                required: 'Enter First Name ',
+                required: { value: true, message: 'Enter First Name ' },
+                minLength: { value: 6, message: 'min length are at least 6' },
+                maxLength: { value: 32, message: 'max length are at least 32' },
               })}
               placeholder="FIRSR NAME"
               className="border p-3 col-span-1 md:col-span-1 lowercase "
@@ -67,7 +74,9 @@ export default function RegisterForm() {
             )}
             <input
               {...register('lastname', {
-                required: 'Enter Last Name ',
+                required: { value: true, message: 'Enter Last Name ' },
+                minLength: { value: 6, message: 'min length are at least 6' },
+                maxLength: { value: 32, message: 'max length are at least 32' },
               })}
               placeholder="LAST NAME "
               className="border p-3 col-span-3 md:col-span-1 lowercase"
@@ -100,7 +109,18 @@ export default function RegisterForm() {
 
             <input
               {...register('password', {
-                required: 'Enter Password',
+                required: {
+                  value: true,
+                  message: 'Enter Password',
+                },
+                minLength: {
+                  value: 6,
+                  message: 'min length are at least 6',
+                },
+                maxLength: {
+                  value: 32,
+                  message: 'Max length are at least 32',
+                },
               })}
               placeholder="Password "
               className="border p-3 col-span-3 md:col-span-1 lowercase "
