@@ -91,35 +91,19 @@ const Contact = () => {
       </p>
       <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 p-3 ">
         <div className="border rounded text-center w-full h-auto col-span-1">
-          <img
-            src="public/svg/call-svgrepo-com.svg"
-            width={50}
-            height={50}
-            alt="phone"
-            className=""
-          />
-          <h1>Phone</h1>
+          <span className="text-2xl text-teal-800">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </span>
+          <h1 className="font-bold">Phone</h1>
           <p>+25132380202</p>
         </div>
-        <div className="border rounded text-center w-full h-auto col-span-1 ">
-          <img
-            src="public/images/email-14-svgrepo-com.svg"
-            alt="Envelope with a newsletter"
-            className=" "
-            width={50}
-            height={50}
-          />
+        <div className="border rounded text-center w-full h-auto col-span-1 text-teal-800">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
           <h1>Email</h1>
           <p>yared241993@gmail.com</p>
         </div>
-        <div className="border rounded text-center w-full h-auto col-span-1 ">
-          <img
-            src="public/svg/call-svgrepo-com.svg"
-            width={50}
-            height={50}
-            alt="phone"
-            className=""
-          />
+        <div className="border rounded text-center w-full h-auto col-span-1 text-teal-800">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
           <h1>Address</h1>
           <p>Ethiopia , AdissAbeba , Mekelle</p>
         </div>
