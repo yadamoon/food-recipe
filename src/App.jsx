@@ -28,7 +28,7 @@ function App() {
     return () => clearTimeout(timer)
   }, [])
   return (
-    <div className=" bg-gray-300 ">
+    <div className=" bg-gray-200 ">
       <HeaderApp />
       <Nav />
       <br />
@@ -36,7 +36,7 @@ function App() {
         <div className="flex justify-center items-center w-full h-screen bg-white">
           <ReactLoading
             type="spinningBubbles"
-            color="#fffff"
+            color="#008080"
             height={100}
             width={50}
           />
