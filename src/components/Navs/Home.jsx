@@ -149,7 +149,9 @@ export const PopularVideo = () => {
                   />
                 </svg>
               </div>
-              <p className="text-center font-bold">{foods.title}</p>{' '}
+              <p className="text-center font-bold text-teal-800">
+                {foods.title}
+              </p>
             </div>
           ))}
         </div>
