@@ -5,7 +5,7 @@ const ContactForm = () => {
     <div className="w-full h-screen">
       <div className=" h-96"></div>
       <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
-        <div className="w-full shadow rounded p-8 sm:p-12 -mt-72">
+        <div className="w-fullrounded p-8 sm:p-12 -mt-72">
           <p className="text-3xl font-bold leading-7 text-center text-black">
             Contact me
           </p>
@@ -17,27 +17,24 @@ const ContactForm = () => {
                 </label>
                 <input
                   type="text"
-                  className="leading-none text-gray-50 p-3 focus:outline-none focus:teal-blue-700 mt-4 border-0  rounded"
+                  className="leading-none text-gray-50 p-3  focus:teal-blue-700 mt-4 border rounded"
                 />
               </div>
               <div className="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
                 <label className="font-semibold leading-none text-gray-600">
                   Phone
                 </label>
-                <input
-                  type="email"
-                  className="leading-none text-gray-50 p-3 focus:outline-none focus:teal-blue-700 mt-4 border-0  rounded"
-                />
+                <input type="text" className=" p-3 mt-4 border  rounded" />
               </div>
             </div>
             <div className="md:flex items-center mt-8">
               <div className="w-full flex flex-col">
                 <label className="font-semibold leading-none text-gray-600">
-                  Subject
+                  Email
                 </label>
                 <input
                   type="text"
-                  className="leading-none text-gray-50 p-3 focus:outline-none focus:teal-blue-700 mt-4 border-0  rounded"
+                  className="leading-none  p-3  mt-4 border  rounded"
                 />
               </div>
             </div>
@@ -48,7 +45,7 @@ const ContactForm = () => {
                 </label>
                 <textarea
                   type="text"
-                  className="h-40 text-base leading-none text-gray-50 p-3 focus:outline-none focus:teal-blue-700 mt-4  border-0 rounded"
+                  className="h-40 text-base  focus:teal-blue-700 mt-4  border rounded"
                 ></textarea>
               </div>
             </div>
