@@ -69,10 +69,11 @@ export const FoodForHealthy = () => {
             esse est neque debitis reiciendis autem officiis libero ducimus
             fugiat?
           </p>
-
-          <button className="bg-teal-600 text-white p-2 rounded space-y-6">
-            Get Startd
-          </button>
+          <div className="grid grid-cols-1 w-full items-center sm:w-2/3 sm:mx-16">
+            <button className="bg-teal-600 text-white p-2 rounded space-y-6">
+              Get Startd
+            </button>
+          </div>
         </div>
       </div>
     </>
@@ -151,7 +152,7 @@ export const PopularVideo = () => {
               </div>
               <p className="text-center font-bold text-teal-800">
                 {foods.title}
-              </p>
+              </p>{' '}
             </div>
           ))}
         </div>
