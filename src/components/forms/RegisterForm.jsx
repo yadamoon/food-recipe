@@ -80,7 +80,14 @@ export default function RegisterForm() {
 
             <input
               {...register('email', {
-                required: ' please Enter your Email',
+                required: {
+                  value: true,
+                  message: 'Enter Your  Email',
+                },
+                pattern: {
+                  value: /[@#$%&]/,
+                  message: 'Enter at least one special character',
+                },
               })}
               placeholder="EMAIL"
               className="border p-3 col-span-1 md:col-span-1 "
