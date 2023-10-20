@@ -7,9 +7,9 @@ const Nav = () => {
   const [activeStatus, setActiveStatus] = useState(1)
 
   return (
-    <div className=" ">
+    <div className="">
       <div className="bg-white ">
-        <ul className=" flex lg:red-400 justify-end w-full">
+        <ul className=" flex justify-end w-full mx-3">
           <li
             onClick={() => setActiveStatus(1)}
             className={
@@ -38,7 +38,7 @@ const Nav = () => {
                   <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
                 </svg>
               </span>
-              <span className="ml-1 flex font-normal">Home</span>
+              {/* <span className="ml-1 flex font-normal">Home</span> */}
             </Link>
             {activeStatus == 1 && (
               <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -82,10 +82,10 @@ const Nav = () => {
                     </g>
                   </svg>
                 </span>
-                <span className="ml-1 flex font-normal">
-                  {/* {activeStatus == 3 ? 'Active' : 'Inactive'} */}
+                {/* <span className="ml-1 flex font-normal">
+               
                   Recipes
-                </span>
+                </span> */}
               </Link>
               {activeStatus == 2 && (
                 <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -97,8 +97,8 @@ const Nav = () => {
             onClick={() => setActiveStatus(3)}
             className={
               activeStatus == 3
-                ? 'text-sm border-indigo-700 pt-3 rounded-t text-indigo-700 mr-12'
-                : 'text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-indigo-700 cursor-pointer'
+                ? 'text-sm border-teal-700 pt-3 rounded-t text-teal-700 mr-12'
+                : 'text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-teal-700 cursor-pointer'
             }
           >
             <Link to="/contact" className="flex items-center mb-3">
@@ -136,13 +136,13 @@ const Nav = () => {
                   </g>
                 </svg>
               </span>
-              <span className="ml-1  flex font-normal">
-                {/* {activeStatus == 2 ? 'Active' : 'Inactive'} */}
+              {/* <span className="ml-1  flex font-normal">
+              
                 contact
-              </span>
+              </span> */}
             </Link>
             {activeStatus == 3 && (
-              <div className="w-full h-1 bg-indigo-700 rounded-t-md" />
+              <div className="w-full h-1 bg-teal-700 rounded-t-md" />
             )}
           </li>
 
@@ -190,10 +190,10 @@ const Nav = () => {
                     </g>
                   </svg>
                 </span>
-                <span className="ml-1 flex font-normal">
-                  {/* {activeStatus == 3 ? 'Active' : 'Inactive'} */}
+                {/* <span className="ml-1 flex font-normal">
+                
                   Settings
-                </span>
+                </span> */}
               </Link>
               {activeStatus == 4 && (
                 <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -238,10 +238,10 @@ const Nav = () => {
                     </g>
                   </svg>
                 </span>
-                <span className="ml-1 flex font-normal">
-                  {/* {activeStatus == 3 ? 'Active' : 'Inactive'} */}
+                {/* <span className="ml-1 flex font-normal">
+               
                   Add
-                </span>
+                </span> */}
               </Link>
               {activeStatus == 5 && (
                 <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -304,10 +304,7 @@ const Nav = () => {
                   </g>
                 </svg>
               </span>
-              <span className="ml-1 flex font-normal">
-                {/* {activeStatus == 3 ? 'Active' : 'Inactive'} */}
-                Help
-              </span>
+              {/* <span className="ml-1  font-normal md:hidden lg:hidde">Help</span> */}
             </Link>
             {activeStatus == 6 && (
               <div className="w-full h-1 bg-teal-700 rounded-t-md" />
