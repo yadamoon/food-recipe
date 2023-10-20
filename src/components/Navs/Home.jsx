@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className="spacey-10">
+    <div className="spacey-10 ">
       <FoodForHealthy />
       <PopularVideo />
       <Sub />
@@ -13,7 +13,7 @@ export default function Home() {
 export const Sub = () => {
   return (
     <>
-      <div className="p-6 container md:w-2/3 xl:w-auto mx-auto  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white">
+      <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white">
         <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative h-auto flex items-center justify-center">
           <img
             src="public/images/email-14-svgrepo-com.svg"
