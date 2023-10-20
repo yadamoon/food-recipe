@@ -3,9 +3,7 @@ import Nav from './components/Nav'
 import FooterApp from './components/common/FooterApp'
 import HeaderApp from './components/common/HeaderApp'
 import DetailsComponents from './components/Navs/List_Recipes'
-
 import Help from './components/Navs/Help'
-
 import NotFound from './components/Navs/NotFound'
 import DetailsRecipe from './components/Navs/DetailsRecipe'
 import LoginPage from './components/forms/LoginPage'
@@ -31,11 +29,14 @@ function App() {
   }, [])
   return (
     <div className=" bg-gray-300 ">
+      <HeaderApp />
+      <Nav />
+      <br />
       {isLoading ? (
         <div className="flex justify-center items-center w-full h-screen bg-white">
           <ReactLoading
             type="spinningBubbles"
-            color="#FFFFF"
+            color="#fffff"
             height={100}
             width={50}
           />
@@ -43,9 +44,6 @@ function App() {
       ) : (
         <div>
           {' '}
-          <HeaderApp />
-          <Nav />
-          <br />
           <Routes className="pl-40 pr-40">
             <Route path="/" element={<Home />} />
             <Route path="/Add_New_Recipe" element={<Add_New_Recipe />} />
