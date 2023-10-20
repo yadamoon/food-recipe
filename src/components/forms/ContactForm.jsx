@@ -32,16 +32,16 @@ const ContactForm = () => {
                       message: 'Please Enter Your Name!',
                     },
                     minLength: {
-                      value: 6,
+                      value: 2,
                       message: 'min length are at least 6',
                     },
                     maxLength: {
-                      value: 32,
+                      value: 20,
                       message: 'max length are at least 32',
                     },
                   })}
                   placeholder=" Name"
-                  className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100"
+                  className=" p-3 mt-4 border  rounded"
                 />
                 {errors.name && (
                   <span className="text-red-700 col-span-1 ">
@@ -53,7 +53,7 @@ const ContactForm = () => {
                 <label className="font-semibold leading-none text-gray-600">
                   Phone
                 </label>
-                <input />
+
                 <input
                   {...register('phone', {
                     required: {
