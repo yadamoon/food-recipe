@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { setHide, setShow } from '../../store/slices/authSlice'
+import { motion } from 'framer-motion'
 
 export default function HeaderApp() {
   const [show, setshow] = useState(false)
@@ -13,7 +14,11 @@ export default function HeaderApp() {
       <nav className="2xl:container 2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4">
         {/* For large and Medium-sized Screen */}
         <div className="flex justify-between ">
-          <div className=" flex space-x-3 items-center">
+          <motion.div
+            className=" flex space-x-3 items-center"
+            initial={{ y: -250 }}
+            animate={{ y: -10 }}
+          >
             <img
               src="public/svg/western-food-1-svgrepo-com.svg"
               width={80}
@@ -23,7 +28,7 @@ export default function HeaderApp() {
             <h1 className=" text-3xl leading-6 text-teal-800 uppercase font-thin">
               food recipe
             </h1>
-          </div>
+          </motion.div>
           <div className="hidden sm:flex flex-row items-center space-x-6">
             <svg
               className=" focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer"
