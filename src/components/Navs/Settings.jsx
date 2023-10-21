@@ -68,16 +68,12 @@ const publicProfile = () => {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => {
+  const saveToDB = (data) => {
     console.log(data) // You can handle the form data here
   }
 
   return (
     <div className="bg-white justify-center flex">
-      <div className="text-gray-400 font-bold text-2xl mx-0">
-        <h1>Profile</h1>
-      </div>
-
       <form action="">
         <div className="md:flex items-center mt-12 ">
           <div className="w-full md:w-1/2 flex flex-col">
@@ -86,10 +82,10 @@ const publicProfile = () => {
             </label>
 
             <input
-              {...register('name', {
+              {...register('firstName', {
                 required: {
                   value: true,
-                  message: 'Please Enter Your Name!',
+                  message: 'Please Enter Your First Name!',
                 },
                 minLength: {
                   value: 2,
@@ -102,9 +98,9 @@ const publicProfile = () => {
               })}
               className=" p-3 mt-4 border  rounded"
             />
-            {errors.name && (
+            {errors.firstName && (
               <span className="text-red-700 col-span-1 ">
-                {errors.name.message}
+                {errors.firstName.message}
               </span>
             )}
           </div>
@@ -112,12 +108,11 @@ const publicProfile = () => {
             <label className="font-semibold leading-none text-gray-600">
               Last Name
             </label>
-
             <input
               {...register('lastName', {
                 required: {
                   value: true,
-                  message: 'Please Enter Your last Name!',
+                  message: 'Please Enter Last Name',
                 },
                 minLength: {
                   value: 2,
@@ -130,9 +125,9 @@ const publicProfile = () => {
               })}
               className=" p-3 mt-4 border  rounded"
             />
-            {errors.name && (
+            {errors.lastName && (
               <span className="text-red-700 col-span-1 ">
-                {errors.name.message}
+                {errors.lastName.message}
               </span>
             )}
           </div>
@@ -176,7 +171,7 @@ const publicProfile = () => {
               {...register('email', {
                 required: {
                   value: true,
-                  message: 'Please Enter Your Phone Number!',
+                  message: 'Please Enter Your Email!',
                 },
                 minLength: {
                   value: 6,
@@ -191,7 +186,7 @@ const publicProfile = () => {
                   message: 'Enter at least one special character',
                 },
               })}
-              className="leading-none  p-3  mt-4 border  rounded"
+              className="leading-none  p-4  mt-4 border  rounded"
             />
             {errors.email && (
               <span className="text-red-700 col-span-1 ">
@@ -212,15 +207,15 @@ const publicProfile = () => {
                 {...register('oldPassword', {
                   required: {
                     value: true,
-                    message: 'Please Enter Your Name!',
+                    message: 'Please Enter Old Your Password!',
                   },
                   minLength: {
-                    value: 2,
+                    value: 6,
                     message: 'min length are at least 6',
                   },
                   maxLength: {
-                    value: 20,
-                    message: 'max length are at least 32',
+                    value: 8,
+                    message: 'max length are at least 8',
                   },
                 })}
                 className=" p-3 mt-4 border  rounded"
@@ -237,25 +232,25 @@ const publicProfile = () => {
               </label>
 
               <input
-                {...register('lastName', {
+                {...register('newPassword', {
                   required: {
                     value: true,
-                    message: 'Please Enter Your last Name!',
+                    message: 'Please Enter New Password!',
                   },
                   minLength: {
-                    value: 2,
+                    value: 6,
                     message: 'min length are at least 6',
                   },
                   maxLength: {
-                    value: 20,
-                    message: 'max length are at least 32',
+                    value: 8,
+                    message: 'max length are at least 8',
                   },
                 })}
                 className=" p-3 mt-4 border  rounded"
               />
-              {errors.name && (
+              {errors.newPassword && (
                 <span className="text-red-700 col-span-1 ">
-                  {errors.name.message}
+                  {errors.newPassword.message}
                 </span>
               )}
             </div>
@@ -265,33 +260,42 @@ const publicProfile = () => {
               </label>
 
               <input
-                {...register('phone', {
+                {...register('confiremPassword', {
                   required: {
                     value: true,
-                    message: 'Please Enter Your Phone Number!',
+                    message: 'Please Confirem New Password!',
                   },
                   minLength: {
                     value: 6,
                     message: 'min length are at least 6',
                   },
                   maxLength: {
-                    value: 32,
-                    message: 'max length are at least 32',
+                    value: 8,
+                    message: 'max length are at least 8',
                   },
                 })}
                 className=" p-3 mt-4 border  rounded"
               />
-              {errors.phone && (
+              {errors.confiremPassword && (
                 <span className="text-red-700 col-span-1 ">
-                  {errors.phone.message}
+                  {errors.confiremPassword.message}
                 </span>
               )}
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center w-full">
-          <button className="mt-9 font-semibold leading-none text-white py-4 px-10 bg-teal-700 rounded hover:bg-teal-600 focus:ring-2 focus:ring-offset-2 focus:ring-teal-700 focus:outline-none">
-            Send message
+        <div className="grid grid-cols-2 gap-2">
+          <button
+            className="mt-9 font-semibold leading-none text-white py-4 bg-red-700 rounded hover:bg-red-600 focus:ring-2 focus:ring-offset-2 focus:ring-red-700 focus:outline-none col-span-1 "
+            onClick={handleSubmit(saveToDB)}
+          >
+            Don't Save
+          </button>
+          <button
+            className="mt-9 font-semibold leading-none text-white py-4 px-10 bg-teal-700 rounded hover:bg-teal-600 focus:ring-2 focus:ring-offset-2 focus:ring-teal-700 focus:outline-none col-span-1 "
+            onClick={handleSubmit(saveToDB)}
+          >
+            Save
           </button>
         </div>
       </form>
