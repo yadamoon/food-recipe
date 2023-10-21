@@ -31,8 +31,8 @@ const Settings = () => {
       {/* <!-- Seperator --> */}
       <div className="grid grid-cols-3 gap-4">
         <div className="shrink-0 bg-border h-[1px] w-full col-span-3"></div>
-        <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-          <nav className="flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1">
+        <div className=" ">
+          <nav className=" w-2/3">
             {contents.map((item, index) => (
               <a
                 key={index}
@@ -75,7 +75,7 @@ const publicProfile = () => {
   return (
     <div className="bg-white justify-center flex">
       <form action="">
-        <div className=" grid grid-cols-3  gap-2">
+        <div className=" grid grid-cols-3 ">
           <div className="w-full  col-span-1">
             <label className="font-semibold leading-none text-gray-600">
               First Name
