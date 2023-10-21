@@ -24,10 +24,9 @@ const Settings = () => {
   return (
     <div className="hidden space-y-6 p-10 pb-16 md:block bg-white">
       <div className="space-y-0.5">
-        <h2 className="text-2xl font-bold tracking-tight">Settings</h2>
-        <p className="text-muted-foreground">
-          Manage your account settings and set e-mail preferences.
-        </p>
+        <h2 className="text-2xl font-bold tracking-tight text-center">
+          Settings
+        </h2>
       </div>
       {/* <!-- Seperator --> */}
       <div className="shrink-0 bg-border h-[1px] w-full"></div>

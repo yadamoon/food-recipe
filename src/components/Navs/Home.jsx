@@ -69,8 +69,8 @@ export const FoodForHealthy = () => {
             esse est neque debitis reiciendis autem officiis libero ducimus
             fugiat?
           </p>
-          <div className="grid grid-cols-1 w-full items-center sm:w-2/3 sm:mx-16">
-            <button className="bg-teal-600 text-white p-2 rounded space-y-6">
+          <div className="grid grid-cols-1 w-full items-center sm:w-2/3 sm:mx-16 space-y-10">
+            <button className="bg-teal-600 text-white pe-7 p-2  rounded ">
               Get Startd
             </button>
           </div>
