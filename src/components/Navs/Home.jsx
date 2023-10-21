@@ -19,11 +19,11 @@ export const Sub = () => {
             src="public/images/email-14-svgrepo-com.svg"
             alt="Envelope with a newsletter"
             role="img"
-            className="w-2/3 "
+            className="w-1/3 "
           />
         </div>
         <div className="w-full xl:w-1/2 xl:pl-40 xl:py-28 ">
-          <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold leading-10 text-teal-800 mb-4 text-center xl:text-left md:mt-0 mt-4">
+          <h1 className="text-xl md:text-4xl xl:text-5xl font-bold leading-10 text-teal-800 mb-4 text-center xl:text-left md:mt-0 mt-4">
             Subscribe
           </h1>
           <p className="text-base leading-normal text-gray-600 text-center xl:text-left">
