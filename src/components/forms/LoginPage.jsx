@@ -131,8 +131,6 @@ function LoginPage() {
           </div>
         </form>
       </div>
-
-      <button onClick={notify}>notify me</button>
     </div>
   )
 }
