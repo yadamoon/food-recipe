@@ -73,7 +73,7 @@ const publicProfile = () => {
   }
 
   return (
-    <div className="bg-white justify-center flex">
+    <div className="bg-white justify-center flex ml-12">
       <form action="">
         <div className=" grid grid-cols-3 ">
           <div className="w-full  col-span-1">
