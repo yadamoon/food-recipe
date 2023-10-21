@@ -8,11 +8,11 @@ const Settings = () => {
       content: publicProfile,
     },
     {
-      title: 'Account Settings',
+      title: 'Language',
       content: accountSettings,
     },
     {
-      title: 'Account Settings',
+      title: 'Appearance',
       content: notifications,
     },
   ]
@@ -75,8 +75,8 @@ const publicProfile = () => {
   return (
     <div className="bg-white justify-center flex">
       <form action="">
-        <div className="md:flex items-center mt-12 ">
-          <div className="w-full md:w-1/2 flex flex-col">
+        <div className=" grid grid-cols-3  gap-2">
+          <div className="w-full  col-span-1">
             <label className="font-semibold leading-none text-gray-600">
               First Name
             </label>
@@ -104,7 +104,8 @@ const publicProfile = () => {
               </span>
             )}
           </div>
-          <div className="w-full md:w-1/2 flex flex-col mx-8">
+
+          <div className="w-full   col-span-1">
             <label className="font-semibold leading-none text-gray-600">
               Last Name
             </label>
@@ -131,7 +132,8 @@ const publicProfile = () => {
               </span>
             )}
           </div>
-          <div className="w-full md:w-1/2 flex flex-col md:ml-0 md:mt-0 mt-4">
+
+          <div className="w-full  col-span-1">
             <label className="font-semibold leading-none text-gray-600">
               Phone
             </label>
