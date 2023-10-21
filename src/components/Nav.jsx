@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -9,7 +10,7 @@ const Nav = () => {
   return (
     <div className="">
       <div className="bg-white ">
-        <ul className=" flex justify-end w-full mx-3">
+        <motion.ul className=" flex justify-end w-full mx-3 ">
           <li
             onClick={() => setActiveStatus(1)}
             className={
@@ -82,10 +83,9 @@ const Nav = () => {
                     </g>
                   </svg>
                 </span>
-                {/* <span className="ml-1 flex font-normal">
-               
+                <span className=" hidden ml-1 md:block font-normal">
                   Recipes
-                </span> */}
+                </span>
               </Link>
               {activeStatus == 2 && (
                 <div className="w-full h-1 bg-teal-700 rounded-t-md" />
@@ -303,7 +303,7 @@ const Nav = () => {
               <div className="w-full h-1 bg-teal-700 rounded-t-md" />
             )}
           </li>
-        </ul>
+        </motion.ul>
       </div>
     </div>
   )
