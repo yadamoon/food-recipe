@@ -100,7 +100,6 @@ const publicProfile = () => {
                   message: 'max length are at least 32',
                 },
               })}
-              placeholder="First Name"
               className=" p-3 mt-4 border  rounded"
             />
             {errors.name && (
@@ -129,7 +128,6 @@ const publicProfile = () => {
                   message: 'max length are at least 32',
                 },
               })}
-              placeholder="last Name "
               className=" p-3 mt-4 border  rounded"
             />
             {errors.name && (
@@ -158,7 +156,6 @@ const publicProfile = () => {
                   message: 'max length are at least 32',
                 },
               })}
-              placeholder="Phone Number"
               className=" p-3 mt-4 border  rounded"
             />
             {errors.phone && (
@@ -194,7 +191,6 @@ const publicProfile = () => {
                   message: 'Enter at least one special character',
                 },
               })}
-              placeholder="Email"
               className="leading-none  p-3  mt-4 border  rounded"
             />
             {errors.email && (
@@ -208,11 +204,12 @@ const publicProfile = () => {
           <div className="md:flex items-center mt-12 ">
             <div className="w-full md:w-1/2 flex flex-col">
               <label className="font-semibold leading-none text-gray-600">
-                First Name
+                Old Password
               </label>
 
               <input
-                {...register('name', {
+                type="password"
+                {...register('oldPassword', {
                   required: {
                     value: true,
                     message: 'Please Enter Your Name!',
@@ -226,18 +223,17 @@ const publicProfile = () => {
                     message: 'max length are at least 32',
                   },
                 })}
-                placeholder="First Name"
                 className=" p-3 mt-4 border  rounded"
               />
-              {errors.name && (
+              {errors.oldPassword && (
                 <span className="text-red-700 col-span-1 ">
-                  {errors.name.message}
+                  {errors.oldPassword.message}
                 </span>
               )}
             </div>
             <div className="w-full md:w-1/2 flex flex-col mx-8">
               <label className="font-semibold leading-none text-gray-600">
-                Last Name
+                New Password
               </label>
 
               <input
@@ -255,7 +251,6 @@ const publicProfile = () => {
                     message: 'max length are at least 32',
                   },
                 })}
-                placeholder="last Name "
                 className=" p-3 mt-4 border  rounded"
               />
               {errors.name && (
@@ -284,7 +279,6 @@ const publicProfile = () => {
                     message: 'max length are at least 32',
                   },
                 })}
-                placeholder="Phone Number"
                 className=" p-3 mt-4 border  rounded"
               />
               {errors.phone && (
@@ -296,10 +290,7 @@ const publicProfile = () => {
           </div>
         </div>
         <div className="flex items-center justify-center w-full">
-          <button
-            // onClick={handleSubmit(handleClick)}
-            className="mt-9 font-semibold leading-none text-white py-4 px-10 bg-teal-700 rounded hover:bg-teal-600 focus:ring-2 focus:ring-offset-2 focus:ring-teal-700 focus:outline-none"
-          >
+          <button className="mt-9 font-semibold leading-none text-white py-4 px-10 bg-teal-700 rounded hover:bg-teal-600 focus:ring-2 focus:ring-offset-2 focus:ring-teal-700 focus:outline-none">
             Send message
           </button>
         </div>
