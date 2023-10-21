@@ -82,8 +82,9 @@ const Contact = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="bg-white  mx-3">
-      <h1 className="text-center text-2xl font-bold">CONTACT US</h1>
+    <div className="bg-white  mx-3 rounded">
+      <br />
+      <h1 className="text-center text-2xl font-bold ">CONTACT US</h1>
 
       <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 sm:grid-cols-2 p-6 ">
         <div className=" rounded text-center w-full h-auto col-span-1 p-6 border  shadow hover:bg-gray-50">

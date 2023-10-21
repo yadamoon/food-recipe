@@ -10,7 +10,7 @@ export default function HeaderApp() {
   const { signedIn } = useSelector((state) => state.auth)
 
   return (
-    <div className=" bg-gray-100 ">
+    <div className=" bg-gray-100  ">
       <nav className="2xl:container 2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4">
         {/* For large and Medium-sized Screen */}
         <div className="flex justify-between ">
@@ -29,7 +29,7 @@ export default function HeaderApp() {
               food recipe
             </h1>
           </motion.div>
-          <div className="hidden sm:flex flex-row items-center space-x-6">
+          {/* <div className="hidden sm:flex flex-row items-center space-x-6">
             <svg
               className=" focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer"
               width={24}
@@ -114,7 +114,7 @@ export default function HeaderApp() {
                 strokeLinejoin="round"
               />
             </svg>
-          </div>
+          </div> */}
           {!signedIn && (
             <div className="hidden sm:flex flex-row space-x-4">
               <Link

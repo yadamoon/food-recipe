@@ -14,12 +14,12 @@ const ContactForm = () => {
     <div className="w-full h-screen ">
       <div className=" h-96"></div>
       <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12 ">
-        <div className="w-fullrounded p-8 sm:p-12 -mt-72 border  shadow">
+        <div className="w-fullrounded p-8 sm:p-12 -mt-72 border  shadow rounded">
           <p className="text-3xl font-bold leading-7 text-center text-black">
             CONTACT
           </p>
           <form action="">
-            <div className="md:flex items-center mt-12">
+            <div className="md:flex items-center mt-12 ">
               <div className="w-full md:w-1/2 flex flex-col">
                 <label className="font-semibold leading-none text-gray-600">
                   Name
