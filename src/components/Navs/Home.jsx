@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className="spacey-10 ">
+    <div className=" ">
       <FoodForHealthy />
       <PopularVideo />
       <Sub />
@@ -115,15 +115,19 @@ export const PopularVideo = () => {
     <div className="  bg-gradient-to-br p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch bg-white   overflow-auto">
       {/* //!? from tilawind Componenets */}
       <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
-        <div className=" text-center">
+        <motion.div className=" text-center" animate={{ y: 40 }}>
           <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-teal-800 md:w-full w-9/12 mx-auto">
             Popular videos
           </h2>
-        </div>
+        </motion.div>
 
         <div className=" grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:grap-8 md:gap-6 gap-4 mt-10">
           {popularVideo.map((foods) => (
-            <div key={foods.id} className="relative group">
+            <motion.div
+              key={foods.id}
+              className="relative group"
+              animate={{ x: 40, y: 10 }}
+            >
               <img src={foods.img} alt={foods.alt} className="  " />
               <div className=" flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full" />
               <div className=" absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100">
@@ -160,7 +164,7 @@ export const PopularVideo = () => {
               <p className="text-center font-bold text-teal-800">
                 {foods.title}
               </p>{' '}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
