@@ -10,7 +10,10 @@ const Nav = () => {
   return (
     <div className="">
       <div className="bg-white ">
-        <motion.ul className=" flex justify-end w-full mx-3 ">
+        <motion.ul
+          animate={{ x: 10 }}
+          className=" flex justify-end w-full mx-3 "
+        >
           <li
             onClick={() => setActiveStatus(1)}
             className={
