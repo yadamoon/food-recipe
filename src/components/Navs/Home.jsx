@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 
 export default function Home() {
@@ -50,15 +51,21 @@ export const FoodForHealthy = () => {
   return (
     <>
       <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white">
-        <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative flex items-center justify-center">
+        <motion.div
+          className="xl:w-1/2 md:mb-14 xl:mb-0 relative flex items-center justify-center"
+          animate={{ x: 40 }}
+        >
           <img
             src="public/images/test.png"
             alt="Envelope with a newsletter"
             role="img"
             className="h-2/3 xl:w-full lg:w-1/2 w-full bg-white rounded-2xl "
           />
-        </div>
-        <div className="w-full xl:w-1/2 xl:pl-40 xl:py-28 ">
+        </motion.div>
+        <motion.div
+          className="w-full xl:w-1/2 xl:pl-40 xl:py-28 "
+          animate={{ y: 30 }}
+        >
           <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold leading-10 text-teal-800 mb-4 text-center xl:text-left md:mt-0 mt-4">
             Eat Healthy <br />
             Live Healthy
@@ -74,7 +81,7 @@ export const FoodForHealthy = () => {
               Get Startd
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   )
