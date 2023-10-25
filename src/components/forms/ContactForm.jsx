@@ -40,7 +40,6 @@ const ContactForm = () => {
                       message: 'max length are at least 32',
                     },
                   })}
-                  placeholder=" Name"
                   className=" p-3 mt-4 border  rounded"
                 />
                 {errors.name && (
@@ -69,7 +68,6 @@ const ContactForm = () => {
                       message: 'max length are at least 32',
                     },
                   })}
-                  placeholder="Phone Number"
                   className=" p-3 mt-4 border  rounded"
                 />
                 {errors.phone && (
@@ -105,7 +103,6 @@ const ContactForm = () => {
                       message: 'Enter at least one special character',
                     },
                   })}
-                  placeholder=" Email"
                   className="leading-none  p-3  mt-4 border  rounded"
                 />
                 {errors.email && (
@@ -136,7 +133,6 @@ const ContactForm = () => {
                       message: 'max length are at least 32',
                     },
                   })}
-                  placeholder="Phone Number"
                   className="h-40 text-base  focus:teal-blue-700 mt-4  border rounded"
                 />
                 {errors.phone && (
