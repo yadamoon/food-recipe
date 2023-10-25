@@ -24,6 +24,7 @@ const Settings = () => {
   return (
     <div className=" mx-10 rounded bg-white">
       <div>
+        {/* titel of components */}
         <h2 className="text-center text-3xl">Settings</h2>
       </div>
       {/* <!-- Seperator --> */}
