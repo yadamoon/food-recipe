@@ -116,6 +116,7 @@ export default function HeaderApp() {
           className={`${show ? 'block' : 'hidden'} sm:hidden mt-4 mx-auto`}
         >
           <div className="flex flex-row items-center justify-center space-x-6">
+            {/* tewiter */}
             <svg
               className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer"
               width={24}
@@ -131,21 +132,26 @@ export default function HeaderApp() {
                 strokeLinejoin="round"
               />
             </svg>
-            <svg
-              className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
-                stroke="#1F2937"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            {/* facebook */}
+            <a href="https://www.facebook.com/wizyaru.teklehaymanotnigro">
+              <svg
+                className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                onClick={'https://www.facebook.com/wizyaru.teklehaymanotnigro'}
+              >
+                <path
+                  d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+                  stroke="#1F2937"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+            {/* linkedIn */}
             <svg
               className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer"
               width={24}
@@ -173,6 +179,7 @@ export default function HeaderApp() {
                 strokeLinejoin="round"
               />
             </svg>
+            {/* //!? instagram */}
             <svg
               className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer"
               width={24}
