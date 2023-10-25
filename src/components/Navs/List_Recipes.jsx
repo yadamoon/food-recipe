@@ -22,7 +22,7 @@ function RCPaginate({ items, itemsPerPage, setter }) {
   }
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center ">
       <ReactPaginate
         containerClassName="flex space-x-4 items-center bg-white p-2 px-4 justify-center rounded"
         nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
