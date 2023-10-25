@@ -62,15 +62,15 @@ const Settings = () => {
 export default Settings
 import { useForm } from 'react-hook-form'
 const publicProfile = () => {
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
 
-  // const saveToDB = (data) => {
-  //   console.log(data) // You can handle the form data here
-  // }
+  const saveToDB = (data) => {
+    console.log(data) // You can handle the form data here
+  }
 
   return (
     <div>
@@ -318,7 +318,25 @@ const publicProfile = () => {
                   Email
                 </label>
                 <input
-                  type="text"
+                  type="email"
+                  {...register('email', {
+                    required: {
+                      value: true,
+                      message: 'Please Enter Your Email!',
+                    },
+                    minLength: {
+                      value: 6,
+                      message: 'min length are at least 6',
+                    },
+                    maxLength: {
+                      value: 32,
+                      message: 'max length are at least 32',
+                    },
+                    pattern: {
+                      value: /[@]/,
+                      message: 'Enter at least one special character',
+                    },
+                  })}
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
               </div>
@@ -331,6 +349,20 @@ const publicProfile = () => {
                 </label>
                 <input
                   type="text"
+                  {...register('firstName', {
+                    required: {
+                      value: true,
+                      message: 'Please Enter Your First Name!',
+                    },
+                    minLength: {
+                      value: 2,
+                      message: 'min length are at least 6',
+                    },
+                    maxLength: {
+                      value: 20,
+                      message: 'max length are at least 32',
+                    },
+                  })}
                   className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
               </div>
@@ -342,7 +374,21 @@ const publicProfile = () => {
                   Last Name
                 </label>
                 <input
-                  type="number"
+                  type="text"
+                  {...register('lastName', {
+                    required: {
+                      value: true,
+                      message: 'Please Enter Last Name',
+                    },
+                    minLength: {
+                      value: 2,
+                      message: 'min length are at least 6',
+                    },
+                    maxLength: {
+                      value: 20,
+                      message: 'max length are at least 32',
+                    },
+                  })}
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
               </div>
@@ -366,7 +412,21 @@ const publicProfile = () => {
                   New Password
                 </label>
                 <input
-                  type="number"
+                  type="password"
+                  {...register('newPassword', {
+                    required: {
+                      value: true,
+                      message: 'Please Enter New Password!',
+                    },
+                    minLength: {
+                      value: 6,
+                      message: 'min length are at least 6',
+                    },
+                    maxLength: {
+                      value: 8,
+                      message: 'max length are at least 8',
+                    },
+                  })}
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
               </div>
@@ -397,6 +457,20 @@ const publicProfile = () => {
                 </label>
                 <input
                   type="text"
+                  {...register('confiremPassword', {
+                    required: {
+                      value: true,
+                      message: 'Please Confirem New Password!',
+                    },
+                    minLength: {
+                      value: 6,
+                      message: 'min length are at least 6',
+                    },
+                    maxLength: {
+                      value: 8,
+                      message: 'max length are at least 8',
+                    },
+                  })}
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
               </div>
