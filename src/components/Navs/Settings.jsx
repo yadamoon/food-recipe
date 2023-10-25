@@ -319,10 +319,7 @@ const publicProfile = () => {
                 </label>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
                 />
               </div>
               <div className="w-full">
@@ -334,10 +331,7 @@ const publicProfile = () => {
                 </label>
                 <input
                   type="text"
-                  name="brand"
-                  id="brand"
                   className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
                 />
               </div>
               <div className="w-full">
@@ -349,10 +343,7 @@ const publicProfile = () => {
                 </label>
                 <input
                   type="number"
-                  name="price"
-                  id="price"
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
                 />
               </div>
               <div className="w-full">
@@ -364,10 +355,7 @@ const publicProfile = () => {
                 </label>
                 <input
                   type="text"
-                  name="brand"
-                  id="brand"
                   className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
                 />
               </div>
               <div className="w-full">
@@ -379,10 +367,7 @@ const publicProfile = () => {
                 </label>
                 <input
                   type="number"
-                  name="price"
-                  id="price"
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
                 />
               </div>
               {/* <div>
@@ -412,10 +397,7 @@ const publicProfile = () => {
                 </label>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
                 />
               </div>
             </div>
