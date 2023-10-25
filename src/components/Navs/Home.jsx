@@ -54,17 +54,15 @@ export const FoodForHealthy = () => {
   return (
     <>
       <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white">
-        <motion.div
-          className="xl:w-1/2 md:mb-14 xl:mb-0 relative flex items-center justify-center"
-          animate={{ x: 40 }}
-        >
-          <img
+        <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative flex items-center justify-center">
+          <motion.img
             src="public/images/test.png"
             alt="Envelope with a newsletter"
             role="img"
-            className="h-2/3 xl:w-full lg:w-1/2 w-full bg-white rounded-2xl "
+            className="h-2/3 xl:w-full lg:w-1/2 w-full bg-white rounded-2xl md:w-1/2 "
+            animate={{ x: 20 }}
           />
-        </motion.div>
+        </div>
         <motion.div
           className="w-full xl:w-1/2 xl:pl-40 xl:py-28 "
           animate={{ y: 30 }}
