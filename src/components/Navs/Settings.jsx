@@ -360,7 +360,7 @@ const publicProfile = () => {
                   for="brand"
                   class="block mb-2 text-sm font-medium  dark:text-black"
                 >
-                  First Name
+                  Old Password
                 </label>
                 <input
                   type="text"
@@ -375,7 +375,7 @@ const publicProfile = () => {
                   for="price"
                   className="block mb-2 text-sm font-medium  dark:text-black"
                 >
-                  Last Name
+                  New Password
                 </label>
                 <input
                   type="number"
@@ -403,33 +403,20 @@ const publicProfile = () => {
                   <option value="PH">Phones</option>
                 </select>
               </div> */}
-              <div>
+              <div className="sm:col-span-2">
                 <label
-                  for="item-weight"
+                  for="name"
                   className="block mb-2 text-sm font-medium  dark:text-black"
                 >
-                  Item Weight (kg)
+                  Confir Passwordem
                 </label>
                 <input
-                  type="number"
-                  name="item-weight"
-                  id="item-weight"
+                  type="text"
+                  name="name"
+                  id="name"
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   required=""
                 />
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  for="description"
-                  class="block mb-2 text-sm font-medium  dark:text-black"
-                >
-                  Description
-                </label>
-                <textarea
-                  id="description"
-                  rows="8"
-                  className="block p-2.5 w-full text-sm rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500  "
-                ></textarea>
               </div>
             </div>
             <div className="flex items-center space-x-4">
