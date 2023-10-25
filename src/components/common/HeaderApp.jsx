@@ -20,10 +20,11 @@ export default function HeaderApp() {
             animate={{ y: -10 }}
           >
             <img
-              src="public/svg/western-food-1-svgrepo-com.svg"
+              src="public/images/finail.svg"
               width={80}
               height={40}
               alt=""
+              className="rounded-full"
             />
             <h1 className=" text-3xl leading-6 text-teal-800 uppercase font-thin">
               food recipe
