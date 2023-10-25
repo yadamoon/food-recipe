@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className="md:mx-28 w-full">
+    <div className="sm:mx-32 w-full">
       <FoodForHealthy />
       <PopularVideo />
       <Sub />
