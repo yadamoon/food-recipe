@@ -66,7 +66,7 @@ function DetailsComponents() {
       <h1 className="text-3xl text-center font-extrabold text-teal-800">
         Our Popular Food
       </h1>
-
+      {/* search componenets */}
       <SearchForm recipes={recipes} setter={setRecipesFiltered} />
       <div className="">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 p-3 ">
