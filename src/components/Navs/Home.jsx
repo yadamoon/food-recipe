@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className=" ">
+    <div className="md:mx-28 w-full">
       <FoodForHealthy />
       <PopularVideo />
       <Sub />
@@ -53,7 +53,7 @@ export const Sub = () => {
 export const FoodForHealthy = () => {
   return (
     <>
-      <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white">
+      <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white ">
         <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative flex items-center justify-center">
           <motion.img
             src="public/images/test.png"
@@ -113,10 +113,10 @@ export const PopularVideo = () => {
   ]
 
   return (
-    <div className="  bg-gradient-to-br p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch bg-white   overflow-auto">
+    <div className="  bg-gradient-to-br p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch bg-white    overflow-auto">
       {/* //!? from tilawind Componenets */}
       <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
-        <motion.div className=" text-center" animate={{ y: 40 }}>
+        <motion.div className=" text-center" animate={{ y: 20 }}>
           <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-teal-800 md:w-full w-9/12 mx-auto">
             Popular videos
           </h2>
@@ -127,7 +127,7 @@ export const PopularVideo = () => {
             <motion.div
               key={foods.id}
               className="relative group"
-              animate={{ x: 40, y: 10 }}
+              animate={{ x: 5, y: 10 }}
             >
               <img src={foods.img} alt={foods.alt} className="  " />
               <div className=" flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full" />
