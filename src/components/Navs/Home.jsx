@@ -10,6 +10,7 @@ export default function Home() {
     </div>
   )
 }
+// links of email
 
 export const Sub = () => {
   return (
@@ -49,7 +50,7 @@ export const Sub = () => {
     </>
   )
 }
-
+// helathy food
 export const FoodForHealthy = () => {
   return (
     <>
@@ -87,6 +88,7 @@ export const FoodForHealthy = () => {
     </>
   )
 }
+// popular videos
 
 export const PopularVideo = () => {
   const popularVideo = [

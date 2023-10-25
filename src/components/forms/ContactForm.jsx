@@ -24,7 +24,7 @@ const ContactForm = () => {
                 <label className="font-semibold leading-none text-gray-600">
                   Name
                 </label>
-
+                {/* name */}
                 <input
                   {...register('name', {
                     required: {
@@ -48,6 +48,7 @@ const ContactForm = () => {
                   </span>
                 )}
               </div>
+              {/* phone */}
               <div className="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
                 <label className="font-semibold leading-none text-gray-600">
                   Phone
@@ -78,6 +79,7 @@ const ContactForm = () => {
               </div>
             </div>
 
+            {/* email */}
             <div className="md:flex items-center mt-8">
               <div className="w-full flex flex-col">
                 <label className="font-semibold leading-none text-gray-600">
@@ -113,6 +115,7 @@ const ContactForm = () => {
               </div>
             </div>
             <div>
+              {/* message */}
               <div className="w-full flex flex-col mt-8">
                 <label className="font-semibold leading-none text-gray-600">
                   Message
@@ -143,6 +146,7 @@ const ContactForm = () => {
               </div>
             </div>
             <div className="flex items-center justify-center w-full">
+              {/* button to save */}
               <button
                 onClick={handleSubmit(handleClick)}
                 className="mt-9 font-semibold leading-none text-white py-4 px-10 bg-teal-700 rounded hover:bg-teal-600 focus:ring-2 focus:ring-offset-2 focus:ring-teal-700 focus:outline-none"
