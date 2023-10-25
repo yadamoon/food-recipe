@@ -15,14 +15,17 @@ export const Sub = () => {
   return (
     <>
       <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white">
-        <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative h-auto flex items-center justify-center">
+        <motion.div
+          className="xl:w-1/2 md:mb-14 xl:mb-0 relative h-auto flex items-center justify-center"
+          animate={{ y: 20 }}
+        >
           <img
             src="public/images/email-14-svgrepo-com.svg"
             alt="Envelope with a newsletter"
             role="img"
             className="w-1/3 "
           />
-        </div>
+        </motion.div>
         <div className="w-full xl:w-1/2 xl:pl-40 xl:py-28 ">
           <h1 className="text-xl md:text-4xl xl:text-5xl font-bold leading-10 text-teal-800 mb-4 text-center xl:text-left md:mt-0 mt-4">
             Subscribe
