@@ -22,7 +22,7 @@ const Settings = () => {
     auth.signOut()
   }
   return (
-    <div className="  rounded bg-white">
+    <div className=" w-full  bg-white">
       <div>
         {/* titel of components */}
         <h2 className="text-center text-3xl">Settings</h2>
@@ -30,7 +30,7 @@ const Settings = () => {
       {/* <!-- Seperator --> */}
       <div className="flex items-center justify-center flex-col h-screen">
         <div className="text-sm font-bold ">
-          <nav className="flex w-full justify-center space-x-3 ">
+          <nav className="flex w-full justify-center space-x-3   ">
             {contents.map((item, index) => (
               <a
                 key={index}
