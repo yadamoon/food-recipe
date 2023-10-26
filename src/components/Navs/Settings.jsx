@@ -22,37 +22,35 @@ const Settings = () => {
     auth.signOut()
   }
   return (
-    <div className=" mx-10 rounded bg-white">
+    <div className="  rounded bg-white">
       <div>
         {/* titel of components */}
         <h2 className="text-center text-3xl">Settings</h2>
       </div>
       {/* <!-- Seperator --> */}
-      <div className="grid grid-cols-3 gap-3  ">
-        <div className=" inline-block col-span-1 sm:col-span-3 lg:col-span-1 bg-white">
-          <nav className="">
+      <div className="flex items-center justify-center flex-col h-screen">
+        <div className="text-sm font-bold ">
+          <nav className="flex w-full justify-center space-x-3 ">
             {contents.map((item, index) => (
               <a
                 key={index}
                 className={
-                  (index === activeMenu ? 'text-white bg-teal-700' : '') +
-                  ' inline-flex items-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50  h-9 px-4 py-2 justify-start w-full border'
+                  (index === activeMenu
+                    ? 'text-white bg-teal-700 rounded '
+                    : '') + '   p-2  border'
                 }
                 onClick={() => setActiveMenu(index)}
               >
                 {item.title}
               </a>
             ))}
-            <button
-              className="hover:text-white hover:bg-teal-700 inline-flex items-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50  h-9 px-4 py-2 justify-start w-auto border"
-              onClick={handlLogout}
-            >
+            <button className="border p-2" onClick={handlLogout}>
               logout
             </button>
           </nav>
         </div>
 
-        <ActiveContent className="col-span-3 md:col-span-3 sm:col-span-1 " />
+        <ActiveContent className="col-span-3 md:col-span-3 sm:col-span-1 mx-10 " />
       </div>
     </div>
   )
