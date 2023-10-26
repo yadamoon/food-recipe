@@ -5,14 +5,17 @@ const Settings = () => {
   const contents = [
     {
       title: 'Public Profile',
+      image: 'public/images/user-profile-filled-svgrepo-com.svg',
       content: publicProfile,
     },
     {
       title: 'Language',
+      image: 'public/images/language-svgrepo-com.svg',
       content: accountSettings,
     },
     {
       title: 'Appearance',
+      image: 'public/images/theme-opened-svgrepo-com.svg',
       content: notifications,
     },
   ]
@@ -36,17 +39,31 @@ const Settings = () => {
                 key={index}
                 className={
                   (index === activeMenu
-                    ? 'text-white bg-teal-700 rounded '
+                    ? 'text-white bg-teal-600 rounded '
                     : '') + '   p-2  border'
                 }
                 onClick={() => setActiveMenu(index)}
               >
-                {item.title}
+                <span className="text-center">
+                  <img
+                    src={item.image}
+                    width={30}
+                    height={20}
+                    alt={item.image}
+                    srcset=""
+                  />
+                </span>
               </a>
             ))}
-            <button className="border p-2" onClick={handlLogout}>
-              logout
-            </button>
+            <a className="border p-2" onClick={handlLogout}>
+              <img
+                src="public/images/logout-svgrepo-com.svg"
+                width={30}
+                height={30}
+                alt=""
+                srcset=""
+              />
+            </a>
           </nav>
         </div>
 
