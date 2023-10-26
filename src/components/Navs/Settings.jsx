@@ -55,7 +55,7 @@ const Settings = () => {
                 </span>
               </a>
             ))}
-            <a className="border p-2" onClick={handlLogout}>
+            <Link to="/" className="border p-2" onClick={handlLogout}>
               <img
                 src="public/images/logout-svgrepo-com.svg"
                 width={30}
@@ -63,7 +63,7 @@ const Settings = () => {
                 alt=""
                 srcset=""
               />
-            </a>
+            </Link>
           </nav>
         </div>
 
@@ -75,6 +75,7 @@ const Settings = () => {
 
 export default Settings
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 const publicProfile = () => {
   const {
     register,
