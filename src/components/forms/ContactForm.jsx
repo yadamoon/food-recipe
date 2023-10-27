@@ -1,7 +1,16 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
+import Modal from 'modal-react-lib'
+import 'modal-react-lib/dist/index.css'
+
 const ContactForm = () => {
+  const [openModal, setOpenModal] = useState(false)
+
+  const modal_content = {
+    title: 'Modal Title',
+    text: 'Modal content',
+  }
   const {
     register,
     handleSubmit,
@@ -10,8 +19,10 @@ const ContactForm = () => {
   } = useForm()
   const handleClick = ({ name, phone, email, message }) => {
     console.log(`${name},${phone},${email},${message}`)
+
     reset()
   }
+
   return (
     <div className="w-full h-screen ">
       <div className=" h-96"></div>
@@ -156,6 +167,14 @@ const ContactForm = () => {
                 Send message
               </button>
             </div>
+
+            <button onClick={() => setOpenModal(!openModal)}>Open modal</button>
+
+            <Modal
+              openState={openModal}
+              onRequestClose={setOpenModal}
+              content={modal_content}
+            />
           </form>
         </div>
       </div>
