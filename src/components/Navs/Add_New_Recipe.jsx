@@ -61,7 +61,6 @@ const Add_New_Recipe = () => {
               }
             >
               {!pictureUrl && (
-                // <i className="fa fa-user-o" style={{ fontSize: 32 }}></i>
                 <div
                   className="w-6 h-6  hover:bg-teal-700 hover:text-white rounded  text-black  "
                   onClick={openFileDialog}
