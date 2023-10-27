@@ -83,7 +83,7 @@ const publicProfile = () => {
     formState: { errors },
   } = useForm()
 
-  const saveToDB = (data) => {
+  const saveToDB = ({ email, firstName, lastName }) => {
     console.log(data) // You can handle the form data here
   }
 
@@ -98,7 +98,7 @@ const publicProfile = () => {
             <div className="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
               <div className="sm:col-span-2">
                 <label
-                  for="name"
+                  for="Email"
                   className="block mb-2 text-sm font-medium  dark:text-black"
                 >
                   Email
@@ -128,7 +128,7 @@ const publicProfile = () => {
               </div>
               <div className="w-full">
                 <label
-                  for="brand"
+                  for="firstName"
                   class="block mb-2 text-sm font-medium  dark:text-black"
                 >
                   First Name
@@ -154,7 +154,7 @@ const publicProfile = () => {
               </div>
               <div className="w-full">
                 <label
-                  for="price"
+                  for="lastName"
                   className="block mb-2 text-sm font-medium  dark:text-black"
                 >
                   Last Name
@@ -180,19 +180,33 @@ const publicProfile = () => {
               </div>
               <div className="w-full">
                 <label
-                  for="brand"
+                  for="Old Password"
                   class="block mb-2 text-sm font-medium  dark:text-black"
                 >
                   Old Password
                 </label>
                 <input
-                  type="text"
+                  type="password"
+                  {...register('oldPassword', {
+                    required: {
+                      value: true,
+                      message: 'Please Enter New Password!',
+                    },
+                    minLength: {
+                      value: 6,
+                      message: 'min length are at least 6',
+                    },
+                    maxLength: {
+                      value: 8,
+                      message: 'max length are at least 8',
+                    },
+                  })}
                   className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
               </div>
               <div className="w-full">
                 <label
-                  for="price"
+                  for="New Password"
                   className="block mb-2 text-sm font-medium  dark:text-black"
                 >
                   New Password
@@ -219,7 +233,7 @@ const publicProfile = () => {
 
               <div className="sm:col-span-2">
                 <label
-                  for="name"
+                  for="confiremPassword"
                   className="block mb-2 text-sm font-medium  dark:text-black"
                 >
                   Confir Passwordem
