@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import auth from '../../services/http/auth'
-
+import { motion } from 'framer-motion'
 const Settings = () => {
   const contents = [
     {
@@ -28,7 +28,9 @@ const Settings = () => {
     <div className=" w-full  bg-white">
       <div>
         {/* titel of components */}
-        <h2 className="text-center text-3xl">Settings</h2>
+        <motion.h2 className="text-center text-3xl" animate={{ x: 20 }}>
+          Settings
+        </motion.h2>
       </div>
       {/* <!-- Seperator --> */}
       <div className="flex items-center justify-center flex-col h-screen">
@@ -76,6 +78,7 @@ const Settings = () => {
 export default Settings
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+
 const publicProfile = () => {
   const {
     register,
