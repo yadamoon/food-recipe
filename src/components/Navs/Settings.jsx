@@ -52,7 +52,6 @@ const Settings = () => {
                     width={30}
                     height={20}
                     alt={item.image}
-                    srcset=""
                   />
                 </span>
               </a>
@@ -63,7 +62,6 @@ const Settings = () => {
                 width={30}
                 height={30}
                 alt=""
-                srcset=""
               />
             </Link>
           </nav>
