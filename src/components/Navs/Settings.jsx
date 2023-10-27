@@ -108,7 +108,7 @@ const publicProfile = () => {
 
   return (
     <div>
-      <section className="bg-white">
+      <div className="bg-white">
         <div className="max-w-2xl px-4 py-8 mx-auto lg:py-16">
           <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-black">
             Update product
@@ -336,12 +336,22 @@ const publicProfile = () => {
             </div>
           </form>
         </div>
-      </section>
+      </div>
     </div>
   )
 }
 const accountSettings = () => {
-  return <div className="">accountSettings</div>
+  return (
+    <div className=" flex justify-center">
+      <div className="">
+        <select name="" id="">
+          <option value="Eng"></option>
+          <option value="Amh"></option>
+          <option value="Tig"></option>
+        </select>
+      </div>
+    </div>
+  )
 }
 const notifications = () => {
   return <div className="">notifications</div>
