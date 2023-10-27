@@ -100,7 +100,7 @@ const publicProfile = () => {
       oldPassword,
       newPassword,
       confiremPassword
-    ) // You can handle the form data here
+    )
     reset()
   }
 
