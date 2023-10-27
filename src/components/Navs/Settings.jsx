@@ -94,7 +94,7 @@ const publicProfile = () => {
           <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-black">
             Update product
           </h2>
-          <form action="#">
+          <form>
             <div className="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
               <div className="sm:col-span-2">
                 <label
@@ -216,24 +216,7 @@ const publicProfile = () => {
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
               </div>
-              {/* <div>
-                <label
-                  for="category"
-                  className="block mb-2 text-sm font-medium  dark:text-black"
-                >
-                  Address{' '}
-                </label>
-                <select
-                  id="category"
-                  className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                >
-                  <option selected="">Electronics</option>
-                  <option value="TV">TV/Monitors</option>
-                  <option value="PC">PC</option>
-                  <option value="GA">Gaming/Console</option>
-                  <option value="PH">Phones</option>
-                </select>
-              </div> */}
+
               <div className="sm:col-span-2">
                 <label
                   for="name"
@@ -282,6 +265,7 @@ const publicProfile = () => {
               </button>
               <button
                 type="submit"
+                onClick={handleSubmit(saveToDB)}
                 class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-teal-700"
               >
                 Update Profile
