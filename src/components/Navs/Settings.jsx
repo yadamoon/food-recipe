@@ -343,11 +343,11 @@ const publicProfile = () => {
 const accountSettings = () => {
   return (
     <div className=" flex justify-center">
-      <div className="">
+      <div className=" w-full h-screen">
         <select name="" id="">
-          <option value="Eng"></option>
-          <option value="Amh"></option>
-          <option value="Tig"></option>
+          <option value="Eng">Eng</option>
+          <option value="Amh">Amh</option>
+          <option value="Tig">Tig</option>
         </select>
       </div>
     </div>
