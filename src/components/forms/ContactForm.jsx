@@ -6,9 +6,11 @@ const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm()
   const handleClick = ({ name, phone, email, message }) => {
     console.log(`${name},${phone},${email},${message}`)
+    reset()
   }
   return (
     <div className="w-full h-screen ">
