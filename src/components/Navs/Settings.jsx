@@ -81,6 +81,7 @@ const publicProfile = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm()
 
   const saveToDB = ({
@@ -92,13 +93,14 @@ const publicProfile = () => {
     confiremPassword,
   }) => {
     console.log(
-      emal,
+      email,
       firstName,
       lastName,
       oldPassword,
       newPassword,
       confiremPassword
     ) // You can handle the form data here
+    reset()
   }
 
   return (
