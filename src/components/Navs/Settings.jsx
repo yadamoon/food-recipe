@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import auth from '../../services/http/auth'
 import { motion } from 'framer-motion'
+import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 const Settings = () => {
   const contents = [
     {
@@ -74,8 +76,6 @@ const Settings = () => {
 }
 
 export default Settings
-import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
 
 const publicProfile = () => {
   const {
