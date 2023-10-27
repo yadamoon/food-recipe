@@ -83,8 +83,22 @@ const publicProfile = () => {
     formState: { errors },
   } = useForm()
 
-  const saveToDB = ({ email, firstName, lastName }) => {
-    console.log(data) // You can handle the form data here
+  const saveToDB = ({
+    email,
+    firstName,
+    lastName,
+    oldPassword,
+    newPassword,
+    confiremPassword,
+  }) => {
+    console.log(
+      emal,
+      firstName,
+      lastName,
+      oldPassword,
+      newPassword,
+      confiremPassword
+    ) // You can handle the form data here
   }
 
   return (
@@ -125,6 +139,11 @@ const publicProfile = () => {
                   })}
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
+                {errors.email && (
+                  <span className="text-red-700 col-span-1 ">
+                    {errors.email.message}
+                  </span>
+                )}
               </div>
               <div className="w-full">
                 <label
@@ -151,6 +170,11 @@ const publicProfile = () => {
                   })}
                   className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
+                {errors.firstName && (
+                  <span className="text-red-700 col-span-1 ">
+                    {errors.firstName.message}
+                  </span>
+                )}
               </div>
               <div className="w-full">
                 <label
@@ -177,6 +201,11 @@ const publicProfile = () => {
                   })}
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
+                {errors.lastName && (
+                  <span className="text-red-700 col-span-1 ">
+                    {errors.lastName.message}
+                  </span>
+                )}
               </div>
               <div className="w-full">
                 <label
@@ -203,6 +232,11 @@ const publicProfile = () => {
                   })}
                   className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
+                {errors.oldPassword && (
+                  <span className="text-red-700 col-span-1 ">
+                    {errors.oldPassword.message}
+                  </span>
+                )}
               </div>
               <div className="w-full">
                 <label
@@ -229,6 +263,11 @@ const publicProfile = () => {
                   })}
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
+                {errors.newPassword && (
+                  <span className="text-red-700 col-span-1 ">
+                    {errors.newPassword.message}
+                  </span>
+                )}
               </div>
 
               <div className="sm:col-span-2">
@@ -256,6 +295,11 @@ const publicProfile = () => {
                   })}
                   className="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                 />
+                {errors.confiremPassword && (
+                  <span className="text-red-700 col-span-1 ">
+                    {errors.confiremPassword.message}
+                  </span>
+                )}
               </div>
             </div>
             <div className="flex items-center space-x-6 justify-center">
