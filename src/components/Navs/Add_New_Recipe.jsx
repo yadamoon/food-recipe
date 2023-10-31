@@ -65,7 +65,6 @@ const Add_New_Recipe = () => {
                   className="w-6 h-6  hover:bg-teal-700 hover:text-white rounded  text-black  "
                   onClick={openFileDialog}
                 >
-                  {' '}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -130,7 +129,7 @@ const Add_New_Recipe = () => {
               {...register('title', {
                 required: 'Enter a Title for the food please!',
               })}
-              placeholder="Titel"
+              placeholder="Title"
               className="border p-3 font-bold col-span-3 md:col-span-2"
             />
 
