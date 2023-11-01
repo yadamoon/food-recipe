@@ -168,8 +168,6 @@ const ContactForm = () => {
               </button>
             </div>
 
-            <button onClick={() => setOpenModal(!openModal)}>Open modal</button>
-
             <Modal
               openState={openModal}
               onRequestClose={setOpenModal}
