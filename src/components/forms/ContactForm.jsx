@@ -31,7 +31,7 @@ const ContactForm = () => {
           <p className="text-3xl font-bold leading-7 text-center text-black">
             CONTACT
           </p>
-          <form action="">
+          <form action=" h-full">
             <div className="md:flex items-center mt-12 ">
               <div className="w-full md:w-1/2 flex flex-col">
                 <label className="font-semibold leading-none text-gray-600">
@@ -129,7 +129,7 @@ const ContactForm = () => {
             </div>
             <div>
               {/* message */}
-              <div className="w-full flex flex-col mt-8">
+              <div className="w-full flex flex-col mt-8 sm:mt-0 max-h-full">
                 <label className="font-semibold leading-none text-gray-600">
                   Message
                 </label>
@@ -157,15 +157,19 @@ const ContactForm = () => {
                   </span>
                 )}
               </div>
-            </div>
-            <div className="flex items-center justify-center w-full">
-              {/* button to save */}
-              <button
-                onClick={handleSubmit(handleClick)}
-                className="mt-9 font-semibold leading-none text-white py-4 px-10 bg-teal-700 rounded hover:bg-teal-600 focus:ring-2 focus:ring-offset-2 focus:ring-teal-700 focus:outline-none"
-              >
-                Send message
-              </button>
+              <div className="flex items-center justify-center w-full">
+                {/* button to save */}
+                <button
+                  onClick={handleSubmit(handleClick)}
+                  className="mt-9 font-semibold leading-none text-white py-4 px-10 bg-teal-700 rounded hover:bg-teal-600 focus:ring-2 focus:ring-offset-2 focus:ring-teal-700 focus:outline-none"
+                >
+                  Send message
+                </button>
+                <br />
+                <br />
+                <br />
+                <div className="space-y-4"></div>
+              </div>
             </div>
 
             <Modal
