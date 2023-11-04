@@ -1,6 +1,10 @@
 import React, { useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { http } from '../../services/http/http'
+import Swal from 'sweetalert2'
+
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Add_New_Recipe = () => {
   const {
@@ -43,7 +47,19 @@ const Add_New_Recipe = () => {
     })
     if (!result.isError) {
       reset()
+      Swal.fire({
+        title: 'Success!',
+        icon: 'success',
+        title: 'Your work has been saved',
+        confirmButtonText: 'Cool',
+      })
     }
+    Swal.fire({
+      title: 'Error!',
+      icon: 'error',
+      title: 'Please try again',
+      // confirmButtonText: 'ok',
+    })
     console.log(result)
   }
   return (

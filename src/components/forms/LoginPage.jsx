@@ -37,10 +37,10 @@ function LoginPage() {
       dispatch(setUser({ user: result.user }))
       navigate('/')
       Swal.fire({
-        title: 'Error!',
-        text: 'Do you want to continue',
-        icon: 'error',
-        confirmButtonText: 'Cool',
+        title: 'Success!',
+        icon: 'success',
+        title: 'Your work has been saved',
+        // confirmButtonText: 'Cool',
       })
       reset()
       handleLoginSuccessful()
