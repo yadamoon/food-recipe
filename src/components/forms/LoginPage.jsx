@@ -4,6 +4,7 @@ import auth from '../../services/http/auth'
 import { useDispatch } from 'react-redux'
 import { setStatus, setUser } from '../../store/slices/authSlice'
 import { Link, useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -35,7 +36,12 @@ function LoginPage() {
       dispatch(setStatus({ status: true }))
       dispatch(setUser({ user: result.user }))
       navigate('/')
-      toast.success('Succefullys')
+      Swal.fire({
+        title: 'Error!',
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'Cool',
+      })
       reset()
       handleLoginSuccessful()
     } else {
