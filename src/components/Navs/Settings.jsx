@@ -3,6 +3,10 @@ import auth from '../../services/http/auth'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
+
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 const Settings = () => {
   const contents = [
     {
@@ -26,6 +30,7 @@ const Settings = () => {
   const handlLogout = () => {
     auth.signOut()
   }
+
   return (
     <div className=" w-full  bg-white">
       <div>
@@ -102,6 +107,22 @@ const publicProfile = () => {
       confiremPassword
     )
     reset()
+  }
+  const cancel = () => {
+    Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: false,
+      showCancelButton: false,
+      confirmButtonText: 'Save',
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info')
+      }
+    })
   }
 
   return (
@@ -315,6 +336,7 @@ const publicProfile = () => {
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
+                  onClick={cancel()}
                 >
                   <path
                     fill-rule="evenodd"
