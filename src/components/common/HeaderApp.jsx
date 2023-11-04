@@ -14,7 +14,8 @@ export default function HeaderApp() {
       <nav className="2xl:container 2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4">
         {/* For large and Medium-sized Screen */}
         <div className="flex justify-between ">
-          <motion.div
+          <motion.Link
+            to="/"
             className=" flex space-x-3 items-center"
             initial={{ y: -250 }}
             animate={{ y: -10 }}
@@ -26,10 +27,13 @@ export default function HeaderApp() {
               alt=""
               className="rounded-full"
             />
-            <h1 className=" text-3xl leading-6 text-teal-800 uppercase font-thin">
+            <Link
+              to="/"
+              className=" text-3xl leading-6 text-teal-800 uppercase font-thin"
+            >
               food recipe
-            </h1>
-          </motion.div>
+            </Link>
+          </motion.Link>
 
           {!signedIn && (
             <div className="hidden sm:flex flex-row space-x-4">
