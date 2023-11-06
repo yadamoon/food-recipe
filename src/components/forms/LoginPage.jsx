@@ -64,8 +64,6 @@ function LoginPage() {
     setPasswordType('password')
   }
   const handleLoginSuccessful = () => {
-    // Perform login logic here
-
     // If login is successful
     toast.success('Login successful!', {
       position: toast.POSITION.TOP_RIGHT,
