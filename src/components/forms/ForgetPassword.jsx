@@ -9,7 +9,31 @@ export default function ForgetPassword() {
     formState: { errors },
   } = useForm()
 
-  const handleForgotPassword = () => {}
+  const handleForgotPassword = ({ email }) => {
+    let timerInterval
+    Swal.fire({
+      title: 'please wait just a sec!',
+      // html: 'I will close in <b></b> milliseconds.',
+      html: `${email}`,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading()
+        const timer = Swal.getPopup().querySelector('b')
+        timerInterval = setInterval(() => {
+          timer.textContent = `${Swal.getTimerLeft()}`
+        }, 100)
+      },
+      willClose: () => {
+        clearInterval(timerInterval)
+      },
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('I was closed by the timer')
+      }
+    })
+  }
 
   return (
     <>
@@ -18,14 +42,29 @@ export default function ForgetPassword() {
           <div className="text-2xl space-y-2">
             <h1 className="space-y-2 font-bold">Forget password</h1>
           </div>
-          <form className="w-full space-y-3">
+
+          <form className="w-full space-y-3 pb-5">
             <div className="grid grid-cols-1 gap-2">
               <input
                 {...register('email', {
-                  required: ' please Enter your Email',
+                  required: {
+                    value: true,
+                    message: 'Please Enter Your correct Email!',
+                  },
+                  minLength: {
+                    value: 6,
+                    message: 'min length are at least 6',
+                  },
+                  maxLength: {
+                    value: 32,
+                    message: 'max length are at least 32',
+                  },
+                  pattern: {
+                    value: /[@]/,
+                    message: 'Enter at least one special character',
+                  },
                 })}
-                placeholder="Email"
-                className="border p-3 col-span-1 md:col-span-1 "
+                className="leading-none  p-3  mt-4 border  rounded"
               />
               {errors.email && (
                 <span className="text-red-700 col-span-1 ">
