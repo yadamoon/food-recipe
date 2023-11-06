@@ -40,7 +40,6 @@ function LoginPage() {
         title: 'Success!',
         icon: 'success',
         title: 'Login Successfully',
-        // confirmButtonText: 'Cool',
         showConfirmButton: false,
         timer: 2000,
       })
@@ -52,7 +51,8 @@ function LoginPage() {
         title: 'Error!',
         icon: 'error',
         title: 'Wrong please try again',
-        // confirmButtonText: 'Cool',
+        timer: 2000,
+        showConfirmButton: false,
       })
     }
   }
