@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-
-import Modal from 'modal-react-lib'
 import 'modal-react-lib/dist/index.css'
 
 const ContactForm = () => {
