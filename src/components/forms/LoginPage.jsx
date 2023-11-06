@@ -110,13 +110,13 @@ function LoginPage() {
                 {errors.password.message}
               </span>
             )}
-            <label htmlFor="showPassword">
+            <label htmlFor="showPassword" className="font-bold space-x-3">
               <input
                 type="checkBox"
                 {...register('showPassword', {})}
                 onClick={handleCkeckBox}
               />
-              Show Password
+              <span> Show Password </span>
             </label>
           </div>
           <div>
