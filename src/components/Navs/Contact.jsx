@@ -26,6 +26,20 @@ const Contact = () => {
       `,
     })
   }
+
+  const mapAddress = () => {
+    Swal.fire({
+      title:
+        '<strong>Location  <i class="fa fa-map-marker" aria-hidden="true"></i></strong>',
+      icon: 'info',
+      showCloseButton: true,
+      showCancelButton: true,
+      confirmButtonText: `<i class="fa fa-close"></i>`,
+      cancelButtonText: `
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      `,
+    })
+  }
   return (
     <div className="bg-white  mx-3 rounded">
       <br />
@@ -52,7 +66,10 @@ const Contact = () => {
           <h1 className="font-bold">Email</h1>
           <p className="font-thin">yared241993@gmail.com</p>
         </div>
-        <div className=" rounded text-center w-full h-5/5 col-span-1 p-6 border  shadow  hover:bg-gray-50">
+        <div
+          className=" rounded text-center w-full h-5/5 col-span-1 p-6 border  shadow  hover:bg-gray-50"
+          onClick={mapAddress}
+        >
           <span className="text-2xl text-teal-800">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
           </span>
