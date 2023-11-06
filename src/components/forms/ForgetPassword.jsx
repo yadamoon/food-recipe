@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+// import NewPasswordForm from './NewPasswordForm'
 
 export default function ForgetPassword() {
   const {
@@ -71,48 +72,8 @@ export default function ForgetPassword() {
                   {errors.email.message}
                 </span>
               )}
-              {/* <input
-                {...register('newpassword', {
-                  required: 'Enter new Password',
-                })}
-                placeholder="New Password "
-                className="border p-3 col-span-3 md:col-span-1 "
-              />
-              {errors.password && (
-                <span className="text-red-700 col-span-1">
-                  {errors.password.message}
-                </span>
-              )} */}
-              {/* <input
-                {...register('confiremPassword', {
-                  required: 'Password and Confirm Password Field do not match ',
-                })}
-                placeholder="confirme password "
-                className="border p-3 col-span-3 md:col-span-1 "
-              />
-              {errors.confiremPassword && (
-                <span className="text-red-700 col-span-1  ">
-                  {errors.confiremPassword.message}
-                </span>
-              )} */}
-              {/* <input
-                {...register('EmailSMS', {
-                  required: ' plese enter code  ',
-                })}
-                placeholder="Code "
-                className="border p-3 col-span-3 md:col-span-1 "
-              />
-              {errors.confiremPassword && (
-                <span className="text-red-700 col-span-1  ">
-                  {errors.confiremPassword.message}
-                </span>
-              )} */}
             </div>
-
             <div className=" grid grid-cols-2 gap-3 pb-5">
-              {/* <button className="border bg-red-500 text-white  pl-20 pr-20 pt-3 pb-2 hover:bg-red-600 hover:text-white rounded w-full md:w-auto">
-                Back
-              </button> */}
               <button
                 className="border bg-teal-500 text-white  p-2 hover:bg-teal-600 hover:text-white rounded w-full md:w-auto"
                 onClick={handleSubmit(handleForgotPassword)}
@@ -125,6 +86,7 @@ export default function ForgetPassword() {
           </form>
         </div>
       </div>
+      {/* <NewPasswordForm /> */}
     </>
   )
 }
