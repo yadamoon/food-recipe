@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Swal from 'sweetalert2'
-
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -16,6 +15,37 @@ const ContactForm = () => {
     console.log(`${name},${phone},${email},${message}`)
 
     reset()
+  }
+
+  const handleContactForm = async ({ name, phone, email, message }) => {
+    // const result = await auth.signIn({
+    //   method: 'post',
+    //   // url: 'auth/login',
+    //   data: { name, phone , email ,message},
+    // })
+    // if (!result.isError) {
+    // dispatch(setStatus({ status: true }))
+    // dispatch(setUser({ user: result.user }))
+    // navigate('/')
+    Swal.fire({
+      title: 'message sent!',
+      icon: 'success',
+      title: 'Successfully ',
+      showConfirmButton: false,
+      timer: 2000,
+    })
+    reset()
+    // }
+    // else {
+    //   console.log({ error: result.error })
+    //   Swal.fire({
+    //     title: 'Error!',
+    //     icon: 'error',
+    //     title: 'Wrong please try again',
+    //     timer: 2000,
+    //     showConfirmButton: false,
+    //   })
+    // }
   }
 
   return (
@@ -154,7 +184,7 @@ const ContactForm = () => {
               <div className="flex items-center justify-center w-full">
                 {/* button to save */}
                 <button
-                  onClick={handleSubmit(handleClick)}
+                  onClick={handleSubmit(handleContactForm)}
                   className="mt-9 font-semibold leading-none text-white py-4 px-10 bg-teal-700 rounded hover:bg-teal-600 focus:ring-2 focus:ring-offset-2 focus:ring-teal-700 focus:outline-none"
                 >
                   Send message
