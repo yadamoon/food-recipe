@@ -39,13 +39,21 @@ function LoginPage() {
       Swal.fire({
         title: 'Success!',
         icon: 'success',
-        title: 'Your work has been saved',
+        title: 'Login Successfully',
         // confirmButtonText: 'Cool',
+        showConfirmButton: false,
+        timer: 2000,
       })
       reset()
       handleLoginSuccessful()
     } else {
       console.log({ error: result.error })
+      Swal.fire({
+        title: 'Error!',
+        icon: 'error',
+        title: 'Wrong please try again',
+        // confirmButtonText: 'Cool',
+      })
     }
   }
   const handleCkeckBox = () => {
