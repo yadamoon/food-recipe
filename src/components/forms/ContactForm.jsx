@@ -24,14 +24,14 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="w-full h-screen ">
+    <div className="w-full h-screen  pb-[120vh] lg:pb-[80vh]">
       <div className=" h-96"></div>
       <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12 ">
         <div className="w-fullrounded p-8 sm:p-12 -mt-72 border  shadow rounded">
           <p className="text-3xl font-bold leading-7 text-center text-black">
             CONTACT
           </p>
-          <form action=" h-full">
+          <form action=" ">
             <div className="md:flex items-center mt-12 ">
               <div className="w-full md:w-1/2 flex flex-col">
                 <label className="font-semibold leading-none text-gray-600">
@@ -165,18 +165,10 @@ const ContactForm = () => {
                 >
                   Send message
                 </button>
-                <br />
-                <br />
-                <br />
-                <div className="space-y-4"></div>
               </div>
-            </div>
 
-            <Modal
-              openState={openModal}
-              onRequestClose={setOpenModal}
-              content={modal_content}
-            />
+              {/* <div className="space-y-6"></div> */}
+            </div>
           </form>
         </div>
       </div>
