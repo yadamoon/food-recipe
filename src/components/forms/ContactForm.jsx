@@ -66,7 +66,6 @@ const ContactForm = () => {
                 <label className="font-semibold leading-none text-gray-600">
                   Phone
                 </label>
-
                 <input
                   {...register('phone', {
                     required: {
@@ -103,7 +102,7 @@ const ContactForm = () => {
                   {...register('email', {
                     required: {
                       value: true,
-                      message: 'Please Enter Your Phone Number!',
+                      message: 'Please Enter Your correct Email!',
                     },
                     minLength: {
                       value: 6,
@@ -135,10 +134,10 @@ const ContactForm = () => {
                 </label>
                 <textarea
                   type="text"
-                  {...register('phone', {
+                  {...register('message', {
                     required: {
                       value: true,
-                      message: 'Please Enter Your Phone Number!',
+                      message: 'Please Enter Your some message!',
                     },
                     minLength: {
                       value: 6,
@@ -151,9 +150,9 @@ const ContactForm = () => {
                   })}
                   className="h-40 text-base  focus:teal-blue-700 mt-4  border rounded"
                 />
-                {errors.phone && (
+                {errors.message && (
                   <span className="text-red-700 col-span-1 ">
-                    {errors.phone.message}
+                    {errors.message.message}
                   </span>
                 )}
               </div>
