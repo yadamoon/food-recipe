@@ -9,12 +9,12 @@ const Contact = () => {
       showCloseButton: true,
       showCancelButton: true,
       focusConfirm: false,
-      confirmButtonText: `<a className="bg-red-600">cancel</a>`,
-      confirmButtonAriaLabel: 'Cancel',
+      confirmButtonText: `<i class="fa fa-close"></i>`,
+
       cancelButtonText: `
         <i class="fa fa-phone"></i>
       `,
-      cancelButtonAriaLabel: 'Thumbs down',
+      // cancelButtonAriaLabel: 'Thumbs down',
     })
   }
   return (
