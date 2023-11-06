@@ -9,6 +9,8 @@ export default function ForgetPassword() {
     formState: { errors },
   } = useForm()
 
+  const handleForgotPassword = () => {}
+
   return (
     <>
       <div className="flex justify-center">
@@ -30,7 +32,7 @@ export default function ForgetPassword() {
                   {errors.email.message}
                 </span>
               )}
-              <input
+              {/* <input
                 {...register('newpassword', {
                   required: 'Enter new Password',
                 })}
@@ -41,8 +43,8 @@ export default function ForgetPassword() {
                 <span className="text-red-700 col-span-1">
                   {errors.password.message}
                 </span>
-              )}
-              <input
+              )} */}
+              {/* <input
                 {...register('confiremPassword', {
                   required: 'Password and Confirm Password Field do not match ',
                 })}
@@ -53,8 +55,8 @@ export default function ForgetPassword() {
                 <span className="text-red-700 col-span-1  ">
                   {errors.confiremPassword.message}
                 </span>
-              )}
-              <input
+              )} */}
+              {/* <input
                 {...register('EmailSMS', {
                   required: ' plese enter code  ',
                 })}
@@ -65,15 +67,18 @@ export default function ForgetPassword() {
                 <span className="text-red-700 col-span-1  ">
                   {errors.confiremPassword.message}
                 </span>
-              )}
+              )} */}
             </div>
 
-            <div className=" grid grid-cols-2 gap-3space-y-3">
-              <button className="border bg-red-500 text-white  pl-20 pr-20 pt-3 pb-2 hover:bg-red-600 hover:text-white rounded w-full md:w-auto">
+            <div className=" grid grid-cols-2 gap-3 pb-5">
+              {/* <button className="border bg-red-500 text-white  pl-20 pr-20 pt-3 pb-2 hover:bg-red-600 hover:text-white rounded w-full md:w-auto">
                 Back
-              </button>
-              <button className="border bg-teal-500 text-white  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded w-full md:w-auto">
-                Done
+              </button> */}
+              <button
+                className="border bg-teal-500 text-white  p-2 hover:bg-teal-600 hover:text-white rounded w-full md:w-auto"
+                onClick={handleSubmit(handleForgotPassword)}
+              >
+                send reset code
               </button>
             </div>
             <br />
