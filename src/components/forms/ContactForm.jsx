@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import 'modal-react-lib/dist/index.css'
+import Swal from 'sweetalert2'
+
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const ContactForm = () => {
-  const [openModal, setOpenModal] = useState(false)
-
-  const modal_content = {
-    title: 'Modal Title',
-    text: 'Modal content',
-  }
   const {
     register,
     handleSubmit,
