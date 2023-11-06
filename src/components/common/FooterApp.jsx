@@ -88,22 +88,22 @@ const FooterApp = () => {
             <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
               <div class="w-full px-4 lg:w-1/4 md:w-1/2">
                 <h2 class="mb-3 text-sm font-medium tracking-widest text-teal-500 uppercase title-font">
-                  About
+                  social media
                 </h2>
                 <nav class="mb-10 list-none">
                   <li class="mt-3">
                     <a class="text-gray-500 cursor-pointer hover:text-gray-900">
-                      Company
+                      Email : yared241993@gmail.com
                     </a>
                   </li>
                   <li class="mt-3">
                     <a class="text-gray-500 cursor-pointer hover:text-gray-900">
-                      Careers
+                      facebook : chereka yared
                     </a>
                   </li>
                   <li class="mt-3">
                     <a class="text-gray-500 cursor-pointer hover:text-gray-900">
-                      Blog
+                      telegram : chereka_yaredo
                     </a>
                   </li>
                 </nav>
@@ -162,11 +162,7 @@ const FooterApp = () => {
                       Send a Message
                     </a>
                   </li>
-                  <li class="mt-3">
-                    <a class="text-gray-500 cursor-pointer hover:text-teal-900">
-                      Request a Quote
-                    </a>
-                  </li>
+
                   <li class="mt-3">
                     <a class="text-gray-500 cursor-pointer hover:text-teal-900">
                       +251-93832-0202
