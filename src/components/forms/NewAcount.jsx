@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 
 const NewAcount = () => {
   const {
@@ -13,7 +14,7 @@ const NewAcount = () => {
   }
 
   return (
-    <div className="bg-white mx-10">
+    <div className="bg-white mx-10 rounded">
       <div className="flex items-center justify-center p-12">
         <div className="mx-auto w-full max-w-[550px]">
           <h1 className="text-center justify-center font-thin text-3xl space-y-3">
@@ -174,7 +175,7 @@ const NewAcount = () => {
             </div>
             <div className="text-center">
               <span>
-                i have account <a href="#">sign in</a>
+                i have account <Link to="/LoginPage">sign in</Link>
               </span>
             </div>
           </form>
