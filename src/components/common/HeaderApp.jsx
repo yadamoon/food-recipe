@@ -212,20 +212,22 @@ export default function HeaderApp() {
               />
             </svg>
           </div>
-          <div className="flex flex-col gap-4 mt-4 w-80 mx-auto ">
-            <Link
-              className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm  border border-teal-700 focus:outline-none  justify-center items-center"
-              to="/Add_New_Recipe"
-            >
-              Sign Up
-            </Link>
-            <Link
-              to="/Login"
-              className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-white bg-teal-700  justify-center items-center"
-            >
-              Sign In
-            </Link>
-          </div>
+          {!signedIn && (
+            <div className="flex flex-col gap-4 mt-4 w-80 mx-auto ">
+              <Link
+                className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm  border border-teal-700 focus:outline-none  justify-center items-center"
+                to="/Add_New_Recipe"
+              >
+                Sign Up
+              </Link>
+              <Link
+                to="/Login"
+                className="rounded-md flex space-x-2 w-full h-10 font-normal text-sm leading-3 text-white bg-teal-700  justify-center items-center"
+              >
+                Sign In
+              </Link>
+            </div>
+          )}
         </div>
       </nav>
     </div>
