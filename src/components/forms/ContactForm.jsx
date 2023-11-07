@@ -124,6 +124,7 @@ const ContactForm = () => {
                 </label>
 
                 <input
+                  type="email"
                   {...register('email', {
                     required: {
                       value: true,
@@ -190,8 +191,6 @@ const ContactForm = () => {
                   Send message
                 </button>
               </div>
-
-              {/* <div className="space-y-6"></div> */}
             </div>
           </form>
         </div>
