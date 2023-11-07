@@ -14,10 +14,10 @@ const NewAcount = () => {
   }
 
   return (
-    <div>
-      <div className="px-16 bg-white grid grid-cols-2 gap-2 pt-6 pb-10">
+    <div className="flex justify-center">
+      <div className="px-16 bg-white pt-6 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 sm:grid-cols-1">
         <div className="flex items-center justify-end">
-          <div className="bg-white rounded-lg min-w-[80%] p-8 space-y-8">
+          <div className="bg-white rounded-lg  p-8 space-y-8 col-span-1">
             <div>
               <div className="text-xl uppercase text-gray-600">
                 Register to learn how to make some food!
@@ -25,8 +25,8 @@ const NewAcount = () => {
               <div className="text-[13px] text-gray-500">
                 Fill in the form to register your self
               </div>
-              <form action="">
-                <div className="mb-5">
+              <form action="" className="w-full">
+                <div className="mb-5 ">
                   <input
                     type="text"
                     {...register('first_name', {
@@ -187,6 +187,15 @@ const NewAcount = () => {
               </form>
             </div>
           </div>
+        </div>
+        <div className="justify-center col-span-1 ">
+          <img
+            src="public/images/test.png"
+            alt="advert"
+            width="300px"
+            height={60}
+            // className="text-center mx-36 pt-32 lg:mx-36 md:mx-24 sm:mx-0 sm:hidden"
+          />
         </div>
       </div>
     </div>
