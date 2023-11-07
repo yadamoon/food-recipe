@@ -16,7 +16,6 @@ const NewPasswordForm = () => {
     let timerInterval
     Swal.fire({
       title: 'please wait just a sec!',
-      // html: 'I will close in <b></b> milliseconds.',
       html: `${email}`,
       timer: 2000,
       timerProgressBar: true,
