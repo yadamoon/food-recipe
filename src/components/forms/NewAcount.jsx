@@ -13,9 +13,13 @@ const NewAcount = () => {
   }
 
   return (
-    <div>
+    <div className="bg-white mx-10">
       <div className="flex items-center justify-center p-12">
         <div className="mx-auto w-full max-w-[550px]">
+          <h1 className="text-center justify-center font-thin text-3xl space-y-3">
+            Create New Account
+          </h1>
+          <br />
           <form action="https://formbold.com/s/FORM_ID" method="POST">
             <div className="mb-5">
               <input
@@ -23,7 +27,7 @@ const NewAcount = () => {
                 {...register('first_name', {
                   required: {
                     value: true,
-                    message: 'Please Enter Your Namw!',
+                    message: 'Please Enter Your First Name!',
                   },
                   minLength: {
                     value: 6,
@@ -43,7 +47,32 @@ const NewAcount = () => {
                 </span>
               )}
             </div>
-
+            <div className="mb-5">
+              <input
+                type="text"
+                {...register('last_name', {
+                  required: {
+                    value: true,
+                    message: 'Please Enter Your Last Name!',
+                  },
+                  minLength: {
+                    value: 6,
+                    message: 'min length are at least 6',
+                  },
+                  maxLength: {
+                    value: 32,
+                    message: 'max length are at least 32',
+                  },
+                })}
+                placeholder="Last Name"
+                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              />
+              {errors.first_name && (
+                <span className="text-red-700 col-span-1 ">
+                  {errors.first_name.message}
+                </span>
+              )}
+            </div>
             <div className="mb-5">
               <input
                 type="email"
@@ -142,6 +171,11 @@ const NewAcount = () => {
               >
                 Done
               </button>
+            </div>
+            <div className="text-center">
+              <span>
+                i have account <a href="#">sign in</a>
+              </span>
             </div>
           </form>
         </div>
