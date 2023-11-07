@@ -16,7 +16,7 @@ const NewAcount = () => {
   return (
     <div className="bg-white mx-10 rounded">
       <div className="flex items-center justify-center p-12">
-        <div className="mx-auto w-full max-w-[550px]">
+        <div className="w-5/6">
           <h1 className="text-center justify-center font-thin text-3xl space-y-3">
             Create New Account
           </h1>
@@ -66,7 +66,7 @@ const NewAcount = () => {
                   },
                 })}
                 placeholder="Last Name"
-                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280]  "
               />
               {errors.first_name && (
                 <span className="text-red-700 col-span-1 ">
