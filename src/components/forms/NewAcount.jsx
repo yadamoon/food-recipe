@@ -15,8 +15,8 @@ const NewAcount = () => {
 
   return (
     <div className="flex justify-center mx-3 bg-white">
-      <div className="px-16 max-w-5xl  pt-6 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 sm:grid-cols-1">
-        <div className="flex  justify-center">
+      <div className="px-16 max-w-6xl  pt-6 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 sm:grid-cols-1">
+        <div className="flex   justify-center">
           <div className="bg-white p-8 space-y-8 col-span-1  justify-center ">
             <div className="">
               <div className="text-xl uppercase text-gray-600">
@@ -188,7 +188,7 @@ const NewAcount = () => {
             </div>
           </div>
         </div>
-        <div className="justify-center col-span-1 pt-10 bg-white ">
+        <div className="justify-center items-center col-span-1 pt-10 bg-white ">
           <img
             src="public/images/test.png"
             alt="advert"
