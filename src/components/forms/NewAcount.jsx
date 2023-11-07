@@ -21,7 +21,7 @@ const NewAcount = () => {
             Create New Account
           </h1>
           <br />
-          <form action="https://formbold.com/s/FORM_ID" method="POST">
+          <form action="">
             <div className="mb-5">
               <input
                 type="text"
@@ -174,8 +174,11 @@ const NewAcount = () => {
               </button>
             </div>
             <div className="text-center">
-              <span>
-                i have account <Link to="/LoginPage">sign in</Link>
+              <span className="font-thin">
+                I have account
+                <Link to="/LoginPage" className="font-bold">
+                  Login
+                </Link>
               </span>
             </div>
           </form>
