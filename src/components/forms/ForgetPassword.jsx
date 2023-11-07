@@ -53,6 +53,7 @@ export default function ForgetPassword() {
             <form className="w-full space-y-3 pb-5">
               <div className="grid grid-cols-1 gap-2">
                 <input
+                  type="email"
                   {...register('email', {
                     required: {
                       value: true,

@@ -47,6 +47,7 @@ const NewPasswordForm = () => {
               <div className="w-full">
                 {' '}
                 <input
+                  type="password"
                   {...register('newPassword', {
                     required: 'Enter new Password',
                   })}
@@ -62,6 +63,7 @@ const NewPasswordForm = () => {
 
               <div>
                 <input
+                  type="password"
                   {...register('confiremPassword', {
                     required:
                       'Password and Confirm Password Field do not match ',
