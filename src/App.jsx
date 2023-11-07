@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import Contact from './components/Navs/Contact'
 import { useState, useEffect } from 'react'
 import ReactLoading from 'react-loading'
+import NewAcount from './components/forms/NewAcount'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -55,7 +56,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="ForgetPassword" element={<ForgetPassword />} />
             <Route path="/Register_New_Account" element={<RegisterForm />} />
-
+            <Route path="/Create New Account" element={<NewAcount />} />s
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FooterApp className="space-10" />
