@@ -142,48 +142,6 @@ export default function RegisterForm() {
                 {errors.confiremPassword.message}
               </span>
             )}
-
-            {/* <div className="border p-2 flex flex-col items-stretch space-y-1">
-              <input
-                {...register('npassword', {
-                  required: {
-                    value: true,
-                    message: 'Npassword is required',
-                  },
-                  minLength: {
-                    value: 6,
-                    message: 'Password should be at least 6 characters long',
-                  },
-                  pattern: {
-                    value: /[a-z]/,
-                    message: 'Enter at least one lowercase letter',
-                  },
-                  pattern: {
-                    value: /[A-Z]/,
-                    message: 'Enter at least one uppercase letter',
-                  },
-                  pattern: {
-                    value: /[0-9]/,
-                    message: 'Enter at least one digit',
-                  },
-                  pattern: {
-                    value: /[@#$%&]/,
-                    message: 'Enter at least one special character',
-                  },
-                  maxLength: {
-                    value: 32,
-                    message: 'max value are 32',
-                  },
-                })}
-                placeholder="PASSWORD "
-                className="border p-3 col-span-3 md:col-span-1 "
-              />
-              {errors.npassword && (
-                <span className="text-red-700 col-span-1">
-                  {errors.npassword.message}
-                </span>
-              )}
-            </div> */}
           </div>
 
           <div className=" grid grid-cols-2 gap-3 space-y-3">
