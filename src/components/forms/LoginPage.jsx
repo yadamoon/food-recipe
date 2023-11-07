@@ -139,7 +139,7 @@ function LoginPage() {
             <div className=" border h-0 w-2/4 border-stone-300"></div>
           </div>
           <div className="border bg-gray-300 uppercase text-center text-black w-full  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded md:w-auto ">
-            <Link to="/Register_New_Account">Create New Acc </Link>
+            <Link to="/Create New Account">Create New Acc </Link>
           </div>
         </form>
       </div>
