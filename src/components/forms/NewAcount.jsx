@@ -128,12 +128,19 @@ const NewAcount = () => {
               )}
             </div>
 
-            <div>
+            <div className="flex items-center space-x-6 justify-center">
               <button
-                className="hover:shadow-form rounded-md bg-teal-600 py-3 px-8 text-base font-semibold text-white outline-none"
-                onClick={handleSubmit(handleRegister)}
+                type="button"
+                className="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
               >
-                Submit
+                Cancel
+              </button>
+              <button
+                type="submit"
+                onClick={handleSubmit(handleRegister)}
+                class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-teal-700"
+              >
+                Done
               </button>
             </div>
           </form>
