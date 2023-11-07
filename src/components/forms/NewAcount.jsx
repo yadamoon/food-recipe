@@ -14,18 +14,18 @@ const NewAcount = () => {
   }
 
   return (
-    <div className="flex justify-center">
-      <div className="px-16 bg-white pt-6 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 sm:grid-cols-1">
-        <div className="flex items-center justify-end">
-          <div className="bg-white rounded-lg  p-8 space-y-8 col-span-1">
-            <div>
+    <div className="flex justify-center mx-3 bg-white">
+      <div className="px-16 max-w-5xl  pt-6 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 sm:grid-cols-1">
+        <div className="flex  justify-center">
+          <div className="bg-white p-8 space-y-8 col-span-1  justify-center ">
+            <div className="">
               <div className="text-xl uppercase text-gray-600">
                 Register to learn how to make some food!
               </div>
               <div className="text-[13px] text-gray-500">
                 Fill in the form to register your self
               </div>
-              <form action="" className="w-full">
+              <form action="" className="">
                 <div className="mb-5 ">
                   <input
                     type="text"
@@ -44,7 +44,7 @@ const NewAcount = () => {
                       },
                     })}
                     placeholder="First Name"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className=" rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                   {errors.first_name && (
                     <span className="text-red-700 col-span-1 ">
@@ -70,7 +70,7 @@ const NewAcount = () => {
                       },
                     })}
                     placeholder="Last Name"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280]  "
+                    className=" rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280]  "
                   />
                   {errors.first_name && (
                     <span className="text-red-700 col-span-1 ">
@@ -100,7 +100,7 @@ const NewAcount = () => {
                       },
                     })}
                     placeholder="Enter your Email"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
 
                   {errors.email && (
@@ -127,7 +127,7 @@ const NewAcount = () => {
                       },
                     })}
                     placeholder="Enter New Password"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                   {errors.newpassword && (
                     <span className="text-red-700 col-span-1 ">
@@ -153,7 +153,7 @@ const NewAcount = () => {
                       },
                     })}
                     placeholder="Enter Confirme password"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className=" rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] "
                   />
                   {errors.confiremPassword && (
                     <span className="text-red-700 col-span-1 ">
@@ -188,13 +188,12 @@ const NewAcount = () => {
             </div>
           </div>
         </div>
-        <div className="justify-center col-span-1 ">
+        <div className="justify-center col-span-1 pt-10 bg-white ">
           <img
             src="public/images/test.png"
             alt="advert"
             width="300px"
             height={60}
-            // className="text-center mx-36 pt-32 lg:mx-36 md:mx-24 sm:mx-0 sm:hidden"
           />
         </div>
       </div>
