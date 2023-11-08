@@ -1,17 +1,17 @@
 import React from 'react'
-// import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 // import { Link } from 'react-router-dom'
 
 const NewAcount = () => {
-  // const {
-  //   register,
-  //   handleSubmit,
+  const {
+    register,
+    handleSubmit,
 
-  //   formState: { errors },
-  // } = useForm()
-  // const handleRegister = ({ email, first_name, newPassword }) => {
-  //   console.log(email, first_name, newPassword)
-  // }
+    formState: { errors },
+  } = useForm()
+  const handleRegister = ({ email, first_name, newPassword }) => {
+    console.log(email, first_name, newPassword)
+  }
 
   return (
     <div className=" mx-5 rounded">
@@ -46,6 +46,20 @@ const NewAcount = () => {
                         id="firstName"
                         type="text"
                         placeholder="First Name"
+                        {...register('firstName', {
+                          required: {
+                            value: true,
+                            message: 'Please Enter First Name!',
+                          },
+                          minLength: {
+                            value: 6,
+                            message: 'min length are at least 2',
+                          },
+                          maxLength: {
+                            value: 32,
+                            message: 'max length are at least 12',
+                          },
+                        })}
                       />
                     </div>
                     <div className="md:ml-2">
