@@ -138,7 +138,7 @@ function LoginPage() {
             <div className=" text-stone-300 px-4 text-sm font-normal">OR</div>
             <div className=" border h-0 w-2/4 border-stone-300"></div>
           </div>
-          <div className="border bg-gray-300 uppercase text-center text-black w-full  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded md:w-auto ">
+          <div className="border border-green-600 uppercase text-center text-black w-full  pl-20 pr-20 pt-3 pb-2 hover:bg-teal-600 hover:text-white rounded md:w-auto ">
             <Link to="/Create New Account">Create New Acc </Link>
           </div>
         </form>
