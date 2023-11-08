@@ -27,7 +27,6 @@ const NewAcount = () => {
                   srcset=""
                 />
               </div>
-
               <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
                 <h3 className="pt-4 text-2xl text-center">
                   Create an Account!
@@ -42,7 +41,7 @@ const NewAcount = () => {
                         First Name
                       </label>
                       <input
-                        className="w-full px-1 pr-24 py-3 text-sm leading-tight text-gray-700 border rounded  appearance-none  "
+                        className="w-full px-1 pr-24 py-3 text-sm  text-gray-700 border rounded   "
                         id="firstName"
                         type="text"
                         placeholder="First Name"
@@ -75,7 +74,7 @@ const NewAcount = () => {
                         Last Name
                       </label>
                       <input
-                        className="w-full px-1 pr-20 py-3 text-sm leading-tight text-gray-700 border rounded  appearance-none  "
+                        className="w-full px-1 pr-20 py-3 text-sm  text-gray-700 border rounded   "
                         id="lastName"
                         type="text"
                         placeholder="Last Name"
@@ -109,7 +108,7 @@ const NewAcount = () => {
                       Email
                     </label>
                     <input
-                      className="w-full px-1 py-3 mb-3 text-sm leading-tight text-gray-700 border rounded  appearance-none  "
+                      className="w-full px-1 py-3 mb-3 text-sm  text-gray-700 border rounded    "
                       id="email"
                       type="email"
                       placeholder="Email"
@@ -147,7 +146,7 @@ const NewAcount = () => {
                         Password
                       </label>
                       <input
-                        className="w-full px-1 pr-24 py-3  mb-3 text-sm leading-tight text-gray-700 border  rounded  appearance-none  "
+                        className="w-full px-1 pr-24 py-3  mb-3 text-sm  text-gray-700 border  rounded   "
                         id="password"
                         type="password"
                         placeholder="******************"
@@ -180,7 +179,7 @@ const NewAcount = () => {
                         Confirm Password
                       </label>
                       <input
-                        className="w-full px-1 pr-24 py-3  mb-3 text-sm leading-tight text-gray-700 border rounded  appearance-none  "
+                        className="w-full px-1 pr-24 py-3  mb-3 text-sm  text-gray-700 border rounded    "
                         id="c_password"
                         type="password"
                         placeholder="******************"
