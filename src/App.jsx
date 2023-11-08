@@ -43,7 +43,7 @@ function App() {
           />
         </div>
       ) : (
-        <div>
+        <div className="w-full">
           {' '}
           <Routes className="pl-40 pr-40">
             <Route path="/" element={<Home />} />
