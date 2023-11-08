@@ -168,6 +168,39 @@ const NewAcount = () => {
                       </span>
                     )}
                   </div>
+                  <div className="mb-4">
+                    <label
+                      className="block mb-2 text-sm font-bold text-gray-700"
+                      for="username"
+                    >
+                      Username
+                    </label>
+                    <input
+                      className="w-full px-1 py-3 mb-3 text-sm  text-gray-700 border rounded    "
+                      id="username"
+                      type="text"
+                      placeholder="Username"
+                      {...register('username', {
+                        required: {
+                          value: true,
+                          message: 'Please Enter Username!',
+                        },
+                        minLength: {
+                          value: 6,
+                          message: 'min length are at least 6',
+                        },
+                        maxLength: {
+                          value: 32,
+                          message: 'max length are at least 32',
+                        },
+                      })}
+                    />
+                    {errors.username && (
+                      <span className="text-sm italic text-red-500  col-span-1 ">
+                        {errors.username.message}
+                      </span>
+                    )}
+                  </div>
 
                   <div className="mb-4 md:flex md:justify-between flex">
                     <select className="bg-gray-100 border border-gray-300 rounded-l px-2 py-3">
