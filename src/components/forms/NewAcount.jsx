@@ -42,7 +42,7 @@ const NewAcount = () => {
                         First Name
                       </label>
                       <input
-                        className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        className="w-full px-1 pr-24 py-3 text-sm leading-tight text-gray-700 border rounded  appearance-none  "
                         id="firstName"
                         type="text"
                         placeholder="First Name"
@@ -75,7 +75,7 @@ const NewAcount = () => {
                         Last Name
                       </label>
                       <input
-                        className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        className="w-full px-1 pr-20 py-3 text-sm leading-tight text-gray-700 border rounded  appearance-none  "
                         id="lastName"
                         type="text"
                         placeholder="Last Name"
@@ -109,7 +109,7 @@ const NewAcount = () => {
                       Email
                     </label>
                     <input
-                      className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                      className="w-full px-1 py-3 mb-3 text-sm leading-tight text-gray-700 border rounded  appearance-none  "
                       id="email"
                       type="email"
                       placeholder="Email"
@@ -147,7 +147,7 @@ const NewAcount = () => {
                         Password
                       </label>
                       <input
-                        className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border  rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        className="w-full px-1 pr-24 py-3  mb-3 text-sm leading-tight text-gray-700 border  rounded  appearance-none  "
                         id="password"
                         type="password"
                         placeholder="******************"
@@ -180,7 +180,7 @@ const NewAcount = () => {
                         Confirm Password
                       </label>
                       <input
-                        className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        className="w-full px-1 pr-24 py-3  mb-3 text-sm leading-tight text-gray-700 border rounded  appearance-none  "
                         id="c_password"
                         type="password"
                         placeholder="******************"
@@ -209,7 +209,7 @@ const NewAcount = () => {
                   </div>
                   <div className="mb-6 text-center">
                     <button
-                      className="w-full px-4 py-2 font-bold text-white bg-teal-500 rounded-full hover:bg-teal-700 focus:outline-none focus:shadow-outline"
+                      className="w-full px-4 py-2 font-bold text-white bg-teal-500 rounded-full hover:bg-teal-700  "
                       type="button"
                       onClick={handleSubmit(handleRegister)}
                     >
