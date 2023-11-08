@@ -61,6 +61,11 @@ const NewAcount = () => {
                           },
                         })}
                       />
+                      {errors.firstName && (
+                        <span className="text-red-700 col-span-1 ">
+                          {errors.firstName.message}
+                        </span>
+                      )}
                     </div>
                     <div className="md:ml-2">
                       <label
@@ -89,6 +94,11 @@ const NewAcount = () => {
                           },
                         })}
                       />
+                      {errors.lastName && (
+                        <span className="text-xs italic text-red-500  col-span-1 ">
+                          {errors.lastName.message}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="mb-4">
@@ -103,7 +113,30 @@ const NewAcount = () => {
                       id="email"
                       type="email"
                       placeholder="Email"
+                      {...register('email', {
+                        required: {
+                          value: true,
+                          message: 'Please Enter Your correct Email!',
+                        },
+                        minLength: {
+                          value: 6,
+                          message: 'min length are at least 6',
+                        },
+                        maxLength: {
+                          value: 32,
+                          message: 'max length are at least 32',
+                        },
+                        pattern: {
+                          value: /[@]/,
+                          message: 'Enter at least one special character',
+                        },
+                      })}
                     />
+                    {errors.email && (
+                      <span className="text-xs italic text-red-500  col-span-1 ">
+                        {errors.email.message}
+                      </span>
+                    )}
                   </div>
                   <div className="mb-4 md:flex md:justify-between">
                     <div className="mb-4 md:mr-2 md:mb-0">
@@ -118,10 +151,26 @@ const NewAcount = () => {
                         id="password"
                         type="password"
                         placeholder="******************"
+                        {...register('email', {
+                          required: {
+                            value: true,
+                            message: 'Please Enter Your correct password!',
+                          },
+                          minLength: {
+                            value: 8,
+                            message: 'min length are at least 6',
+                          },
+                          maxLength: {
+                            value: 32,
+                            message: 'max length are at least 32',
+                          },
+                        })}
                       />
-                      <p className="text-xs italic text-red-500">
-                        Please choose a password.
-                      </p>
+                      {errors.password && (
+                        <span className="text-xs italic text-red-500  col-span-1">
+                          {errors.password.message}
+                        </span>
+                      )}
                     </div>
                     <div className="md:ml-2">
                       <label
@@ -135,13 +184,34 @@ const NewAcount = () => {
                         id="c_password"
                         type="password"
                         placeholder="******************"
+                        {...register('confirmePassword', {
+                          required: {
+                            value: true,
+                            message:
+                              'Please Enter Your correct Confirme Password!',
+                          },
+                          minLength: {
+                            value: 6,
+                            message: 'min length are at least 6',
+                          },
+                          maxLength: {
+                            value: 32,
+                            message: 'max length are at least 32',
+                          },
+                        })}
                       />
+                      {errors.confirmePassword && (
+                        <span className="text-xs italic text-red-500  col-span-1">
+                          {errors.confirmePassword.message}
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div className="mb-6 text-center">
                     <button
                       className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
                       type="button"
+                      onClick={handleSubmit(handleRegister)}
                     >
                       Register Account
                     </button>
