@@ -151,7 +151,7 @@ const NewAcount = () => {
                         id="password"
                         type="password"
                         placeholder="******************"
-                        {...register('email', {
+                        {...register('password', {
                           required: {
                             value: true,
                             message: 'Please Enter Your correct password!',
@@ -209,7 +209,7 @@ const NewAcount = () => {
                   </div>
                   <div className="mb-6 text-center">
                     <button
-                      className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                      className="w-full px-4 py-2 font-bold text-white bg-teal-500 rounded-full hover:bg-teal-700 focus:outline-none focus:shadow-outline"
                       type="button"
                       onClick={handleSubmit(handleRegister)}
                     >
@@ -217,14 +217,7 @@ const NewAcount = () => {
                     </button>
                   </div>
                   <hr className="mb-6 border-t" />
-                  <div className="text-center">
-                    <a
-                      className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                      href="#"
-                    >
-                      Forgot Password?
-                    </a>
-                  </div>
+
                   <div className="text-center">
                     <a
                       className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
