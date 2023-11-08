@@ -1,200 +1,144 @@
 import React from 'react'
-import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+// import { useForm } from 'react-hook-form'
+// import { Link } from 'react-router-dom'
 
 const NewAcount = () => {
-  const {
-    register,
-    handleSubmit,
+  // const {
+  //   register,
+  //   handleSubmit,
 
-    formState: { errors },
-  } = useForm()
-  const handleRegister = ({ email, first_name, newPassword }) => {
-    console.log(email, first_name, newPassword)
-  }
+  //   formState: { errors },
+  // } = useForm()
+  // const handleRegister = ({ email, first_name, newPassword }) => {
+  //   console.log(email, first_name, newPassword)
+  // }
 
   return (
-    <div className="flex justify-center mx-3 bg-white">
-      <div className="px-16 max-w-6xl  pt-6 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 sm:grid-cols-1">
-        <div className="flex   justify-center">
-          <div className="bg-white p-8 space-y-8 col-span-1  justify-center ">
-            <div className="w-full">
-              <div className="text-xl uppercase text-gray-600">
-                Register to learn how to make some food!
+    <div className=" mx-5 rounded">
+      <div className="font-mono bg-white">
+        <div className="container mx-auto">
+          <div className="flex justify-center px-6 my-12">
+            <div className="w-full xl:w-3/4 lg:w-11/12 flex">
+              <div className="w-full h-auto bg-white hidden lg:block lg:w-5/12 bg-cover rounded-l-lg">
+                <img
+                  src="public/images/test.png"
+                  className="bg-cover h-auto"
+                  alt=""
+                  srcset=""
+                />
               </div>
-              <div className="text-[13px] text-gray-500">
-                Fill in the form to register your self
-              </div>
-              <form action="" className="">
-                <div className="mb-5 ">
-                  <input
-                    type="text"
-                    {...register('first_name', {
-                      required: {
-                        value: true,
-                        message: 'Please Enter Your First Name!',
-                      },
-                      minLength: {
-                        value: 6,
-                        message: 'min length are at least 6',
-                      },
-                      maxLength: {
-                        value: 32,
-                        message: 'max length are at least 32',
-                      },
-                    })}
-                    placeholder="First Name"
-                    className=" rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                  />
-                  {errors.first_name && (
-                    <span className="text-red-700 col-span-1 ">
-                      {errors.first_name.message}
-                    </span>
-                  )}
-                </div>
-                <div className="mb-5">
-                  <input
-                    type="text"
-                    {...register('last_name', {
-                      required: {
-                        value: true,
-                        message: 'Please Enter Your Last Name!',
-                      },
-                      minLength: {
-                        value: 6,
-                        message: 'min length are at least 6',
-                      },
-                      maxLength: {
-                        value: 32,
-                        message: 'max length are at least 32',
-                      },
-                    })}
-                    placeholder="Last Name"
-                    className=" rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280]  "
-                  />
-                  {errors.first_name && (
-                    <span className="text-red-700 col-span-1 ">
-                      {errors.first_name.message}
-                    </span>
-                  )}
-                </div>
-                <div className="mb-5">
-                  <input
-                    type="email"
-                    {...register('email', {
-                      required: {
-                        value: true,
-                        message: 'Please Enter Your correct Email!',
-                      },
-                      minLength: {
-                        value: 6,
-                        message: 'min length are at least 6',
-                      },
-                      maxLength: {
-                        value: 32,
-                        message: 'max length are at least 32',
-                      },
-                      pattern: {
-                        value: /[@]/,
-                        message: 'Enter at least one special character',
-                      },
-                    })}
-                    placeholder="Enter your Email"
-                    className="rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                  />
 
-                  {errors.email && (
-                    <span className="text-red-700 col-span-1 ">
-                      {errors.email.message}
-                    </span>
-                  )}
-                </div>
-                <div className="mb-5">
-                  <input
-                    type="text"
-                    {...register('newpassword', {
-                      required: {
-                        value: true,
-                        message: 'Please Enter New Password!',
-                      },
-                      minLength: {
-                        value: 6,
-                        message: 'min length are at least 6',
-                      },
-                      maxLength: {
-                        value: 32,
-                        message: 'max length are at least 32',
-                      },
-                    })}
-                    placeholder="Enter New Password"
-                    className="rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                  />
-                  {errors.newpassword && (
-                    <span className="text-red-700 col-span-1 ">
-                      {errors.newpassword.message}
-                    </span>
-                  )}
-                </div>
-                <div className="mb-5">
-                  <input
-                    type="text"
-                    {...register('confiremPassword', {
-                      required: {
-                        value: true,
-                        message: 'Wrong!',
-                      },
-                      minLength: {
-                        value: 6,
-                        message: 'min length are at least 6',
-                      },
-                      maxLength: {
-                        value: 32,
-                        message: 'max length are at least 32',
-                      },
-                    })}
-                    placeholder="Enter Confirme password"
-                    className=" rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] "
-                  />
-                  {errors.confiremPassword && (
-                    <span className="text-red-700 col-span-1 ">
-                      {errors.confiremPassword.message}
-                    </span>
-                  )}
-                </div>
-                <div className="flex items-center space-x-6 justify-center">
-                  <button
-                    type="button"
-                    className="text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    type="submit"
-                    onClick={handleSubmit(handleRegister)}
-                    class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-teal-700"
-                  >
-                    Done
-                  </button>
-                </div>
-                <div className="text-center">
-                  <span className="font-thin">
-                    I have account
-                    <Link to="/LoginPage" className="font-bold">
-                      Login
-                    </Link>
-                  </span>
-                </div>
-              </form>
+              <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
+                <h3 className="pt-4 text-2xl text-center">
+                  Create an Account!
+                </h3>
+                <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+                  <div className="mb-4 md:flex md:justify-between">
+                    <div className="mb-4 md:mr-2 md:mb-0">
+                      <label
+                        className="block mb-2 text-sm font-bold text-gray-700"
+                        for="firstName"
+                      >
+                        First Name
+                      </label>
+                      <input
+                        className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        id="firstName"
+                        type="text"
+                        placeholder="First Name"
+                      />
+                    </div>
+                    <div className="md:ml-2">
+                      <label
+                        className="block mb-2 text-sm font-bold text-gray-700"
+                        for="lastName"
+                      >
+                        Last Name
+                      </label>
+                      <input
+                        className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        id="lastName"
+                        type="text"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <label
+                      className="block mb-2 text-sm font-bold text-gray-700"
+                      for="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                      id="email"
+                      type="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div className="mb-4 md:flex md:justify-between">
+                    <div className="mb-4 md:mr-2 md:mb-0">
+                      <label
+                        className="block mb-2 text-sm font-bold text-gray-700"
+                        for="password"
+                      >
+                        Password
+                      </label>
+                      <input
+                        className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        id="password"
+                        type="password"
+                        placeholder="******************"
+                      />
+                      <p className="text-xs italic text-red-500">
+                        Please choose a password.
+                      </p>
+                    </div>
+                    <div className="md:ml-2">
+                      <label
+                        className="block mb-2 text-sm font-bold text-gray-700"
+                        for="c_password"
+                      >
+                        Confirm Password
+                      </label>
+                      <input
+                        className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        id="c_password"
+                        type="password"
+                        placeholder="******************"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-6 text-center">
+                    <button
+                      className="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                      type="button"
+                    >
+                      Register Account
+                    </button>
+                  </div>
+                  <hr className="mb-6 border-t" />
+                  <div className="text-center">
+                    <a
+                      className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                      href="#"
+                    >
+                      Forgot Password?
+                    </a>
+                  </div>
+                  <div className="text-center">
+                    <a
+                      className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                      href="#"
+                    >
+                      Already have an account? Login!
+                    </a>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="justify-center items-center col-span-1 pt-10 bg-white ">
-          <img
-            src="public/images/test.png"
-            alt="advert"
-            width="300px"
-            height={60}
-          />
         </div>
       </div>
     </div>
