@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+import { http } from '../../services/http/http'
 
 const NewAcount = () => {
   const {
@@ -16,32 +17,23 @@ const NewAcount = () => {
       password: '',
     },
   })
-  const handleRegister = async (item) => {
-    // console.log(firstName, lastName, email, password)
-
-    const data = new FormData()
-    const keys = Object.keys(item)
-    keys.forEach((key) => data.append(key, item[key]))
-    const result = await http.upload({
+  const addNewUser = async ({
+    username,
+    firstname,
+    lastname,
+    email,
+    password,
+    phoneNumber,
+  }) => {
+    const result = await http.request({
       method: 'post',
-      url: 'recipe',
-      data,
+      url: 'users',
+      data: { firstname, lastlame, username, email, password, phoneNumber },
     })
     if (!result.isError) {
       reset()
-      Swal.fire({
-        title: 'Success!',
-        icon: 'success',
-        title: 'Your work has been saved',
-        confirmButtonText: 'Cool',
-      })
     }
-    Swal.fire({
-      title: 'Error!',
-      icon: 'error',
-      title: 'Please try again',
-      // confirmButtonText: 'ok',
-    })
+    console.log(result)
   }
 
   return (
@@ -76,7 +68,7 @@ const NewAcount = () => {
                         id="firstName"
                         type="text"
                         placeholder="First Name"
-                        {...register('firstName', {
+                        {...register('firstname', {
                           required: {
                             value: true,
                             message: 'Please Enter First Name!',
@@ -109,7 +101,7 @@ const NewAcount = () => {
                         id="lastName"
                         type="text"
                         placeholder="Last Name"
-                        {...register('lastName', {
+                        {...register('lastname', {
                           required: {
                             value: true,
                             message: 'Please Enter Last Name!',
@@ -202,7 +194,7 @@ const NewAcount = () => {
                     )}
                   </div>
 
-                  <div className="mb-4 md:flex md:justify-between flex">
+                  <div className="mb-4 md:flex md:justify-between flex ">
                     <select className="bg-gray-100 border border-gray-300 rounded-l px-2 py-3">
                       <option value="+1">+251</option>
                       <option value="+91">+61</option>
@@ -287,7 +279,7 @@ const NewAcount = () => {
                     <button
                       className="w-full px-4 py-2 font-bold text-white bg-teal-500 rounded hover:bg-teal-700  "
                       type="button"
-                      onClick={handleSubmit(handleRegister)}
+                      onClick={handleSubmit(addNewUser)}
                     >
                       Register Account
                     </button>
