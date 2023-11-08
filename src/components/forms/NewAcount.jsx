@@ -8,13 +8,44 @@ const NewAcount = () => {
     handleSubmit,
 
     formState: { errors },
-  } = useForm()
-  const handleRegister = ({ email, first_name, newPassword }) => {
-    console.log(email, first_name, newPassword)
+  } = useForm({
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+    },
+  })
+  const handleRegister = async (item) => {
+    // console.log(firstName, lastName, email, password)
+
+    const data = new FormData()
+    const keys = Object.keys(item)
+    keys.forEach((key) => data.append(key, item[key]))
+    const result = await http.upload({
+      method: 'post',
+      url: 'recipe',
+      data,
+    })
+    if (!result.isError) {
+      reset()
+      Swal.fire({
+        title: 'Success!',
+        icon: 'success',
+        title: 'Your work has been saved',
+        confirmButtonText: 'Cool',
+      })
+    }
+    Swal.fire({
+      title: 'Error!',
+      icon: 'error',
+      title: 'Please try again',
+      // confirmButtonText: 'ok',
+    })
   }
 
   return (
-    <div className=" mx-5 rounded">
+    <div className=" mx-5 mt-10 rounded">
       <div className="font-mono bg-white">
         <div className="container mx-auto">
           <div className="flex justify-center px-6 my-12">
@@ -136,6 +167,19 @@ const NewAcount = () => {
                         {errors.email.message}
                       </span>
                     )}
+                  </div>
+
+                  <div className="mb-4 md:flex md:justify-between flex">
+                    <select className="bg-gray-100 border border-gray-300 rounded-l px-2 py-3">
+                      <option value="+1">+251</option>
+                      <option value="+91">+61</option>
+                      {/* Add more country codes as needed */}
+                    </select>
+                    <input
+                      type="tel"
+                      className="w-full px-1 py-3 text-sm  text-gray-700 border rounded"
+                      placeholder="Phone number"
+                    />
                   </div>
                   <div className="mb-4 md:flex md:justify-between">
                     <div className="mb-4 md:mr-2 md:mb-0">
