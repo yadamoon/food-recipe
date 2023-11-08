@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const NewAcount = () => {
   const {
@@ -209,7 +209,7 @@ const NewAcount = () => {
                   </div>
                   <div className="mb-6 text-center">
                     <button
-                      className="w-full px-4 py-2 font-bold text-white bg-teal-500 rounded-full hover:bg-teal-700  "
+                      className="w-full px-4 py-2 font-bold text-white bg-teal-500 rounded hover:bg-teal-700  "
                       type="button"
                       onClick={handleSubmit(handleRegister)}
                     >
@@ -218,14 +218,14 @@ const NewAcount = () => {
                   </div>
                   <hr className="mb-6 border-t" />
 
-                  <div className="text-center">
+                  <Link to="/Login" className="text-center">
                     <a
                       className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                       href="#"
                     >
                       Already have an account? Login!
                     </a>
-                  </div>
+                  </Link>
                 </form>
               </div>
             </div>
