@@ -62,7 +62,7 @@ const NewAcount = () => {
                         })}
                       />
                       {errors.firstName && (
-                        <span className="text-red-700 col-span-1 ">
+                        <span className=" text-sm italic text-red-500 col-span-1 ">
                           {errors.firstName.message}
                         </span>
                       )}
@@ -95,7 +95,7 @@ const NewAcount = () => {
                         })}
                       />
                       {errors.lastName && (
-                        <span className="text-xs italic text-red-500  col-span-1 ">
+                        <span className="text-sm italic text-red-500  col-span-1 ">
                           {errors.lastName.message}
                         </span>
                       )}
@@ -133,7 +133,7 @@ const NewAcount = () => {
                       })}
                     />
                     {errors.email && (
-                      <span className="text-xs italic text-red-500  col-span-1 ">
+                      <span className="text-sm italic text-red-500  col-span-1 ">
                         {errors.email.message}
                       </span>
                     )}
@@ -147,7 +147,7 @@ const NewAcount = () => {
                         Password
                       </label>
                       <input
-                        className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                        className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border  rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                         id="password"
                         type="password"
                         placeholder="******************"
@@ -167,7 +167,7 @@ const NewAcount = () => {
                         })}
                       />
                       {errors.password && (
-                        <span className="text-xs italic text-red-500  col-span-1">
+                        <span className="text-sm italic text-red-500  col-span-1">
                           {errors.password.message}
                         </span>
                       )}
@@ -201,7 +201,7 @@ const NewAcount = () => {
                         })}
                       />
                       {errors.confirmePassword && (
-                        <span className="text-xs italic text-red-500  col-span-1">
+                        <span className="text-sm italic text-red-500  col-span-1">
                           {errors.confirmePassword.message}
                         </span>
                       )}
