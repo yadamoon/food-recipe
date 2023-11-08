@@ -18,7 +18,7 @@ const NewAcount = () => {
       <div className="px-16 max-w-6xl  pt-6 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 sm:grid-cols-1">
         <div className="flex   justify-center">
           <div className="bg-white p-8 space-y-8 col-span-1  justify-center ">
-            <div className="">
+            <div className="w-full">
               <div className="text-xl uppercase text-gray-600">
                 Register to learn how to make some food!
               </div>
