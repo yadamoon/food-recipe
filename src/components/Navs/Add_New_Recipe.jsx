@@ -57,7 +57,6 @@ const Add_New_Recipe = () => {
       title: 'Error!',
       icon: 'error',
       title: 'Please try again',
-      // confirmButtonText: 'ok',
     })
     console.log(result)
   }
