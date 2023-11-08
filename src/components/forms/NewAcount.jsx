@@ -74,6 +74,20 @@ const NewAcount = () => {
                         id="lastName"
                         type="text"
                         placeholder="Last Name"
+                        {...register('lastName', {
+                          required: {
+                            value: true,
+                            message: 'Please Enter Last Name!',
+                          },
+                          minLength: {
+                            value: 6,
+                            message: 'min length are at least 2',
+                          },
+                          maxLength: {
+                            value: 32,
+                            message: 'max length are at least 12',
+                          },
+                        })}
                       />
                     </div>
                   </div>
