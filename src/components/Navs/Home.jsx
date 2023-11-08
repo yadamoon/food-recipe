@@ -82,7 +82,7 @@ export const FoodForHealthy = () => {
           <div className="grid grid-cols-1 w-full items-center sm:w-2/3 sm:mx-16 space-y-10">
             <Link
               to="/"
-              className="bg-teal-600 text-white pe-7 text-center rounded "
+              className="bg-teal-600 text-white p-3 text-center rounded "
             >
               Get Startd
             </Link>
