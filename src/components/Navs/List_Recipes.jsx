@@ -111,7 +111,7 @@ function DetailsComponents() {
         {recipes.length > 4 && (
           <RCPaginate
             items={recipesFiltered}
-            itemsPerPage={12}
+            itemsPerPage={4}
             setter={setRecipesDisplayed}
           />
         )}
