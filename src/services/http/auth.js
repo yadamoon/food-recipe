@@ -17,7 +17,6 @@ const auth = {
   signOut() {
     apiService.removeHeader()
     tokenService.removeToken()
-    console.log('logout')
   },
 }
 export default auth
