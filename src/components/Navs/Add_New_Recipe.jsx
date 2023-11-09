@@ -46,17 +46,19 @@ const Add_New_Recipe = () => {
     })
     if (!result.isError) {
       reset()
+      setPictureUrl()
       Swal.fire({
-        title: 'Success!',
-        icon: 'success',
-        title: 'Your work has been saved',
+        title: 'error!',
+        icon: 'error',
+        title: 'wrogn please try again',
         confirmButtonText: 'Cool',
       })
     }
     Swal.fire({
-      title: 'Error!',
-      icon: 'error',
-      title: 'Please try again',
+      title: 'Success!',
+      icon: 'success',
+      title: 'Successfuly',
+      timer: 1000,
     })
     console.log(result)
   }
