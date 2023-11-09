@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import auth from '../../services/http/auth'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { useDispatch } from 'react-redux'
+import { setStatus } from '../../store/slices/authSlice'
 const Settings = () => {
   const [path, setPath] = useState('')
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   const contents = [
     {
       title: 'Public Profile',
@@ -45,13 +49,12 @@ const Settings = () => {
           showConfirmButton: false,
           timer: 2000,
         })
+
+        auth.signOut()
+        dispatch(setStatus({ status: false }))
+        navigate('/')
       }
-    }),
-      auth.signOut()
-    changePath()
-  }
-  const changePath = () => {
-    setPath('/')
+    })
   }
 
   return (
@@ -87,7 +90,7 @@ const Settings = () => {
               </a>
             ))}
 
-            <Link to={path} onClick={handlLogout} className="border p-2">
+            <Link onClick={handlLogout} className="border p-2">
               <img
                 src="public/images/logout-svgrepo-com.svg"
                 width={30}
