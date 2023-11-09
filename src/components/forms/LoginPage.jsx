@@ -72,7 +72,7 @@ function LoginPage() {
     })
   }
 
-  const notify = () => toast.info('Succefullys')
+  // const notify = () => toast.info('Succefullys')
 
   return (
     <div className="flex justify-center">
