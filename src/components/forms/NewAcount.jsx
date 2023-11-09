@@ -7,14 +7,15 @@ const NewAcount = () => {
   const {
     register,
     handleSubmit,
-
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
-      firstName: '',
-      lastName: '',
+      firstname: '',
+      lastname: '',
       email: '',
       password: '',
+      phoneNumber: '',
     },
   })
   const addNewUser = async ({
@@ -28,7 +29,7 @@ const NewAcount = () => {
     const result = await http.request({
       method: 'post',
       url: 'users',
-      data: { firstname, lastlame, username, email, password, phoneNumber },
+      data: { firstname, lastname, username, email, password, phoneNumber },
     })
     if (!result.isError) {
       reset()
@@ -74,7 +75,7 @@ const NewAcount = () => {
                             message: 'Please Enter First Name!',
                           },
                           minLength: {
-                            value: 6,
+                            value: 2,
                             message: 'min length are at least 2',
                           },
                           maxLength: {
@@ -83,9 +84,9 @@ const NewAcount = () => {
                           },
                         })}
                       />
-                      {errors.firstName && (
-                        <span className=" text-sm italic text-red-500 col-span-1 ">
-                          {errors.firstName.message}
+                      {errors.firstname && (
+                        <span className=" text-sm  text-red-500 col-span-1 ">
+                          {errors.firstname.message}
                         </span>
                       )}
                     </div>
@@ -116,9 +117,9 @@ const NewAcount = () => {
                           },
                         })}
                       />
-                      {errors.lastName && (
-                        <span className="text-sm italic text-red-500  col-span-1 ">
-                          {errors.lastName.message}
+                      {errors.lastname && (
+                        <span className="text-sm  text-red-500  col-span-1 ">
+                          {errors.lastname.message}
                         </span>
                       )}
                     </div>
@@ -155,7 +156,7 @@ const NewAcount = () => {
                       })}
                     />
                     {errors.email && (
-                      <span className="text-sm italic text-red-500  col-span-1 ">
+                      <span className="text-sm  text-red-500  col-span-1 ">
                         {errors.email.message}
                       </span>
                     )}
@@ -188,7 +189,7 @@ const NewAcount = () => {
                       })}
                     />
                     {errors.username && (
-                      <span className="text-sm italic text-red-500  col-span-1 ">
+                      <span className="text-sm  text-red-500  col-span-1 ">
                         {errors.username.message}
                       </span>
                     )}
@@ -196,15 +197,38 @@ const NewAcount = () => {
 
                   <div className="mb-4 md:flex md:justify-between flex ">
                     <select className="bg-gray-100 border border-gray-300 rounded-l px-2 py-3">
-                      <option value="+1">+251</option>
-                      <option value="+91">+61</option>
+                      <option value="+251">+251</option>
+                      <option value="+61">+61</option>
                       {/* Add more country codes as needed */}
                     </select>
                     <input
-                      type="tel"
+                      type="phoneNumber"
                       className="w-full px-1 py-3 text-sm  text-gray-700 border rounded"
                       placeholder="Phone number"
+                      {...register('phoneNumber', {
+                        required: {
+                          value: true,
+                          message: 'Please Enter Phone Number!',
+                        },
+                        minLength: {
+                          value: 8,
+                          message: 'min length are at least 6',
+                        },
+                        maxLength: {
+                          value: 32,
+                          message: 'max length are at least 32',
+                        },
+                        pattern: {
+                          value: new RegExp('^(0[0-9]{9}|9[0-9]{8})$'),
+                          message: 'Invalid phone number',
+                        },
+                      })}
                     />
+                    {errors.phoneNumber && (
+                      <span className="text-sm  text-red-500  col-span-1 ">
+                        {errors.phoneNumber.message}
+                      </span>
+                    )}
                   </div>
                   <div className="mb-4 md:flex md:justify-between">
                     <div className="mb-4 md:mr-2 md:mb-0">
@@ -235,7 +259,7 @@ const NewAcount = () => {
                         })}
                       />
                       {errors.password && (
-                        <span className="text-sm italic text-red-500  col-span-1">
+                        <span className="text-sm  text-red-500  col-span-1">
                           {errors.password.message}
                         </span>
                       )}
@@ -269,7 +293,7 @@ const NewAcount = () => {
                         })}
                       />
                       {errors.confirmePassword && (
-                        <span className="text-sm italic text-red-500  col-span-1">
+                        <span className="text-sm  text-red-500  col-span-1">
                           {errors.confirmePassword.message}
                         </span>
                       )}
