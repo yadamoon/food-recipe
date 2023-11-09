@@ -184,7 +184,7 @@ const Add_New_Recipe = () => {
             rows={3}
             placeholder="Description"
           />
-          {errors.descrption && (
+          {errors.description && (
             <span className="text-red-700  ">{errors.description.message}</span>
           )}
 
