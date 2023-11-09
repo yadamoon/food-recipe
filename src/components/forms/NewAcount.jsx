@@ -31,10 +31,29 @@ const NewAcount = () => {
       url: 'users',
       data: { firstname, lastname, username, email, password, phoneNumber },
     })
+
     if (!result.isError) {
+      dispatch(setStatus({ status: true }))
+      dispatch(setUser({ user: result.user }))
+      navigate('/')
+      Swal.fire({
+        title: 'Success!',
+        icon: 'success',
+        title: ' Successfully you r created new account',
+        showConfirmButton: false,
+        timer: 2000,
+      })
       reset()
+    } else {
+      console.log({ error: result.error })
+      Swal.fire({
+        title: 'Error!',
+        icon: 'error',
+        title: 'Wrong please try again',
+        timer: 2000,
+        showConfirmButton: false,
+      })
     }
-    console.log(result)
   }
 
   return (
@@ -108,7 +127,7 @@ const NewAcount = () => {
                             message: 'Please Enter Last Name!',
                           },
                           minLength: {
-                            value: 6,
+                            value: 2,
                             message: 'min length are at least 2',
                           },
                           maxLength: {
