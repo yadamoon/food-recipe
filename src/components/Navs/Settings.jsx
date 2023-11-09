@@ -8,6 +8,7 @@ import Swal from 'sweetalert2'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 const Settings = () => {
+  const [path, setPath] = useState('')
   const contents = [
     {
       title: 'Public Profile',
@@ -28,7 +29,29 @@ const Settings = () => {
   const [activeMenu, setActiveMenu] = useState(0)
   const ActiveContent = contents[activeMenu].content
   const handlLogout = () => {
-    auth.signOut()
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, logout !',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Logout!',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 2000,
+        })
+      }
+    }),
+      auth.signOut()
+    changePath()
+  }
+  const changePath = () => {
+    setPath('/')
   }
 
   return (
@@ -63,7 +86,8 @@ const Settings = () => {
                 </span>
               </a>
             ))}
-            <Link to="/" className="border p-2" onClick={handlLogout}>
+
+            <Link to={path} onClick={handlLogout} className="border p-2">
               <img
                 src="public/images/logout-svgrepo-com.svg"
                 width={30}
@@ -108,22 +132,7 @@ const publicProfile = () => {
     )
     reset()
   }
-  const cancel = () => {
-    Swal.fire({
-      title: 'Do you want to save the changes?',
-      showDenyButton: true,
-      showCancelButton: true,
-      confirmButtonText: 'Save',
-      denyButtonText: `Don't save`,
-    }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        Swal.fire('Saved!', '', 'success')
-      } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info')
-      }
-    })
-  }
+  const cancel = () => {}
 
   return (
     <div>
