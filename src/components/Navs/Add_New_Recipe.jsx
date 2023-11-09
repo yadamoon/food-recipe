@@ -50,15 +50,17 @@ const Add_New_Recipe = () => {
       Swal.fire({
         title: 'error!',
         icon: 'error',
-        title: 'wrogn please try again',
+        title: 'wrong! please try',
         confirmButtonText: 'Cool',
       })
     }
     Swal.fire({
       title: 'Success!',
       icon: 'success',
-      title: 'Successfuly',
+      title: 'Successfuly add ',
       timer: 1000,
+
+      showCancelButton: false,
     })
     console.log(result)
   }
