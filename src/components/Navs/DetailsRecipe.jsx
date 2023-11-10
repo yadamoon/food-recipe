@@ -50,7 +50,7 @@ const DetailsRecipe = () => {
                   <div className="grid grid-cols-2 gap-8 mt-8 md:mt-16 md:grid-cols-2">
                     <div>
                       <img
-                        className="object-cover w-full h-28 rounded-t lg:w-64"
+                        className="object-cover w-full h-28 rounded-t lg:w-64 hover:opacity-75"
                         src="https://dummyimage.com/421x261"
                         alt=""
                       />
@@ -65,7 +65,7 @@ const DetailsRecipe = () => {
 
                     <div>
                       <img
-                        className="object-cover w-full h-28 rounded-t lg:w-64"
+                        className="object-cover w-full h-28 rounded-t lg:w-64 hover:opacity-75"
                         src="https://dummyimage.com/421x261"
                         alt=""
                       />
@@ -80,7 +80,7 @@ const DetailsRecipe = () => {
 
                     <div>
                       <img
-                        className="object-cover w-full h-28 rounded-t lg:w-64"
+                        className="object-cover w-full h-28 rounded-t lg:w-64 hover:opacity-75"
                         src="https://dummyimage.com/421x261"
                         alt=""
                       />
@@ -95,7 +95,7 @@ const DetailsRecipe = () => {
 
                     <div>
                       <img
-                        className="object-cover w-full h-28 rounded-t lg:w-64"
+                        className="object-cover w-full h-28 rounded-t lg:w-64 hover:opacity-75"
                         src="https://dummyimage.com/421x261"
                         alt=""
                       />
@@ -110,7 +110,7 @@ const DetailsRecipe = () => {
 
                     <div>
                       <img
-                        className="object-cover w-full h-28 rounded-t lg:w-64"
+                        className="object-cover w-full h-28 rounded-t lg:w-64 hover:opacity-75"
                         src="https://dummyimage.com/421x261"
                         alt=""
                       />
@@ -125,7 +125,7 @@ const DetailsRecipe = () => {
 
                     <div>
                       <img
-                        className="object-cover w-full h-28 rounded-t lg:w-64"
+                        className="object-cover w-full h-28 rounded-t lg:w-64 hover:opacity-75"
                         src="https://dummyimage.com/421x261"
                         alt=""
                       />
