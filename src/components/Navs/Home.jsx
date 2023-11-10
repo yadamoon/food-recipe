@@ -42,6 +42,7 @@ export const Sub = () => {
               type="email"
               placeholder="Your Email"
             />
+
             <button className="w-32 rounded-l-none hover:bg-teal-600 bg-teal-700 rounded text-base font-medium leading-none text-white p-5 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-700">
               subscribe
             </button>
@@ -79,6 +80,8 @@ export const FoodForHealthy = () => {
             esse est neque debitis reiciendis autem officiis libero ducimus
             fugiat?
           </p>
+          <br />
+          <br />
           <div className="grid grid-cols-1 w-full items-center sm:w-2/3 sm:mx-16 space-y-10">
             <Link
               to="/"
