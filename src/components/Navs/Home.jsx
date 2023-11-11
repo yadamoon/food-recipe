@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <div className=" w-full  md:mx-32 lg:mx-1 mx-5">
+    <div className="container bg-white mx-auto w-full h-full">
       <FoodForHealthy />
       <PopularVideo />
       <Sub />
