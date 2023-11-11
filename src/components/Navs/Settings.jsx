@@ -59,14 +59,16 @@ const Settings = () => {
 
   return (
     <div className=" w-full  bg-white">
-      <div>
+      <br />
+      <div className="">
         {/* titel of components */}
-        <motion.h2 className="text-center text-3xl" animate={{ x: 20 }}>
+        <motion.h2 className="text-center space-y-4 mb-2 text-xl " animate={{}}>
           Settings
         </motion.h2>
       </div>
+
       {/* <!-- Seperator --> */}
-      <div className="flex items-center justify-center flex-col h-screen">
+      <div className="flex items-center justify-center flex-col ">
         <div className="text-sm font-bold ">
           <nav className="flex w-full justify-center space-x-3   ">
             {contents.map((item, index) => (
@@ -100,7 +102,8 @@ const Settings = () => {
             </Link>
           </nav>
         </div>
-
+      </div>
+      <div className="">
         <ActiveContent className="col-span-3 md:col-span-3 sm:col-span-1 mx-10 " />
       </div>
     </div>
@@ -142,7 +145,7 @@ const publicProfile = () => {
       <div className="bg-white">
         <div className="max-w-2xl px-4 py-8 mx-auto lg:py-16">
           <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-black">
-            Update product
+            Update profile
           </h2>
           <form>
             <div className="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
