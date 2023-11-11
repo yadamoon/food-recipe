@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 import { http } from '../../services/http/http'
 import { useDispatch } from 'react-redux'
 import { setStatus } from '../../store/slices/authSlice'
+import Swal from 'sweetalert2'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const NewAcount = () => {
   const dispatch = useDispatch()
