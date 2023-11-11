@@ -2,8 +2,11 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { http } from '../../services/http/http'
+import { useDispatch } from 'react-redux'
+import { setStatus } from '../../store/slices/authSlice'
 
 const NewAcount = () => {
+  const dispatch = useDispatch()
   const {
     register,
     handleSubmit,
@@ -46,13 +49,13 @@ const NewAcount = () => {
       reset()
     } else {
       console.log({ error: result.error })
-      Swal.fire({
-        title: 'Error!',
-        icon: 'error',
-        title: 'Wrong please try again',
-        timer: 2000,
-        showConfirmButton: false,
-      })
+      // Swal.fire({
+      //   title: 'Error!',
+      //   icon: 'error',
+      //   title: 'Wrong please try again',
+      //   timer: 2000,
+      //   showConfirmButton: false,
+      // })
     }
   }
 
