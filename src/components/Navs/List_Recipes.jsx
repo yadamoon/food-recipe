@@ -82,7 +82,7 @@ function DetailsComponents() {
                 >
                   <img
                     alt="recipe"
-                    className="block h-full w-full object-cover object-center cursor-pointer hover:opacity-75"
+                    className="block h-80 w-full object-cover object-center cursor-pointer hover:opacity-75"
                     src={
                       recipe.image
                         ? 'http://localhost:3000/uploads/recipes/' +
