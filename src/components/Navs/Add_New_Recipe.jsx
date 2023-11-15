@@ -67,11 +67,11 @@ const Add_New_Recipe = () => {
   return (
     <div className="flex justify-center">
       <div className=" bg-white mx-4 md:mx-0 w-full md:w-2/3 lg:w-1/3 rounded-xl h-auto p-6">
-        <div className="text-2xl">
+        <div className="text-2xl text-center">
           <h1>Add New Recipe</h1>
         </div>
         <form className="w-full space-y-3">
-          <div className="flex justify-center w-full">
+          <div className="md:flex items-center mt-12 ">
             <div
               className={
                 'bg-gray-100  w-full h-52 flex items-center justify-center relative z-0 group' +
@@ -141,53 +141,49 @@ const Add_New_Recipe = () => {
               )}
             </div>
           </div>
+          <div className="w-full flex flex-col">
+            <div className="w-full">
+              <input
+                {...register('title', {
+                  required: 'Enter a Title for the food please!',
+                })}
+                placeholder="Title"
+                className="p-3 w-full  mt-4 border  rounded"
+              />
 
-          <div className="grid grid-cols-3 gap-2">
-            <input
-              {...register('title', {
-                required: 'Enter a Title for the food please!',
-              })}
-              placeholder="Title"
-              className="border p-3 font-bold col-span-3 md:col-span-2"
-            />
+              {errors.title && (
+                <span className="text-red-700 col-span-1 md:col-span-2 ">
+                  {errors.title.message}
+                </span>
+              )}
+            </div>
 
             <input
               {...register('duration', {
                 required: 'Enter a Time ',
               })}
               placeholder="duration"
-              className="border p-3 col-span-3 md:col-span-1"
+              className="leading-none  p-3  mt-4 border  rounded"
             />
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            {/* //todo Errors Display pleace */}
-            <p>
-              {errors.title && (
-                <span className="text-red-700 col-span-1 md:col-span-2 ">
-                  {errors.title.message}
-                </span>
-              )}
-            </p>
-            <p className="col-span-1 md:col-span-2 text-right ml-5">
-              {errors.duration && (
-                <span className="text-red-700  ">
-                  {errors.duration.message}
-                </span>
-              )}
-            </p>
-          </div>
 
-          <textarea
-            {...register('description', {
-              required: 'Enter Descrption for the food please!',
-            })}
-            className="border w-full p-3"
-            rows={3}
-            placeholder="Description"
-          />
-          {errors.description && (
-            <span className="text-red-700  ">{errors.description.message}</span>
-          )}
+            {errors.duration && (
+              <span className="text-red-700  ">{errors.duration.message}</span>
+            )}
+
+            <textarea
+              {...register('description', {
+                required: 'Enter Descrption for the food please!',
+              })}
+              className="h-40 text-base w-full  focus:teal-blue-700 mt-4  border rounded"
+              rows={3}
+              placeholder="Description"
+            />
+            {errors.description && (
+              <span className="text-red-700  ">
+                {errors.description.message}
+              </span>
+            )}
+          </div>
 
           <div className="space-y-3">
             <button
