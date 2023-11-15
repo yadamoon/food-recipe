@@ -162,7 +162,8 @@ const Add_New_Recipe = () => {
               {...register('duration', {
                 required: 'Enter a Time ',
               })}
-              placeholder="duration"
+              // placeholder="duration"
+              placeholder="Time"
               className="leading-none  p-3  mt-4 border  rounded"
             />
 
