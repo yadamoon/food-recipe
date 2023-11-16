@@ -399,9 +399,9 @@ const SideBar = () => {
             />
           </div>
         </div>
-        <div className="px-8 border-t border-white mt-72">
-          <ul className="w-full flex items-center justify-between bg-white">
-            <li className="cursor-pointer text-gray-500 pt-5 pb-3 hover:text-gray-800 ">
+        <div className="px-8 border-t bg-gray-200 border-white mt-72 ">
+          <ul className="w-full flex items-center hover:text-teal-800  justify-between ">
+            <li className="cursor-pointer hover:text-teal-800 pt-5 pb-3  ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-bell"
@@ -419,7 +419,7 @@ const SideBar = () => {
                 <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
               </svg>
             </li>
-            <li className="cursor-pointer text-gray-500 hover:text-gray-800 pt-5 pb-3">
+            <li className="cursor-pointer hover:text-teal-800  pt-5 pb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-messages"
@@ -437,7 +437,7 @@ const SideBar = () => {
                 <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
               </svg>
             </li>
-            <li className="cursor-pointer text-gray-500 hover:text-gray-800 pt-5 pb-3">
+            <li className="cursor-pointer  hover:text-teal-800  pt-5 pb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-settings"
@@ -455,7 +455,7 @@ const SideBar = () => {
                 <circle cx={12} cy={12} r={3} />
               </svg>
             </li>
-            <li className="cursor-pointer text-gray-500 hover:text-gray-800 pt-5 pb-3">
+            <li className="cursor-pointer hover:text-teal-800  pt-5 pb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-archive"
