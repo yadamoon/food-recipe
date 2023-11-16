@@ -3,11 +3,16 @@ import React from 'react'
 const SideBar = () => {
   return (
     <div className="bg-white h-screen ">
-      <div className="w-96 bg-teal-700 shadow md:h-full flex-col justify-between hidden sm:flex">
-        <div className="px-8">
-          <div className="h-16 w-full flex items-center">Admin</div>
-          <ul className="mt-12">
-            <li className="flex w-full justify-between text-white hover:text-white cursor-pointer items-center mb-6">
+      <div className="w-96 bg-teal-700  md:h-full flex-col justify-between hidden sm:flex ">
+        <div className="mt-20">
+          <h1 className="text-white font-bold text-3xl justify-center text-center">
+            Admin
+          </h1>
+          <hr />
+        </div>
+        <div className="px-8 mt-10">
+          <ul className="mb-[100vh]">
+            <li className="flex w-full justify-between text-white hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center mb-6">
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -29,11 +34,11 @@ const SideBar = () => {
                 </svg>
                 <span className="text-sm  ml-2">Dashboard</span>
               </div>
-              <div className="py-1 px-3 bg-white rounded text-black flex items-center justify-center text-xs">
+              <div className="py-1 px-3 bg-white rounded text-black flex items-center justify-center text-xs hover:bg-gray-600 hover:text-white">
                 5
               </div>
             </li>
-            <li className="flex w-full justify-between text-white hover:text-white cursor-pointer items-center mb-6">
+            <li className="flex w-full justify-between text-white hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center mb-6">
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -52,11 +57,11 @@ const SideBar = () => {
                 </svg>
                 <span className="text-sm  ml-2">Table</span>
               </div>
-              <div className="py-1 px-3 bg-white rounded text-black flex items-center justify-center text-xs">
+              <div className="py-1 px-3 bg-white rounded text-black flex items-center justify-center text-xs hover:bg-gray-600 hover:text-white">
                 8
               </div>
             </li>
-            <li className="flex w-full justify-between text-white hover:text-white cursor-pointer items-center mb-6">
+            <li className="flex w-full justify-between text-white hover:text-black  hover:bg-white p-2 rounded cursor-pointer items-center mb-6">
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +82,7 @@ const SideBar = () => {
                 <span className="text-sm  ml-2">Performance</span>
               </div>
             </li>
-            <li className="flex w-full justify-between text-white hover:text-white cursor-pointer items-center mb-6">
+            <li className="flex w-full justify-between text-white hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center mb-6">
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +104,7 @@ const SideBar = () => {
                 <span className="text-sm  ml-2">Deliverables</span>
               </div>
             </li>
-            <li className="flex w-full justify-between text-white hover:text-white cursor-pointer items-center mb-6">
+            <li className="flex w-full justify-between text-white hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center mb-6">
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -118,11 +123,11 @@ const SideBar = () => {
                 </svg>
                 <span className="text-sm  ml-2">Invoices</span>
               </div>
-              <div className="py-1 px-3 bg-white rounded text-black flex items-center justify-center text-xs">
+              <div className="py-1 px-3 bg-white rounded text-black flex items-center justify-center text-xs hover:bg-gray-600 hover:text-white">
                 25
               </div>
             </li>
-            <li className="flex w-full justify-between text-white hover:text-white cursor-pointer items-center mb-6">
+            <li className="flex w-full justify-between text-white hover:text-black hover:bg-white p-2  rounded cursor-pointer items-center mb-6">
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +149,7 @@ const SideBar = () => {
                 <span className="text-sm  ml-2">Inventory</span>
               </div>
             </li>
-            <li className="flex w-full justify-between text-white hover:text-white cursor-pointer items-center">
+            <li className="flex w-full justify-between text-white hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center">
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -259,7 +264,7 @@ const SideBar = () => {
       </div>
 
       {/*phone size  */}
-      <div
+      {/* <div
         className="w-64 z-40 absolute bg-teal-700 shadow md:h-full flex-col justify-between sm:hidden  transition duration-150 ease-in-out"
         id="mobile-nav"
       >
@@ -555,7 +560,7 @@ const SideBar = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
