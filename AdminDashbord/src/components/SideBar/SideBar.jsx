@@ -12,7 +12,7 @@ const SideBar = () => {
       </div>
       <div className="px-8 mb-[100vh] mt-4 ">
         <ul className="mb-3">
-          <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center mb-6">
+          <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center mb-6">
             <div className="flex items-center">
               <svg
                 version="1.0"
@@ -58,7 +58,7 @@ const SideBar = () => {
               5
             </div> */}
           </li>
-          <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center mb-6">
+          <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center mb-6">
             <div className="flex items-center">
               <svg
                 fill="#139202"
@@ -133,7 +133,7 @@ const SideBar = () => {
               <span className="text-sm  ml-2">Deliverables</span>
             </div>
           </li> */}
-          <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center mb-6">
+          <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center mb-6">
             <div className="flex items-center">
               <svg
                 width={18}
@@ -164,10 +164,10 @@ const SideBar = () => {
               <span className="text-sm  ml-2">Notifications</span>
             </div>
             <div className="py-1 px-3 bg-red-600 rounded-full text-white flex items-center justify-center text-xs hover:bg-teal-600 hover:text-white">
-              25
+              8
             </div>
           </li>
-          <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2  rounded cursor-pointer items-center mb-6">
+          <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2  rounded cursor-pointer items-center mb-6">
             <div className="flex items-center">
               <svg
                 width={18}
@@ -209,7 +209,7 @@ const SideBar = () => {
               <span className="text-sm  ml-2">Chart</span>
             </div>
           </li>
-          <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center">
+          <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center">
             <div className="flex items-center">
               <svg
                 fill="#118328"
@@ -244,7 +244,7 @@ const SideBar = () => {
             </h1>
           </div>
           <hr />
-          <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2  rounded cursor-pointer items-center mb-6 mt-5">
+          <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2  rounded cursor-pointer items-center mb-6 mt-5">
             <div className="flex items-center">
               <svg
                 width={18}
@@ -301,7 +301,7 @@ const SideBar = () => {
               <span className="text-sm  ml-2">Profile</span>
             </div>
           </li>
-          <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center">
+          <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center">
             <div className="flex items-center">
               <svg
                 width={18}
