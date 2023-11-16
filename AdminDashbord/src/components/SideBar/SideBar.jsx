@@ -163,7 +163,7 @@ const SideBar = () => {
               </svg>
               <span className="text-sm  ml-2">Notifications</span>
             </div>
-            <div className="py-1 px-3 bg-red-600 rounded text-white flex items-center justify-center text-xs hover:bg-teal-600 hover:text-white">
+            <div className="py-1 px-3 bg-red-600 rounded-full text-white flex items-center justify-center text-xs hover:bg-teal-600 hover:text-white">
               25
             </div>
           </li>
@@ -238,13 +238,13 @@ const SideBar = () => {
             </div>
           </li>
 
-          <div className="space-y-4 mt-5">
-            <h1 className="text-gray-500 font-bold text-center text-xl">
+          <div className="space-y-4 mt-10">
+            <h1 className="text-teal-800 font-bold text-center text-xl">
               Account Page
             </h1>
           </div>
           <hr />
-          <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2  rounded cursor-pointer items-center mb-6">
+          <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2  rounded cursor-pointer items-center mb-6 mt-5">
             <div className="flex items-center">
               <svg
                 width={18}
@@ -399,7 +399,7 @@ const SideBar = () => {
             />
           </div>
         </div>
-        <div className="px-8 border-t bg-gray-200 border-white mt-72 ">
+        <div className="px-8 border-t bg-gray-200 border-white mt-64 ">
           <ul className="w-full flex items-center hover:text-teal-800  justify-between ">
             <li className="cursor-pointer hover:text-teal-800 pt-5 pb-3  ">
               <svg
@@ -455,7 +455,7 @@ const SideBar = () => {
                 <circle cx={12} cy={12} r={3} />
               </svg>
             </li>
-            <li className="cursor-pointer hover:text-teal-800  pt-5 pb-3">
+            <li className="cursor-pointer hover:text-teal-80  pt-5 pb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-archive"
