@@ -304,21 +304,58 @@ const SideBar = () => {
           <li className="flex w-full justify-between text-gray-500 hover:text-black hover:bg-white p-2 rounded cursor-pointer items-center">
             <div className="flex items-center">
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-settings"
                 width={18}
                 height={18}
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                viewBox="0 -1.29 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#000000"
               >
-                <path stroke="none" d="M0 0h24v24H0z" />
-                <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <circle cx={12} cy={12} r={3} />
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  {' '}
+                  <defs> </defs>{' '}
+                  <g data-name="Layer 2" id="Layer_2">
+                    {' '}
+                    <g
+                      data-name="E430, Logout, multimedia, Ui"
+                      id="E430_Logout_multimedia_Ui"
+                    >
+                      {' '}
+                      <line
+                        class="cls-1"
+                        x1="291.14"
+                        x2="502"
+                        y1="234.62"
+                        y2="234.62"
+                      />{' '}
+                      <polyline
+                        class="cls-1"
+                        points="437.83 181.15 502 234.62 437.83 288.1"
+                      />{' '}
+                      <polyline
+                        class="cls-1"
+                        points="10 459.25 10 10 331.31 10 331.31 459.25 230.9 459.25"
+                      />{' '}
+                      <polygon
+                        class="cls-1"
+                        points="230.9 499.41 10 459.25 10 10 230.9 50.16 230.9 499.41"
+                      />{' '}
+                      <polygon
+                        class="cls-1"
+                        points="180.69 178.1 60.2 158.02 60.2 107.82 180.69 127.9 180.69 178.1"
+                      />{' '}
+                    </g>{' '}
+                  </g>{' '}
+                </g>
               </svg>
+
               <span className="text-sm  ml-2">Logout</span>
             </div>
           </li>
@@ -328,7 +365,32 @@ const SideBar = () => {
         <div className="flex justify-center w-full mt-10">
           <div className="relative ">
             <div className=" absolute ml-4 inset-0 m-auto w-4 h-4">
-              <i class="fa fa-search"></i>
+              <svg
+                width={18}
+                height={18}
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  {' '}
+                  <path
+                    d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                    stroke="#139615"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />{' '}
+                </g>
+              </svg>
             </div>
             <input
               className="  focus:outline-none rounded w-full text-sm  bg-gray-100 pl-10 py-2"
@@ -337,7 +399,7 @@ const SideBar = () => {
             />
           </div>
         </div>
-        <div className="px-8 border-t border-white mt-32">
+        <div className="px-8 border-t border-white mt-72">
           <ul className="w-full flex items-center justify-between bg-white">
             <li className="cursor-pointer text-gray-500 pt-5 pb-3 hover:text-gray-800 ">
               <svg
