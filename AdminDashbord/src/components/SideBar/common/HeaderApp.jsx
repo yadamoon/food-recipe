@@ -22,7 +22,7 @@ export default function HeaderApp() {
 
   return (
     <div className="2xl:container 2xl:mx-auto">
-      <div className="bg-white rounded shadow-lg py-5 px-7">
+      <div className="bg-white  shadow-lg py-5 px-7">
         <nav className="flex justify-between">
           <div className="flex items-center space-x-3 lg:pr-16 pr-6">
             <h2 className="font-normal text-2xl leading-6 text-gray-800">
@@ -76,48 +76,6 @@ export default function HeaderApp() {
           </div>
         </nav>
         {/* for smaller devcies */}
-        <div className="block md:hidden w-full mt-5 ">
-          <div
-            onClick={() => setDropDown(!dropDown)}
-            className="cursor-pointer px-4 py-3 text-white bg-indigo-600 rounded flex justify-between items-center w-full"
-          >
-            <div className="flex space-x-2">
-              <span
-                id="s1"
-                className={`${
-                  text.length != 0 ? '' : 'hidden'
-                } font-semibold text-sm leading-3`}
-              >
-                Selected:{' '}
-              </span>
-              <p
-                id="textClicked"
-                className="font-normal text-sm leading-3 focus:outline-none hover:bg-gray-800 duration-100 cursor-pointer "
-              >
-                {text ? text : 'Collections'}
-              </p>
-            </div>
-            <svg
-              id="ArrowSVG"
-              className={`${
-                dropDown ? '' : 'rotate-180'
-              } transform duration-100`}
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6 9L12 15L18 9"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
       </div>
     </div>
   )
