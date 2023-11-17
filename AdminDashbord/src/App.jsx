@@ -4,11 +4,11 @@ import HeaderApp from './components/SideBar/common/HeaderApp'
 
 function App() {
   return (
-    <div className="flex">
-      <div className="basis-[12%] h-[100vh]">
+    <div className="flex grid-cols-4">
+      <div className="basis-[12%] h-[100vh] col-span-1">
         <SideBar />
       </div>
-      <div className="basis-[88%] h-[100vh]">
+      <div className="basis-[88%] h-[100vh] col-span-3">
         <HeaderApp />
       </div>
     </div>
