@@ -1,25 +1,6 @@
 import React, { useState } from 'react'
 
 export default function HeaderApp() {
-  let arr = [true, false, false, false, false, false]
-  const [style, setStyle] = useState(arr)
-  const [dropDown, setDropDown] = useState(true)
-  const [text, setText] = useState('')
-
-  const selected = (props) => {
-    let newArr = [...arr]
-    for (let i = 0; i < newArr.length; i++) {
-      newArr[i] = false
-    }
-    newArr[props] = true
-    setStyle(newArr)
-  }
-
-  const setSelectedText = (txt) => {
-    setText(txt)
-    setDropDown(true)
-  }
-
   return (
     <div className="2xl:container 2xl:mx-auto">
       <div className="bg-white  shadow-lg py-5 px-7">
