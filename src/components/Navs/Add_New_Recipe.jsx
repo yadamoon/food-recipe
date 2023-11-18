@@ -53,15 +53,16 @@ const Add_New_Recipe = () => {
         title: 'wrong! please try',
         confirmButtonText: 'Cool',
       })
-    }
-    Swal.fire({
-      title: 'Success!',
-      icon: 'success',
-      title: 'Successfuly add ',
-      timer: 1000,
+    } else {
+      Swal.fire({
+        title: 'Success!',
+        icon: 'success',
+        title: 'Successfuly add ',
+        timer: 1000,
 
-      showCancelButton: false,
-    })
+        showCancelButton: false,
+      })
+    }
     console.log(result)
   }
   return (
