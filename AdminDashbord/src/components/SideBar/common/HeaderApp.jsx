@@ -42,8 +42,17 @@ export default function HeaderApp() {
         </div>
       </div>
       <div>
+        <Messages />
         <Chart />
       </div>
     </div>
+  )
+}
+
+export const Messages = () => {
+  return (
+    <>
+      <div className=" bg-white flex justify-center w-full mx-10 mt-10"></div>
+    </>
   )
 }
