@@ -1,6 +1,9 @@
 import './App.css'
+import Error from './components/Layout/Error'
 import SideBar from './components/SideBar/SideBar'
 import HeaderApp from './components/SideBar/common/HeaderApp'
+
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
@@ -9,7 +12,10 @@ function App() {
         <SideBar />
       </div>
       <div className="basis-[88%] h-[100vh] col-span-3">
-        <HeaderApp />
+        <Routes>
+          <Route path="/" element={<HeaderApp />} />
+          <Route path="" element={<Error />} />
+        </Routes>
       </div>
     </div>
   )
