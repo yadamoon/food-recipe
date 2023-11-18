@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SideBar = () => {
   return (
@@ -13,7 +14,7 @@ const SideBar = () => {
       <div className="px-8 mb-[100vh] mt-4 ">
         <ul className="mb-3">
           <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center mb-6">
-            <div className="flex items-center">
+            <Link to="/" className="flex items-center">
               <svg
                 version="1.0"
                 id="Layer_1"
@@ -53,13 +54,13 @@ const SideBar = () => {
               </svg>
 
               <span className="text-sm  ml-2">Dashboard</span>
-            </div>
+            </Link>
             {/* <div className="py-1 px-3 bg-teal-600 rounded text-white flex items-center justify-center text-xs hover:bg-teal-600 hover:text-white">
               5
             </div> */}
           </li>
           <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center mb-6">
-            <div className="flex items-center">
+            <Link to="/table" className="flex items-center">
               <svg
                 fill="#139202"
                 width={18}
@@ -85,7 +86,7 @@ const SideBar = () => {
                 </g>
               </svg>
               <span className="text-sm  ml-2">Table</span>
-            </div>
+            </Link>
             {/* <div className="py-1 px-3 bg-teal-600 rounded text-white flex items-center justify-center text-xs hover:bg-teal-600 hover:text-white">
               8
             </div> */}
@@ -134,7 +135,7 @@ const SideBar = () => {
             </div>
           </li> */}
           <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center mb-6">
-            <div className="flex items-center">
+            <Link to="/notification" className="flex items-center">
               <svg
                 width={18}
                 height={18}
@@ -162,13 +163,13 @@ const SideBar = () => {
                 </g>
               </svg>
               <span className="text-sm  ml-2">Notifications</span>
-            </div>
-            <div className="py-1 px-3 bg-red-600 rounded-full text-white flex items-center justify-center text-xs hover:bg-teal-600 hover:text-white">
+            </Link>
+            <Link className="py-1 px-1 bg-red-600 rounded-full text-white flex items-center justify-center text-xs hover:bg-teal-600 hover:text-white">
               8
-            </div>
+            </Link>
           </li>
           <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2  rounded cursor-pointer items-center mb-6">
-            <div className="flex items-center">
+            <Link to="/chart" className="flex items-center">
               <svg
                 width={18}
                 height={18}
@@ -207,10 +208,10 @@ const SideBar = () => {
                 </g>
               </svg>
               <span className="text-sm  ml-2">Chart</span>
-            </div>
+            </Link>
           </li>
           <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center">
-            <div className="flex items-center">
+            <Link to="/settings" className="flex items-center">
               <svg
                 fill="#118328"
                 width={18}
@@ -235,7 +236,7 @@ const SideBar = () => {
                 </g>
               </svg>
               <span className="text-sm  ml-2">Settings</span>
-            </div>
+            </Link>
           </li>
 
           <div className="space-y-4 mt-10">
@@ -245,7 +246,7 @@ const SideBar = () => {
           </div>
           <hr />
           <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2  rounded cursor-pointer items-center mb-6 mt-5">
-            <div className="flex items-center">
+            <Link to="/profile" className="flex items-center">
               <svg
                 width={18}
                 height={18}
@@ -299,10 +300,10 @@ const SideBar = () => {
                 </g>
               </svg>
               <span className="text-sm  ml-2">Profile</span>
-            </div>
+            </Link>
           </li>
           <li className="flex w-full justify-between text-gray-500 hover:text-white hover:bg-teal-800 p-2 rounded cursor-pointer items-center">
-            <div className="flex items-center">
+            <Link to="logout" className="flex items-center">
               <svg
                 width={18}
                 height={18}
@@ -357,7 +358,7 @@ const SideBar = () => {
               </svg>
 
               <span className="text-sm  ml-2">Logout</span>
-            </div>
+            </Link>
           </li>
 
           {/* //todo for end icons */}
@@ -401,7 +402,10 @@ const SideBar = () => {
         </div>
         <div className="px-8 border-t bg-gray-200 border-white mt-64 ">
           <ul className="w-full flex items-center hover:text-teal-800  justify-between ">
-            <li className="cursor-pointer hover:text-teal-800 pt-5 pb-3  ">
+            <Link
+              to=""
+              className="cursor-pointer hover:text-teal-800 pt-5 pb-3  "
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-bell"
@@ -418,8 +422,11 @@ const SideBar = () => {
                 <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
                 <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
               </svg>
-            </li>
-            <li className="cursor-pointer hover:text-teal-800  pt-5 pb-3">
+            </Link>
+            <Link
+              to=""
+              className="cursor-pointer hover:text-teal-800  pt-5 pb-3"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-messages"
@@ -436,8 +443,11 @@ const SideBar = () => {
                 <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
                 <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
               </svg>
-            </li>
-            <li className="cursor-pointer  hover:text-teal-800  pt-5 pb-3">
+            </Link>
+            <Link
+              to=""
+              className="cursor-pointer  hover:text-teal-800  pt-5 pb-3"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-settings"
@@ -454,8 +464,11 @@ const SideBar = () => {
                 <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                 <circle cx={12} cy={12} r={3} />
               </svg>
-            </li>
-            <li className="cursor-pointer hover:text-teal-80  pt-5 pb-3">
+            </Link>
+            <Link
+              to=""
+              className="cursor-pointer hover:text-teal-80  pt-5 pb-3"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-archive"
@@ -473,7 +486,7 @@ const SideBar = () => {
                 <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
                 <line x1={10} y1={12} x2={14} y2={12} />
               </svg>
-            </li>
+            </Link>
           </ul>
         </div>
       </div>
