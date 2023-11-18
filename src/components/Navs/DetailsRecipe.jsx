@@ -3,6 +3,7 @@ import SearchForm from '../forms/SearchForm'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { BASE_URL } from '../../config/config'
+import Empty from './Empty'
 
 const apiURL = BASE_URL + '/recipe'
 
@@ -19,7 +20,7 @@ const DetailsRecipe = () => {
   }, [id])
 
   if (!data) {
-    return <div>Loading...</div>
+    return <Empty />
   }
 
   return (
