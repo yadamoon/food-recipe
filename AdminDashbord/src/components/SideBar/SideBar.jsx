@@ -4,7 +4,7 @@ const SideBar = () => {
   return (
     // <div className="bg-white h-screen ">
     <div className="w-96 bg-white  md:h-screen flex-col justify-between hidden sm:flex ">
-      <div className="mt-0 bg-teal-700 p-3 rounded-b-lg">
+      <div className="mt-0 bg-teal-700 p-3 ">
         <h1 className="text-white font-bold text-3xl justify-center text-center uppercase">
           Admin Panel
         </h1>
