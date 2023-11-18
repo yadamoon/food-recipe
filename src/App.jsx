@@ -18,6 +18,7 @@ import Contact from './components/Navs/Contact'
 import { useState, useEffect } from 'react'
 import ReactLoading from 'react-loading'
 import NewAcount from './components/forms/NewAcount'
+import Empty from './components/Navs/Empty'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -57,6 +58,7 @@ function App() {
             <Route path="/Register_New_Account" element={<RegisterForm />} />
             <Route path="/Create New Account" element={<NewAcount />} />s
             <Route path="*" element={<NotFound />} />
+            <Route path="/Empty" element={<Empty />} />
           </Routes>
           <FooterApp className="space-10" />
         </div>
