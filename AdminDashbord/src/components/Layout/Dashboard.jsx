@@ -1,5 +1,6 @@
 import React from 'react'
 import Chart from './Chart'
+import PieComponent from './PieComponent'
 
 const Dashboard = () => {
   return (
@@ -40,11 +41,14 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex bg-w-full bg-white border col-span-1 ">
+        <div className="  bg-white w-full border col-span-1">
           <div className="border border-gray-300 w-full h-[35px]">
-            <p className="text-2xl text-end justify-end items-end  ml-auto  ">
+            <p className="text-2xl text-end justify-end items-end  ml-auto   ">
               :
             </p>
+          </div>
+          <div className="mt-10">
+            <PieComponent />
           </div>
         </div>
       </div>
