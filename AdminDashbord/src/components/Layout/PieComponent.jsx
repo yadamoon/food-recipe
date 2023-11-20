@@ -38,8 +38,8 @@ const renderCustomizedLabel = ({
 }
 const PieComponent = () => {
   return (
-    <div className="justify-center items-center">
-      <PieChart width={600} height={200}>
+    <div className=" flex justify-center items-center    ">
+      <PieChart width={200} height={200}>
         <Pie
           data={data}
           cx="50%"
