@@ -29,11 +29,14 @@ const Dashboard = () => {
       <div className=" mt-20 ">
         <h1 className=" text-gray-500 font-bold mx-2 text-2xl">Chart</h1>
       </div>
-      <div className="grid grid-cols-2 gap-2 mt-10 h-auto mx-2">
-        <div className="  bg-white w-full border col-span-1">
-          <div className="border border-gray-300 w-full h-[35px]">
-            <p className="text-2xl text-end justify-end items-end  ml-auto   ">
-              :
+      <div className="grid grid-cols-3 gap-2 mt-10 h-auto mx-2">
+        <div className="  bg-white w-full border col-span-2">
+          <div className="border border-gray-300 w-full h-[35px] ">
+            <p className="text-2xl text-end justify-end items-end  ml-auto  mx-5    ">
+              <span className="  rounded-md pl-1  pr-1 bg-gray-400 text-white">
+                {' '}
+                :
+              </span>
             </p>
           </div>
           <div className="mt-10">
@@ -43,11 +46,14 @@ const Dashboard = () => {
 
         <div className="  bg-white w-full border col-span-1">
           <div className="border border-gray-300 w-full h-[35px]">
-            <p className="text-2xl text-end justify-end items-end  ml-auto   ">
-              :
+            <p className="text-2xl text-end justify-end items-end  ml-auto  mx-5    ">
+              <span className="  rounded-md pl-1  pr-1 bg-gray-400 text-white">
+                {' '}
+                :
+              </span>
             </p>
           </div>
-          <div className="mt-10">
+          <div className=" justify-center items-center ">
             <PieComponent />
           </div>
         </div>
