@@ -55,6 +55,13 @@ const PieComponent = () => {
           ))}
         </Pie>
       </PieChart>
+      <div className=" ">
+        {data.map((list, index) => (
+          <div>
+            <p className="">{list.name}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
