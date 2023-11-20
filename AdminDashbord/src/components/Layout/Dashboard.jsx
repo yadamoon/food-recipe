@@ -1,4 +1,5 @@
 import React from 'react'
+import Chart from './Chart'
 
 const Dashboard = () => {
   return (
@@ -22,6 +23,29 @@ const Dashboard = () => {
         <div className="col-span-1 bg-white w-full   border rounded-r-2xl shadow-gray-500 shadow-xl hover:scale-[103%] justify-center items-center">
           <p className="text-sm text-teal-800"> Earnings (Month)</p>
           <h1 className="p-4">$40,000</h1>
+        </div>
+      </div>
+      <div className=" mt-20 ">
+        <h1 className=" text-gray-500 font-bold mx-2 text-2xl">Chart</h1>
+      </div>
+      <div className="grid grid-cols-2 gap-2 mt-10 h-auto mx-2">
+        <div className="  bg-white w-full border col-span-1">
+          <div className="border border-gray-300 w-full h-[35px]">
+            <p className="text-2xl text-end justify-end items-end  ml-auto   ">
+              :
+            </p>
+          </div>
+          <div className="mt-10">
+            <Chart />
+          </div>
+        </div>
+
+        <div className="flex bg-w-full bg-white border col-span-1 ">
+          <div className="border border-gray-300 w-full h-[35px]">
+            <p className="text-2xl text-end justify-end items-end  ml-auto  ">
+              :
+            </p>
+          </div>
         </div>
       </div>
     </div>
