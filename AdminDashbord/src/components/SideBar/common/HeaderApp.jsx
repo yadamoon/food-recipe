@@ -8,12 +8,6 @@ export default function HeaderApp() {
       <div className="2xl:container 2xl:mx-auto">
         <div className="bg-white  shadow-lg py-5 px-7">
           <nav className="flex justify-between">
-            <div className="flex items-center space-x-3 lg:pr-16 pr-6">
-              <h2 className="font-normal text-2xl leading-6 text-gray-800">
-                Dashboard
-              </h2>
-            </div>
-
             <div className="flex ">
               <input
                 className="text-gray-600 dark:text-gray-400 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 bg-gray-200 rounded border shadow"
@@ -38,21 +32,9 @@ export default function HeaderApp() {
               />
             </div>
           </nav>
-          {/* for smaller devcies */}
         </div>
       </div>
-      <div>
-        <Messages />
-        <Chart />
-      </div>
+      <div></div>
     </div>
-  )
-}
-
-export const Messages = () => {
-  return (
-    <>
-      <div className=" bg-white flex justify-center w-full mx-10 mt-10"></div>
-    </>
   )
 }
