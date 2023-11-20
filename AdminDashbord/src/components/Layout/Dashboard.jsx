@@ -34,7 +34,6 @@ const Dashboard = () => {
           <div className="border border-gray-300 w-full h-[35px] ">
             <p className="text-2xl text-end justify-end items-end  ml-auto  mx-5    ">
               <span className="  rounded-md pl-1  pr-1 bg-gray-400 text-white">
-                {' '}
                 :
               </span>
             </p>
@@ -48,12 +47,11 @@ const Dashboard = () => {
           <div className="border border-gray-300 w-full h-[35px]">
             <p className="text-2xl text-end justify-end items-end  ml-auto  mx-5    ">
               <span className="  rounded-md pl-1  pr-1 bg-gray-400 text-white">
-                {' '}
                 :
               </span>
             </p>
           </div>
-          <div className=" justify-center items-center ">
+          <div className=" flex justify-center items-center mt-16 h-auto">
             <PieComponent />
           </div>
         </div>
