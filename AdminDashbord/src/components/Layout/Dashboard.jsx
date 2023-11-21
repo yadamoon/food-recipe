@@ -4,7 +4,7 @@ import PieComponent from './PieComponent'
 
 const Dashboard = () => {
   return (
-    <div className="  mx-2 bg-white">
+    <div className="  mx-2 bg-white rounded ">
       <div className=" ">
         <h1 className="font-bold uppercase text-2xl"> Dashboard</h1>
       </div>
@@ -29,9 +29,9 @@ const Dashboard = () => {
       <div className=" mt-20 ">
         <h1 className=" text-gray-500 font-bold mx-2 text-2xl">Chart</h1>
       </div>
-      <div className="grid grid-cols-4 gap-2 mt-10 h-auto mx-2">
+      <div className="grid grid-cols-4 gap-2 mt-10 h-auto mx-2 ">
         <div className="  bg-white w-full border col-span-3">
-          <div className="border border-gray-300  bg-gray-200 w-full h-[35px] ">
+          <div className="border border-gray-300  bg-gray-100 w-full h-[35px] ">
             <p className="text-2xl text-end justify-end items-end  ml-auto  mx-5    ">
               <span className="  rounded-md pl-1  pr-1 bg-gray-400 text-white">
                 :
@@ -44,7 +44,7 @@ const Dashboard = () => {
         </div>
 
         <div className="  bg-gray  w-full border col-span-1">
-          <div className="border border-gray-300 bg-gray-200 w-full h-[35px]">
+          <div className="border border-gray-300 bg-gray-100 w-full h-[35px]">
             <p className="text-2xl text-end justify-end items-end  ml-auto  mx-5    ">
               <span className="  rounded-md pl-1  pr-1 bg-gray-400 text-white">
                 :
