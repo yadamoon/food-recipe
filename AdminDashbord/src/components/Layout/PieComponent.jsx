@@ -55,11 +55,12 @@ const PieComponent = () => {
           ))}
         </Pie>
       </PieChart>
-      <div className=" ">
+      <div></div>
+      <div className="grid grid-cols-4">
         {data.map((list, index) => (
           <div className="">
-            <p className=" text-teal-600 border border-gray-300 ">
-              {list.name}
+            <p className=" text-teal-600 border  col-span-1   ">
+              <span> {list.name}</span>
             </p>
           </div>
         ))}
