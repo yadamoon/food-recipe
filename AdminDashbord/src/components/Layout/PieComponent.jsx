@@ -31,6 +31,7 @@ const renderCustomizedLabel = ({
       fill="white"
       textAnchor={x > cx ? 'start' : 'end'}
       dominantBaseline="central"
+      className="hover:opacity-75 "
     >
       {`${(percent * 100).toFixed(0)}%`}
     </text>
