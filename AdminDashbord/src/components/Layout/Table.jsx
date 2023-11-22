@@ -4,7 +4,7 @@ function Table() {
   const [show, setShow] = useState(null)
   return (
     <>
-      <div>
+      <div className="w-full">
         {/* <div classNameName="sm:px-6 w-full">
           <div classNameName="px-4 md:px-10 py-4 md:py-7">
             <div classNameName="flex items-center justify-between">
@@ -2608,9 +2608,9 @@ function Table() {
             }`}
         </style> */}
 
-        <div className="relative overflow-x-auto">
+        <div className=" mx-5 my-4 ">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-gray-900 uppercase dark:text-gray-400">
+            <thead className="text-xs text-white uppercase  bg-gray-500">
               <tr>
                 <th scope="col" className="px-6 py-3">
                   Product name
@@ -2627,21 +2627,21 @@ function Table() {
               </tr>
             </thead>
             <tbody>
-              <tr className="bg-white dark:bg-gray-800">
+              <tr className="bg-gray-100 ">
                 <th
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
                 >
-                  Apple MacBook Pro 17"
+                  Apple MacBook Pro 17
                 </th>
                 <td className="px-6 py-4">Silver</td>
                 <td className="px-6 py-4">Laptop</td>
                 <td className="px-6 py-4">$2999</td>
               </tr>
-              <tr className="bg-white dark:bg-gray-800">
+              <tr className="bg-gray-100">
                 <th
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
                 >
                   Microsoft Surface Pro
                 </th>
@@ -2649,10 +2649,10 @@ function Table() {
                 <td className="px-6 py-4">Laptop PC</td>
                 <td className="px-6 py-4">$1999</td>
               </tr>
-              <tr className="bg-white dark:bg-gray-800">
+              <tr className="bg-gray-100">
                 <th
                   scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
                 >
                   Magic Mouse 2
                 </th>
