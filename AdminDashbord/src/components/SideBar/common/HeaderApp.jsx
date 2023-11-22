@@ -600,18 +600,17 @@ export default function HeaderApp() {
     <div className=" 2xl:mx-auto">
       <div className="bg-white  shadow-lg py-5 px-7">
         <nav className="flex justify-between">
-          <div className="flex ">
+          <div className="flex justify-center items-center "></div>
+          <div className="flex justify-center items-center">
             <input
-              className="text-gray-600 dark:text-gray-400 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 bg-gray-200 rounded border shadow"
+              className="text-gray-600 dark:text-gray-400 font-normal w-96 h-10 flex items-center pl-3 text-sm border-gray-300 bg-gray-200 rounded border shadow"
               placeholder="Search"
             />
           </div>
-
           <div className=" flex space-x-5 justify-center items-center pl-2">
             <div className="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ">
               <Link className=" text-white bg-red-600  rounded-lg p-2">
-                {' '}
-                Logout{' '}
+                Logout
               </Link>
             </div>
 
