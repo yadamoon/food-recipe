@@ -5,64 +5,64 @@ function Table() {
   return (
     <>
       <div>
-        <div className="sm:px-6 w-full">
-          <div className="px-4 md:px-10 py-4 md:py-7">
-            <div className="flex items-center justify-between">
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800">
+        {/* <div classNameName="sm:px-6 w-full">
+          <div classNameName="px-4 md:px-10 py-4 md:py-7">
+            <div classNameName="flex items-center justify-between">
+              <p classNameName="text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800">
                 Tasks
               </p>
-              <div className="py-3 px-4 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded">
+              <div classNameName="py-3 px-4 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded">
                 <p>Sort By:</p>
-                <select className="focus:outline-none bg-transparent ml-1">
-                  <option className="text-sm text-indigo-800">Latest</option>
-                  <option className="text-sm text-indigo-800">Oldest</option>
-                  <option className="text-sm text-indigo-800">Latest</option>
+                <select classNameName="focus:outline-none bg-transparent ml-1">
+                  <option classNameName="text-sm text-indigo-800">Latest</option>
+                  <option classNameName="text-sm text-indigo-800">Oldest</option>
+                  <option classNameName="text-sm text-indigo-800">Latest</option>
                 </select>
               </div>
             </div>
           </div>
-          <div className="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10">
-            <div className="sm:flex items-center justify-between">
-              <div className="flex items-center">
+          <div classNameName="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10">
+            <div classNameName="sm:flex items-center justify-between">
+              <div classNameName="flex items-center">
                 <a href="javascript:void(0)">
-                  <div className="py-2 px-8 bg-indigo-100 text-indigo-700 rounded-full">
+                  <div classNameName="py-2 px-8 bg-indigo-100 text-indigo-700 rounded-full">
                     <p>All</p>
                   </div>
                 </a>
                 <a href="javascript:void(0)">
-                  <div className="py-2 px-8 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-full ml-4 sm:ml-8">
+                  <div classNameName="py-2 px-8 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-full ml-4 sm:ml-8">
                     <p>Done</p>
                   </div>
                 </a>
                 <a href="javascript:void(0)">
-                  <div className="py-2 px-8 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-full ml-4 sm:ml-8">
+                  <div classNameName="py-2 px-8 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-full ml-4 sm:ml-8">
                     <p>Pending</p>
                   </div>
                 </a>
               </div>
               <button
                 onclick="popuphandler(true)"
-                className="mt-4 sm:mt-0 inline-flex items-start justify-start px-6 py-3 bg-indigo-700 hover:bg-indigo-600 focus:outline-none rounded"
+                classNameName="mt-4 sm:mt-0 inline-flex items-start justify-start px-6 py-3 bg-indigo-700 hover:bg-indigo-600 focus:outline-none rounded"
               >
-                <p className="text-sm font-medium leading-none text-white">
+                <p classNameName="text-sm font-medium leading-none text-white">
                   Add Task
                 </p>
               </button>
             </div>
-            <div className="mt-7 overflow-x-auto">
-              <table className="w-full whitespace-nowrap">
+            <div classNameName="mt-7 overflow-x-auto">
+              <table classNameName="w-full whitespace-nowrap">
                 <tbody>
-                  <tr className="h-16 border border-gray-100 rounded">
+                  <tr classNameName="h-16 border border-gray-100 rounded">
                     <td>
-                      <div className="ml-5">
-                        <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                      <div classNameName="ml-5">
+                        <div classNameName="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                           <input
                             type="checkbox"
-                            className="checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                            classNameName="checkbox opacity-0 absolute cursor-pointer w-full h-full"
                           />
-                          <div className="check-icon  bg-indigo-700 text-white rounded-sm">
+                          <div classNameName="check-icon  bg-indigo-700 text-white rounded-sm">
                             <svg
-                              className="icon icon-tabler icon-tabler-check"
+                              classNameName="icon icon-tabler icon-tabler-check"
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
                               height={20}
@@ -80,9 +80,9 @@ function Table() {
                         </div>
                       </div>
                     </td>
-                    <td className>
-                      <div className="flex items-center pl-5">
-                        <p className="text-base font-medium leading-none text-gray-700 mr-2">
+                    <td classNameName>
+                      <div classNameName="flex items-center pl-5">
+                        <p classNameName="text-base font-medium leading-none text-gray-700 mr-2">
                           Marketing Keynote Presentation
                         </p>
                         <svg
@@ -107,8 +107,8 @@ function Table() {
                         </svg>
                       </div>
                     </td>
-                    <td className="pl-24">
-                      <div className="flex items-center">
+                    <td classNameName="pl-24">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -133,13 +133,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           Urgent
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -190,13 +190,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -233,13 +233,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           23
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -255,26 +255,26 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <button className="py-3 px-3 text-sm focus:outline-none leading-none text-red-500 bg-red-100 hover:bg-red-200 rounded">
+                    <td classNameName="pl-5">
+                      <button classNameName="py-3 px-3 text-sm focus:outline-none leading-none text-red-500 bg-red-100 hover:bg-red-200 rounded">
                         Due today at 18:00
                       </button>
                     </td>
-                    <td className="pl-4">
-                      <button className="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
+                    <td classNameName="pl-4">
+                      <button classNameName="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
                         View
                       </button>
                     </td>
                     <td>
-                      <div className="relative px-5 pt-2">
+                      <div classNameName="relative px-5 pt-2">
                         {show == 0 ? (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(null)}
                           >
                             <svg
@@ -309,7 +309,7 @@ function Table() {
                           </button>
                         ) : (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(0)}
                           >
                             <svg
@@ -344,11 +344,11 @@ function Table() {
                           </button>
                         )}
                         {show == 0 && (
-                          <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                          <div classNameName="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Edit</p>
                             </div>
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Delete</p>
                             </div>
                           </div>
@@ -356,18 +356,18 @@ function Table() {
                       </div>
                     </td>
                   </tr>
-                  <tr className="h-3" />
-                  <tr className="h-16 border border-gray-100 rounded">
+                  <tr classNameName="h-3" />
+                  <tr classNameName="h-16 border border-gray-100 rounded">
                     <td>
-                      <div className="ml-5">
-                        <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                      <div classNameName="ml-5">
+                        <div classNameName="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                           <input
                             type="checkbox"
-                            className="checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                            classNameName="checkbox opacity-0 absolute cursor-pointer w-full h-full"
                           />
-                          <div className="check-icon  bg-indigo-700 text-white rounded-sm">
+                          <div classNameName="check-icon  bg-indigo-700 text-white rounded-sm">
                             <svg
-                              className="icon icon-tabler icon-tabler-check"
+                              classNameName="icon icon-tabler icon-tabler-check"
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
                               height={20}
@@ -385,15 +385,15 @@ function Table() {
                         </div>
                       </div>
                     </td>
-                    <td className>
-                      <div className="flex items-center pl-5">
-                        <p className="text-base font-medium leading-none text-gray-700 mr-2">
+                    <td classNameName>
+                      <div classNameName="flex items-center pl-5">
+                        <p classNameName="text-base font-medium leading-none text-gray-700 mr-2">
                           UX Wireframes
                         </p>
                       </div>
                     </td>
-                    <td className="pl-24">
-                      <div className="flex items-center">
+                    <td classNameName="pl-24">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -418,13 +418,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           Urgent
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -475,13 +475,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -518,13 +518,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           23
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -540,26 +540,26 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <button className="py-3 px-6 focus:outline-none text-sm leading-none text-gray-600 bg-gray-100 hover:bg-gray-200 rounded">
+                    <td classNameName="pl-5">
+                      <button classNameName="py-3 px-6 focus:outline-none text-sm leading-none text-gray-600 bg-gray-100 hover:bg-gray-200 rounded">
                         Due on 21.02.21
                       </button>
                     </td>
-                    <td className="pl-4">
-                      <button className="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
+                    <td classNameName="pl-4">
+                      <button classNameName="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
                         View
                       </button>
                     </td>
                     <td>
-                      <div className="relative px-5 pt-2">
+                      <div classNameName="relative px-5 pt-2">
                         {show == 1 ? (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(null)}
                           >
                             <svg
@@ -594,7 +594,7 @@ function Table() {
                           </button>
                         ) : (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(1)}
                           >
                             <svg
@@ -629,11 +629,11 @@ function Table() {
                           </button>
                         )}
                         {show == 1 && (
-                          <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                          <div classNameName="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Edit</p>
                             </div>
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Delete</p>
                             </div>
                           </div>
@@ -641,18 +641,18 @@ function Table() {
                       </div>
                     </td>
                   </tr>
-                  <tr className="h-3" />
-                  <tr className="h-16 border border-gray-100 rounded">
+                  <tr classNameName="h-3" />
+                  <tr classNameName="h-16 border border-gray-100 rounded">
                     <td>
-                      <div className="ml-5">
-                        <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                      <div classNameName="ml-5">
+                        <div classNameName="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                           <input
                             type="checkbox"
-                            className="checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                            classNameName="checkbox opacity-0 absolute cursor-pointer w-full h-full"
                           />
-                          <div className="check-icon  bg-indigo-700 text-white rounded-sm">
+                          <div classNameName="check-icon  bg-indigo-700 text-white rounded-sm">
                             <svg
-                              className="icon icon-tabler icon-tabler-check"
+                              classNameName="icon icon-tabler icon-tabler-check"
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
                               height={20}
@@ -670,16 +670,16 @@ function Table() {
                         </div>
                       </div>
                     </td>
-                    <td className>
-                      <div className="flex items-center pl-5">
-                        <p className="text-base font-medium leading-none text-gray-700 mr-2">
+                    <td classNameName>
+                      <div classNameName="flex items-center pl-5">
+                        <p classNameName="text-base font-medium leading-none text-gray-700 mr-2">
                           Marketing Keynote Presentation
                         </p>
                       </div>
                     </td>
-                    <td className="pl-24" />
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-24" />
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -730,13 +730,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -773,13 +773,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           23
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -795,26 +795,26 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <button className="py-3 px-7 text-sm leading-none text-gray-600 focus:outline-none bg-gray-100 hover:bg-gray-200 rounded">
+                    <td classNameName="pl-5">
+                      <button classNameName="py-3 px-7 text-sm leading-none text-gray-600 focus:outline-none bg-gray-100 hover:bg-gray-200 rounded">
                         Due tomorrow
                       </button>
                     </td>
-                    <td className="pl-4">
-                      <button className="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
+                    <td classNameName="pl-4">
+                      <button classNameName="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
                         View
                       </button>
                     </td>
                     <td>
-                      <div className="relative px-5 pt-2">
+                      <div classNameName="relative px-5 pt-2">
                         {show == 3 ? (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(null)}
                           >
                             <svg
@@ -849,7 +849,7 @@ function Table() {
                           </button>
                         ) : (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(3)}
                           >
                             <svg
@@ -884,11 +884,11 @@ function Table() {
                           </button>
                         )}
                         {show == 3 && (
-                          <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                          <div classNameName="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Edit</p>
                             </div>
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Delete</p>
                             </div>
                           </div>
@@ -896,19 +896,19 @@ function Table() {
                       </div>
                     </td>
                   </tr>
-                  <tr className="h-3" />
-                  <tr className="h-16 border border-gray-100 rounded">
+                  <tr classNameName="h-3" />
+                  <tr classNameName="h-16 border border-gray-100 rounded">
                     <td>
-                      <div className="ml-5">
-                        <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                      <div classNameName="ml-5">
+                        <div classNameName="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                           <input
                             defaultChecked
                             type="checkbox"
-                            className="checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                            classNameName="checkbox opacity-0 absolute cursor-pointer w-full h-full"
                           />
-                          <div className="check-icon  bg-indigo-700 text-white rounded-sm">
+                          <div classNameName="check-icon  bg-indigo-700 text-white rounded-sm">
                             <svg
-                              className="icon icon-tabler icon-tabler-check"
+                              classNameName="icon icon-tabler icon-tabler-check"
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
                               height={20}
@@ -926,17 +926,17 @@ function Table() {
                         </div>
                       </div>
                     </td>
-                    <td className>
-                      <div className="flex items-center pl-5">
-                        <p className="text-base font-medium leading-none text-gray-700 mr-2">
+                    <td classNameName>
+                      <div classNameName="flex items-center pl-5">
+                        <p classNameName="text-base font-medium leading-none text-gray-700 mr-2">
                           Development Phase 1
                         </p>
                       </div>
                     </td>
-                    <td className="pl-24" />
-                    <td className="pl-5" />
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-24" />
+                    <td classNameName="pl-5" />
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -987,13 +987,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1030,13 +1030,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           23
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1052,21 +1052,21 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-4">
-                      <button className="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
+                    <td classNameName="pl-4">
+                      <button classNameName="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
                         View
                       </button>
                     </td>
                     <td>
-                      <div className="relative px-5 pt-2">
+                      <div classNameName="relative px-5 pt-2">
                         {show == 4 ? (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(null)}
                           >
                             <svg
@@ -1101,7 +1101,7 @@ function Table() {
                           </button>
                         ) : (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(4)}
                           >
                             <svg
@@ -1136,11 +1136,11 @@ function Table() {
                           </button>
                         )}
                         {show == 4 && (
-                          <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                          <div classNameName="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Edit</p>
                             </div>
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Delete</p>
                             </div>
                           </div>
@@ -1148,18 +1148,18 @@ function Table() {
                       </div>
                     </td>
                   </tr>
-                  <tr className="h-3" />
-                  <tr className="h-16 border border-gray-100 rounded">
+                  <tr classNameName="h-3" />
+                  <tr classNameName="h-16 border border-gray-100 rounded">
                     <td>
-                      <div className="ml-5">
-                        <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                      <div classNameName="ml-5">
+                        <div classNameName="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                           <input
                             type="checkbox"
-                            className="checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                            classNameName="checkbox opacity-0 absolute cursor-pointer w-full h-full"
                           />
-                          <div className="check-icon  bg-indigo-700 text-white rounded-sm">
+                          <div classNameName="check-icon  bg-indigo-700 text-white rounded-sm">
                             <svg
-                              className="icon icon-tabler icon-tabler-check"
+                              classNameName="icon icon-tabler icon-tabler-check"
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
                               height={20}
@@ -1177,9 +1177,9 @@ function Table() {
                         </div>
                       </div>
                     </td>
-                    <td className>
-                      <div className="flex items-center pl-5">
-                        <p className="text-base font-medium leading-none text-gray-700 mr-2">
+                    <td classNameName>
+                      <div classNameName="flex items-center pl-5">
+                        <p classNameName="text-base font-medium leading-none text-gray-700 mr-2">
                           Marketing Keynote Presentation
                         </p>
                         <svg
@@ -1204,8 +1204,8 @@ function Table() {
                         </svg>
                       </div>
                     </td>
-                    <td className="pl-24">
-                      <div className="flex items-center">
+                    <td classNameName="pl-24">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1230,13 +1230,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           Urgent
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1287,13 +1287,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1330,13 +1330,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           23
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1352,26 +1352,26 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <button className="py-3 px-7 text-sm leading-none text-gray-600 bg-gray-100 hover:bg-gray-200 rounded focus:outline-none">
+                    <td classNameName="pl-5">
+                      <button classNameName="py-3 px-7 text-sm leading-none text-gray-600 bg-gray-100 hover:bg-gray-200 rounded focus:outline-none">
                         Due tomorrow
                       </button>
                     </td>
-                    <td className="pl-4">
-                      <button className="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
+                    <td classNameName="pl-4">
+                      <button classNameName="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
                         View
                       </button>
                     </td>
                     <td>
-                      <div className="relative px-5 pt-2">
+                      <div classNameName="relative px-5 pt-2">
                         {show == 5 ? (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(null)}
                           >
                             <svg
@@ -1406,7 +1406,7 @@ function Table() {
                           </button>
                         ) : (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(5)}
                           >
                             <svg
@@ -1441,11 +1441,11 @@ function Table() {
                           </button>
                         )}
                         {show == 5 && (
-                          <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                          <div classNameName="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Edit</p>
                             </div>
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Delete</p>
                             </div>
                           </div>
@@ -1453,19 +1453,19 @@ function Table() {
                       </div>
                     </td>
                   </tr>
-                  <tr className="h-3" />
-                  <tr className="h-16 border border-gray-100 rounded">
+                  <tr classNameName="h-3" />
+                  <tr classNameName="h-16 border border-gray-100 rounded">
                     <td>
-                      <div className="ml-5">
-                        <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                      <div classNameName="ml-5">
+                        <div classNameName="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                           <input
                             defaultChecked
                             type="checkbox"
-                            className="checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                            classNameName="checkbox opacity-0 absolute cursor-pointer w-full h-full"
                           />
-                          <div className="check-icon  bg-indigo-700 text-white rounded-sm">
+                          <div classNameName="check-icon  bg-indigo-700 text-white rounded-sm">
                             <svg
-                              className="icon icon-tabler icon-tabler-check"
+                              classNameName="icon icon-tabler icon-tabler-check"
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
                               height={20}
@@ -1483,9 +1483,9 @@ function Table() {
                         </div>
                       </div>
                     </td>
-                    <td className>
-                      <div className="flex items-center pl-5">
-                        <p className="text-base font-medium leading-none text-gray-700 mr-2">
+                    <td classNameName>
+                      <div classNameName="flex items-center pl-5">
+                        <p classNameName="text-base font-medium leading-none text-gray-700 mr-2">
                           Marketing Keynote Presentation
                         </p>
                         <svg
@@ -1510,10 +1510,10 @@ function Table() {
                         </svg>
                       </div>
                     </td>
-                    <td className="pl-24" />
-                    <td className="pl-5" />
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-24" />
+                    <td classNameName="pl-5" />
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1564,13 +1564,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1607,13 +1607,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           23
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1629,21 +1629,21 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-4">
-                      <button className="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
+                    <td classNameName="pl-4">
+                      <button classNameName="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
                         View
                       </button>
                     </td>
                     <td>
-                      <div className="relative px-5 pt-2">
+                      <div classNameName="relative px-5 pt-2">
                         {show == 6 ? (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(null)}
                           >
                             <svg
@@ -1678,7 +1678,7 @@ function Table() {
                           </button>
                         ) : (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(6)}
                           >
                             <svg
@@ -1713,11 +1713,11 @@ function Table() {
                           </button>
                         )}
                         {show == 6 && (
-                          <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                          <div classNameName="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Edit</p>
                             </div>
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Delete</p>
                             </div>
                           </div>
@@ -1725,18 +1725,18 @@ function Table() {
                       </div>
                     </td>
                   </tr>
-                  <tr className="h-3" />
-                  <tr className="h-16 border border-gray-100 rounded">
+                  <tr classNameName="h-3" />
+                  <tr classNameName="h-16 border border-gray-100 rounded">
                     <td>
-                      <div className="ml-5">
-                        <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                      <div classNameName="ml-5">
+                        <div classNameName="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                           <input
                             type="checkbox"
-                            className="checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                            classNameName="checkbox opacity-0 absolute cursor-pointer w-full h-full"
                           />
-                          <div className="check-icon  bg-indigo-700 text-white rounded-sm">
+                          <div classNameName="check-icon  bg-indigo-700 text-white rounded-sm">
                             <svg
-                              className="icon icon-tabler icon-tabler-check"
+                              classNameName="icon icon-tabler icon-tabler-check"
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
                               height={20}
@@ -1754,15 +1754,15 @@ function Table() {
                         </div>
                       </div>
                     </td>
-                    <td className>
-                      <div className="flex items-center pl-5">
-                        <p className="text-base font-medium leading-none text-gray-700 mr-2">
+                    <td classNameName>
+                      <div classNameName="flex items-center pl-5">
+                        <p classNameName="text-base font-medium leading-none text-gray-700 mr-2">
                           CSS and functionality
                         </p>
                       </div>
                     </td>
-                    <td className="pl-24">
-                      <div className="flex items-center">
+                    <td classNameName="pl-24">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1787,13 +1787,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           Urgent
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1844,13 +1844,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1887,13 +1887,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           23
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -1909,26 +1909,26 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <button className="py-3 px-3 text-sm leading-none text-red-500 bg-red-100 hover:bg-red-200 rounded focus:outline-none">
+                    <td classNameName="pl-5">
+                      <button classNameName="py-3 px-3 text-sm leading-none text-red-500 bg-red-100 hover:bg-red-200 rounded focus:outline-none">
                         Due Today at 18:00
                       </button>
                     </td>
-                    <td className="pl-4">
-                      <button className="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
+                    <td classNameName="pl-4">
+                      <button classNameName="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
                         View
                       </button>
                     </td>
                     <td>
-                      <div className="relative px-5 pt-2">
+                      <div classNameName="relative px-5 pt-2">
                         {show == 7 ? (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(null)}
                           >
                             <svg
@@ -1963,7 +1963,7 @@ function Table() {
                           </button>
                         ) : (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(7)}
                           >
                             <svg
@@ -1998,11 +1998,11 @@ function Table() {
                           </button>
                         )}
                         {show == 7 && (
-                          <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                          <div classNameName="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Edit</p>
                             </div>
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Delete</p>
                             </div>
                           </div>
@@ -2010,19 +2010,19 @@ function Table() {
                       </div>
                     </td>
                   </tr>
-                  <tr className="h-3" />
-                  <tr className="h-16 border border-gray-100 rounded">
+                  <tr classNameName="h-3" />
+                  <tr classNameName="h-16 border border-gray-100 rounded">
                     <td>
-                      <div className="ml-5">
-                        <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                      <div classNameName="ml-5">
+                        <div classNameName="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                           <input
                             defaultChecked
                             type="checkbox"
-                            className="checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                            classNameName="checkbox opacity-0 absolute cursor-pointer w-full h-full"
                           />
-                          <div className="check-icon  bg-indigo-700 text-white rounded-sm">
+                          <div classNameName="check-icon  bg-indigo-700 text-white rounded-sm">
                             <svg
-                              className="icon icon-tabler icon-tabler-check"
+                              classNameName="icon icon-tabler icon-tabler-check"
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
                               height={20}
@@ -2040,9 +2040,9 @@ function Table() {
                         </div>
                       </div>
                     </td>
-                    <td className>
-                      <div className="flex items-center pl-5">
-                        <p className="text-base font-medium leading-none text-gray-700 mr-2">
+                    <td classNameName>
+                      <div classNameName="flex items-center pl-5">
+                        <p classNameName="text-base font-medium leading-none text-gray-700 mr-2">
                           Marketing Keynote Presentation
                         </p>
                         <svg
@@ -2067,9 +2067,9 @@ function Table() {
                         </svg>
                       </div>
                     </td>
-                    <td className="pl-24" />
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-24" />
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -2094,13 +2094,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           Urgent
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -2151,13 +2151,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -2194,13 +2194,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           23
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -2216,21 +2216,21 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-4">
-                      <button className="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
+                    <td classNameName="pl-4">
+                      <button classNameName="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
                         View
                       </button>
                     </td>
                     <td>
-                      <div className="relative px-5 pt-2">
+                      <div classNameName="relative px-5 pt-2">
                         {show == 8 ? (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(null)}
                           >
                             <svg
@@ -2265,7 +2265,7 @@ function Table() {
                           </button>
                         ) : (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(8)}
                           >
                             <svg
@@ -2300,11 +2300,11 @@ function Table() {
                           </button>
                         )}
                         {show == 8 && (
-                          <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                          <div classNameName="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Edit</p>
                             </div>
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Delete</p>
                             </div>
                           </div>
@@ -2312,18 +2312,18 @@ function Table() {
                       </div>
                     </td>
                   </tr>
-                  <tr className="h-3" />
-                  <tr className="h-16 border border-gray-100 rounded">
+                  <tr classNameName="h-3" />
+                  <tr classNameName="h-16 border border-gray-100 rounded">
                     <td>
-                      <div className="ml-5">
-                        <div className="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
+                      <div classNameName="ml-5">
+                        <div classNameName="bg-gray-200 rounded-sm w-5 h-5 flex flex-shrink-0 justify-center items-center relative">
                           <input
                             type="checkbox"
-                            className="checkbox opacity-0 absolute cursor-pointer w-full h-full"
+                            classNameName="checkbox opacity-0 absolute cursor-pointer w-full h-full"
                           />
-                          <div className="check-icon  bg-indigo-700 text-white rounded-sm">
+                          <div classNameName="check-icon  bg-indigo-700 text-white rounded-sm">
                             <svg
-                              className="icon icon-tabler icon-tabler-check"
+                              classNameName="icon icon-tabler icon-tabler-check"
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
                               height={20}
@@ -2341,15 +2341,15 @@ function Table() {
                         </div>
                       </div>
                     </td>
-                    <td className>
-                      <div className="flex items-center pl-5">
-                        <p className="text-base font-medium leading-none text-gray-700 mr-2">
+                    <td classNameName>
+                      <div classNameName="flex items-center pl-5">
+                        <p classNameName="text-base font-medium leading-none text-gray-700 mr-2">
                           Vue integration
                         </p>
                       </div>
                     </td>
-                    <td className="pl-24">
-                      <div className="flex items-center">
+                    <td classNameName="pl-24">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -2374,13 +2374,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           Urgent
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -2431,13 +2431,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -2474,13 +2474,13 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           23
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <div className="flex items-center">
+                    <td classNameName="pl-5">
+                      <div classNameName="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={20}
@@ -2496,26 +2496,26 @@ function Table() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <p className="text-sm leading-none text-gray-600 ml-2">
+                        <p classNameName="text-sm leading-none text-gray-600 ml-2">
                           04/07
                         </p>
                       </div>
                     </td>
-                    <td className="pl-5">
-                      <button className="py-3 px-3 text-sm leading-none text-gray-600 bg-gray-100 hover:bg-gray-200 rounded focus:outline-none">
+                    <td classNameName="pl-5">
+                      <button classNameName="py-3 px-3 text-sm leading-none text-gray-600 bg-gray-100 hover:bg-gray-200 rounded focus:outline-none">
                         Due Today at 18:00
                       </button>
                     </td>
-                    <td className="pl-4">
-                      <button className="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
+                    <td classNameName="pl-4">
+                      <button classNameName="text-sm leading-none text-gray-600 py-3 px-5 bg-gray-100 rounded hover:bg-gray-200 focus:outline-none">
                         View
                       </button>
                     </td>
                     <td>
-                      <div className="relative px-5 pt-2">
+                      <div classNameName="relative px-5 pt-2">
                         {show == 9 ? (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(null)}
                           >
                             <svg
@@ -2550,7 +2550,7 @@ function Table() {
                           </button>
                         ) : (
                           <button
-                            className="focus:outline-none"
+                            classNameName="focus:outline-none"
                             onClick={() => setShow(9)}
                           >
                             <svg
@@ -2585,11 +2585,11 @@ function Table() {
                           </button>
                         )}
                         {show == 9 && (
-                          <div className="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                          <div classNameName="dropdown-content bg-white shadow w-24 absolute z-30 right-0 mr-6 ">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Edit</p>
                             </div>
-                            <div className="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
+                            <div classNameName="text-xs w-full hover:bg-indigo-700 py-4 px-4 cursor-pointer hover:text-white">
                               <p>Delete</p>
                             </div>
                           </div>
@@ -2601,12 +2601,68 @@ function Table() {
               </table>
             </div>
           </div>
-        </div>
-        <style>
+        </div> */}
+        {/* <style>
           {` .checkbox:checked + .check-icon {
                 display: flex;
             }`}
-        </style>
+        </style> */}
+
+        <div className="relative overflow-x-auto">
+          <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead className="text-xs text-gray-900 uppercase dark:text-gray-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">
+                  Product name
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Color
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Category
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Price
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-white dark:bg-gray-800">
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Apple MacBook Pro 17"
+                </th>
+                <td className="px-6 py-4">Silver</td>
+                <td className="px-6 py-4">Laptop</td>
+                <td className="px-6 py-4">$2999</td>
+              </tr>
+              <tr className="bg-white dark:bg-gray-800">
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Microsoft Surface Pro
+                </th>
+                <td className="px-6 py-4">White</td>
+                <td className="px-6 py-4">Laptop PC</td>
+                <td className="px-6 py-4">$1999</td>
+              </tr>
+              <tr className="bg-white dark:bg-gray-800">
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  Magic Mouse 2
+                </th>
+                <td className="px-6 py-4">Black</td>
+                <td className="px-6 py-4">Accessories</td>
+                <td className="px-6 py-4">$99</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   )
