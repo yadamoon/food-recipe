@@ -368,9 +368,12 @@ function App() {
               <p className="text-2xl text-gray-400 dark:text-gray-500">D</p>
             </div> */}
           </div>
-
+          <div className="w-full bg-white">
+            <p className="text-2xl text-gray-400 dark:text-gray-500 bg-white font-bold  mx-3 ">
+              Table
+            </p>
+          </div>
           <div className="flex w-full mb-4 rounded  bg-white">
-            <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
             <Table />
           </div>
           <div className="grid grid-cols-2 gap-4">
