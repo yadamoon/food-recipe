@@ -56,7 +56,7 @@ const data = [
 
 const Chart = () => {
   return (
-    <div className="justify-center items-center">
+    <div className=" flex justify-center items-center">
       {/* <LineChart
         width={700}
         height={350}
@@ -70,10 +70,11 @@ const Chart = () => {
         <Tooltip />
       </LineChart> */}
       <LineChart
-        width={1100}
+        width={1000}
         height={400}
         data={data}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        className="flex"
       >
         <XAxis dataKey="name" />
         <YAxis />
