@@ -1,6 +1,9 @@
 import './App.css'
+import Chart from './components/Layout/Chart'
 import Dashboard from './components/Layout/Dashboard'
 import Error from './components/Layout/Error'
+import PieComponent from './components/Layout/PieComponent'
+import Table from './components/Layout/Table'
 import SideBar from './components/SideBar/SideBar'
 import HeaderApp from './components/SideBar/common/HeaderApp'
 import { Routes, Route } from 'react-router-dom'
@@ -23,6 +26,7 @@ function App() {
     //   </div>
     // </div>
     <div classNameName="">
+      {/* //todo for small size */}
       <button
         data-drawer-target="sidebar-multi-level-sidebar"
         data-drawer-toggle="sidebar-multi-level-sidebar"
@@ -45,7 +49,7 @@ function App() {
           ></path>
         </svg>
       </button>
-
+      {/* //todo sidebar */}
       <aside
         id="sidebar-multi-level-sidebar"
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
@@ -257,32 +261,20 @@ function App() {
 
       <div className="p-4 sm:ml-64">
         <div className="   rounded-lg dark:border-gray-700">
+          {/* //todo HeaderPart */}
           <div className=" mb-4 rounded bg-gray-50 dark:bg-gray-800">
             <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
             <HeaderApp />
           </div>
 
-          {/* dashboard */}
-          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+          {/* //todo dashboard */}
+          <div className="flex  p-2 mb-4 rounded bg-gray-100">
             <p className="text-2xl text-gray-400 dark:text-gray-500">
-              <svg
-                className="w-3.5 h-3.5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 18 18"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 1v16M1 9h16"
-                />
-              </svg>
               Dashboard
             </p>
           </div>
+
+          {/* //todo list Earing */}
           <div className="grid grid-cols-3 gap-4 mb-4">
             <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
               <p className="text-2xl text-gray-400 dark:text-gray-500">
@@ -345,127 +337,41 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">
-              <svg
-                className="w-3.5 h-3.5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 18 18"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 1v16M1 9h16"
-                />
-              </svg>
-              sample
-            </p>
+
+          {/* //todo title chart */}
+          <div className="flex p-2 mb-4 rounded bg-gray-100">
+            <p className="text-2xl text-gray-400 dark:text-gray-500">Charts</p>
           </div>
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+
+          {/* //todo charts */}
+
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            {/* //todo chart */}
+            <div className="flex items-center justify-center rounded bg-white col-span-2">
               <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-                A
+                <Chart />
               </p>
             </div>
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+            {/*//todo  pie chart */}
+            <div className="flex items-center justify-center rounded bg-white col-span-1">
               <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-                B
+                {' '}
+                <PieComponent />
               </p>
             </div>
-            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-                C
-              </p>
+
+            {/* <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">C</p>
             </div>
+
             <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-              <p className="text-2xl text-gray-400 dark:text-gray-500">
-                <svg
-                  className="w-3.5 h-3.5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 18 18"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 1v16M1 9h16"
-                  />
-                </svg>
-                D
-              </p>
-            </div>
+              <p className="text-2xl text-gray-400 dark:text-gray-500">D</p>
+            </div> */}
           </div>
-          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">
-              <svg
-                className="w-3.5 h-3.5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 18 18"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 1v16M1 9h16"
-                />
-              </svg>
-              Sample 2
-            </p>
+
+          <div className="flex w-full mb-4 rounded  bg-white">
+            <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+            <Table />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
