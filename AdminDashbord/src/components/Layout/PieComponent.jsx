@@ -2,9 +2,9 @@ import React from 'react'
 import { PieChart, Pie, Cell } from 'recharts'
 
 const data = [
-  { name: ' A', value: 400 },
-  { name: ' B', value: 300 },
-  { name: ' C', value: 300 },
+  { name: 'A', value: 400 },
+  { name: 'B', value: 300 },
+  { name: 'C', value: 300 },
   { name: 'D', value: 200 },
 ]
 
@@ -39,8 +39,8 @@ const renderCustomizedLabel = ({
 const PieComponent = () => {
   return (
     <div className="  justify-center items-center  grid grid-cols-2">
-      <div className="border col-span-2">
-        <PieChart width={200} height={200}>
+      <div className=" col-span-2">
+        <PieChart width={300} height={300}>
           <Pie
             data={data}
             cx="50%"
@@ -55,6 +55,7 @@ const PieComponent = () => {
               <Cell
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}
+                className="p-10 "
               />
             ))}
           </Pie>
@@ -65,7 +66,7 @@ const PieComponent = () => {
         <div className="grid grid-cols-4 ">
           {data.map((list, index) => (
             <div className="">
-              <p className=" text-teal-600   col-span-1   ">
+              <p className=" text-teal-600 col-span-1   ">
                 <span> {list.name}</span>
               </p>
             </div>
