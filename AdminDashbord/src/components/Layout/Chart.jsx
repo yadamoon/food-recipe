@@ -71,7 +71,7 @@ const Chart = () => {
       </LineChart> */}
       <LineChart
         width={1100}
-        height={300}
+        height={400}
         data={data}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
       >
