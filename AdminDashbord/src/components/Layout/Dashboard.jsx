@@ -5,7 +5,7 @@ import Table from './Table'
 
 const Dashboard = () => {
   return (
-    <div className="  mx-2 bg-white rounded ">
+    <div className="  mx-2 bg-white rounded overflow-y-auto ">
       <div className=" ">
         <h1 className="font-bold uppercase text-2xl"> Dashboard</h1>
       </div>
