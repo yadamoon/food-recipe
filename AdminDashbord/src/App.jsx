@@ -25,7 +25,7 @@ function App() {
     //     </Routes> */}
     //   </div>
     // </div>
-    <div classNameName="">
+    <div className="bg-gray-100 ">
       {/* //todo for small size */}
       <button
         data-drawer-target="sidebar-multi-level-sidebar"
@@ -260,7 +260,7 @@ function App() {
       </aside>
 
       <div className="p-4 sm:ml-64">
-        <div className="   rounded-lg dark:border-gray-700">
+        <div className="   rounded-lg dark:border-gray-700 ">
           {/* //todo HeaderPart */}
           <div className=" mb-4 rounded bg-gray-50 dark:bg-gray-800">
             <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
@@ -368,7 +368,7 @@ function App() {
               <p className="text-2xl text-gray-400 dark:text-gray-500">D</p>
             </div> */}
           </div>
-          <div className="w-full bg-white">
+          <div className="w-full bg-white space-y-2 p-2">
             <p className="text-2xl text-gray-400 dark:text-gray-500 bg-white font-bold  mx-3 ">
               Table
             </p>
