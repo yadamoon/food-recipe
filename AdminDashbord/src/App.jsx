@@ -9,22 +9,6 @@ import HeaderApp from './components/SideBar/common/HeaderApp'
 import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
-    // <div classNameName="flex grid-cols-4">
-    //   <div classNameName="basis-[12%] h-[100vh] col-span-1">
-    //     <SideBar />
-    //   </div>
-    //   <div classNameName="basis-[88%] h-[100vh] col-span-3">
-    //     <HeaderApp />
-    //     <div classNameName="mt-2">
-    //       <Dashboard />
-    //     </div>
-
-    //     {/* <Routes>
-    //       <Route path="" element={<Error />} />
-    //       <Route path="/" element={<Dashboard />} />
-    //     </Routes> */}
-    //   </div>
-    // </div>
     <div className="bg-gray-100 ">
       {/* //todo for small size */}
       <button
