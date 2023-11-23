@@ -504,12 +504,12 @@ const SideBar = () => {
             </h1>
           </div>
           <div className="flex border h-1 bg-white"></div>
-          <ul className="space-y-2 font-medium">
+          <ul className="space-y-2 my-5 font-medium">
             <li>
               <Link
                 to=""
                 href="#"
-                className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   className="w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -549,7 +549,7 @@ const SideBar = () => {
               <Link
                 to=""
                 href="#"
-                className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -571,7 +571,7 @@ const SideBar = () => {
               <Link
                 to=""
                 href="#"
-                className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -593,7 +593,7 @@ const SideBar = () => {
               <Link
                 to=""
                 href="#"
-                className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -612,7 +612,7 @@ const SideBar = () => {
               <Link
                 to=""
                 href="#"
-                className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -630,7 +630,7 @@ const SideBar = () => {
             <li>
               <Link
                 href="#"
-                className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
@@ -655,7 +655,7 @@ const SideBar = () => {
               <Link
                 to=""
                 href="#"
-                className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
