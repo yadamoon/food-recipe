@@ -24,7 +24,7 @@ const SideBar = () => {
             {/* Dashboard */}
             <li>
               <Link
-                to=""
+                to="/"
                 href="#"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
@@ -45,7 +45,7 @@ const SideBar = () => {
             {/* table */}
             <li>
               <Link
-                to=""
+                to="/Table"
                 className="flex items-center w-full p-2 text-base text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
@@ -103,7 +103,7 @@ const SideBar = () => {
             {/* inbox */}
             <li>
               <Link
-                to=""
+                to="/Inbox"
                 href="#"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
@@ -126,8 +126,7 @@ const SideBar = () => {
             {/* user */}
             <li>
               <Link
-                to=""
-                href="#"
+                to="/User"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
@@ -145,8 +144,7 @@ const SideBar = () => {
 
             <li>
               <Link
-                to=""
-                href="#"
+                to="/Product"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
@@ -164,8 +162,7 @@ const SideBar = () => {
             {/* settings */}
             <li>
               <Link
-                to=""
-                href="#"
+                to="/Settings"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
@@ -206,7 +203,7 @@ const SideBar = () => {
             {/* signIN */}
             <li>
               <Link
-                to=""
+                to="/SignIn"
                 onClick={() => {
                   dispatch(logout())
                 }}
@@ -234,8 +231,7 @@ const SideBar = () => {
             {/* signUP */}
             <li>
               <Link
-                to=""
-                href="#"
+                to="/SignUp"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
