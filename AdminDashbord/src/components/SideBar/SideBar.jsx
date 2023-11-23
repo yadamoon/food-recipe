@@ -1,7 +1,11 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { logout } from '../../featureres/Slice/controllerSlice/controllerSlice'
 
 const SideBar = () => {
+  const controller = useSelector((state) => state.controller)
+  const dispatch = useDispatch()
   return (
     <div className="">
       <aside
@@ -141,6 +145,10 @@ const SideBar = () => {
 
             <li>
               <Link
+                to=""
+                onClick={() => {
+                  dispatch(logout())
+                }}
                 href="#"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
