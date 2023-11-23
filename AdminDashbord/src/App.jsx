@@ -5,6 +5,12 @@ import HeaderApp from './components/SideBar/common/HeaderApp'
 import { Routes, Route } from 'react-router-dom'
 import DashboardApp from './components/pages/DashboardApp'
 import ListUser from './components/pages/ListUser'
+import Profiles from './components/pages/Profiles'
+import Products from './components/pages/Products'
+import SignIn from './components/pages/SignIn'
+import SignUp from './components/pages/SignUp'
+import Settings from './components/pages/Settings'
+import Inbox from './components/pages/Inbox'
 
 function App() {
   return (
@@ -253,9 +259,13 @@ function App() {
           <Routes>
             <Route path="/" element={<DashboardApp />} />
             <Route path="/Table" element={<ListUser />} />
-            {/*  <Route path="blogs" element={<Blogs />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="*" element={<NoPage />} /> */}
+            <Route path="/User" element={<Profiles />} />
+            <Route path="/Inbox" element={<Inbox />} />
+            <Route path="/Setting" element={<Settings />} />
+            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/SignIN" element={<SignIn />} />
+            <Route path="/Product" element={<Products />} />
+            {/* <Route path="*" element={<NoPage />} /> */}
           </Routes>
         </div>
       </div>
