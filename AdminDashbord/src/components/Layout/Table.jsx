@@ -2610,19 +2610,22 @@ function Table() {
 
         <div className=" mx-5 my-4 ">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-white uppercase  bg-gray-500">
+            <thead className="text-xs text-white uppercase  bg-gray-700">
               <tr>
                 <th scope="col" className="px-6 py-3">
-                  Product name
+                  FullName
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Color
+                  Rate
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Category
+                  Type Of Food
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Price
+                  Time
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Info
                 </th>
               </tr>
             </thead>
@@ -2632,33 +2635,38 @@ function Table() {
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
                 >
-                  Apple MacBook Pro 17
+                  haniel Alex
                 </th>
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">$2999</td>
+                <td className="px-6 py-4">4 STAR</td>
+                <td className="px-6 py-4">Special Shiro</td>
+                <td className="px-6 py-4">12/06/2023</td>
+                <td className="px-6 py-4">
+                  <a
+                    href=""
+                    className="bg-gray-500 text-white p-3 rounded hover:text-gray-800 hover:bg-gray-300"
+                  >
+                    Details
+                  </a>
+                </td>
               </tr>
               <tr className="bg-gray-100">
                 <th
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
                 >
-                  Microsoft Surface Pro
+                  Alex Weldu
                 </th>
-                <td className="px-6 py-4">White</td>
-                <td className="px-6 py-4">Laptop PC</td>
-                <td className="px-6 py-4">$1999</td>
-              </tr>
-              <tr className="bg-gray-100">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
-                >
-                  Magic Mouse 2
-                </th>
-                <td className="px-6 py-4">Black</td>
-                <td className="px-6 py-4">Accessories</td>
-                <td className="px-6 py-4">$99</td>
+                <td className="px-6 py-4">5 START</td>
+                <td className="px-6 py-4">Special Pizza</td>
+                <td className="px-6 py-4">01/06/2023</td>
+                <td className="px-6 py-4 ">
+                  <a
+                    href=""
+                    className="bg-gray-500 text-white p-3 rounded hover:text-gray-800 hover:bg-gray-300"
+                  >
+                    Details
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>
