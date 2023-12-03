@@ -31,7 +31,7 @@ export default function HeaderApp() {
               to="/"
               className=" text-3xl leading-6 text-teal-800 uppercase font-thin"
             >
-              food recipe
+              food recipe(Yadamoon)
             </Link>
           </motion.Link>
 
