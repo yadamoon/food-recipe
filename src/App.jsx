@@ -30,7 +30,7 @@ function App() {
     return () => clearTimeout(timer)
   }, [])
   return (
-    <div className=" bg-gray-200 w-full">
+    <div className=" bg-gray-200 w-screen">
       <HeaderApp />
       <Nav />
       <br />

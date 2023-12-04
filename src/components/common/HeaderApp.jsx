@@ -11,7 +11,7 @@ export default function HeaderApp() {
   const urlLogo = 'public/images/finail.svg'
 
   return (
-    <div className=" bg-gray-100  ">
+    <div className=" bg-gray-100  w-full ">
       <nav className="2xl:container 2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4">
         {/* For large and Medium-sized Screen */}
         <div className="flex justify-between ">

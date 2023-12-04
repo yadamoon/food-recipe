@@ -8,7 +8,7 @@ const Nav = () => {
   const [activeStatus, setActiveStatus] = useState(1)
 
   return (
-    <div className="">
+    <div className="w-full">
       <div className="bg-white ">
         <motion.ul
           animate={{ x: 10 }}

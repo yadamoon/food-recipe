@@ -2,7 +2,7 @@ import React from 'react'
 
 const FooterApp = () => {
   return (
-    <div className="">
+    <div className="w-full">
       <br />
       <div class="flex items-end w-full  bg-gray-300">
         <footer class="w-full text-gray-700 bg-gray-100 body-font">
