@@ -23,7 +23,7 @@ export const Sub = () => {
         >
           <img
             src="public/images/email-14-svgrepo-com.svg"
-            alt="Envelope with a newsletter"
+            alt="landing image"
             role="img"
             className="w-1/3 "
           />
@@ -102,22 +102,22 @@ export const PopularVideo = () => {
     {
       title: 'pizza',
       img: 'public/images/original_italian_pizza.jpg',
-      alt: 'some burger food',
+      alt: 'Pizza',
     },
     {
       title: 'salad',
       img: 'public/images/Screenshot from 2023-09-30 12-00-11.png',
-      alt: 'some burger food',
+      alt: 'Salad',
     },
     {
       title: 'tibs',
       img: 'public/images/Screenshot from 2023-09-30 12-39-20.png',
-      alt: 'some burger food',
+      alt: 'Tibs',
     },
     {
       title: 'shiro',
       img: 'public/images/Screenshot from 2023-09-27 16-09-25.png',
-      alt: 'some burger food',
+      alt: 'Shiro',
     },
   ]
 
