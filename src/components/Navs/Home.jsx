@@ -123,7 +123,7 @@ export const PopularVideo = () => {
 
   return (
     <div className="p-6 w-ful  md:full xl:w-auto mx-3   xl:items-stretch bg-white    overflow-auto">
-      l{/* //!? from tilawind Componenets */}
+      {/* //!? from tilawind Componenets */}
       <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
         <motion.div className=" text-center" animate={{ y: 20 }}>
           <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-teal-800 md:w-full w-9/12 mx-auto">
