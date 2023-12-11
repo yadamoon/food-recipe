@@ -87,7 +87,7 @@ function DetailsComponents() {
                       recipe.image
                         ? 'http://localhost:3000/uploads/recipes/' +
                           recipe.image
-                        : 'public/images/spageti.png'
+                        : '/images/spageti.png'
                     }
                   />
                 </Link>

@@ -34,7 +34,7 @@ const DetailsRecipe = () => {
                 src={
                   data.image
                     ? 'http://localhost:3000/uploads/recipes/' + data.image
-                    : 'public/images/spageti.png'
+                    : '/images/spageti.png'
                 }
                 alt=""
               />

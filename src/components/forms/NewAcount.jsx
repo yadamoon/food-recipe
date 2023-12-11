@@ -70,7 +70,7 @@ const NewAcount = () => {
             <div className="w-full xl:w-3/4 lg:w-11/12 flex">
               <div className="w-full h-auto bg-white hidden lg:block lg:w-5/12 bg-cover rounded-l-lg">
                 <img
-                  src="public/images/test.png"
+                  src="/images/test.png"
                   className="bg-cover h-auto"
                   alt=""
                   srcset=""

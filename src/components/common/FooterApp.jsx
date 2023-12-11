@@ -9,10 +9,7 @@ const FooterApp = () => {
           <div class="container flex flex-col flex-wrap  py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
             <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
               <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start md:text-center sm:text-center">
-                <img
-                  src="public/images/finail.svg"
-                  class="w-48  text-teal-500 "
-                />
+                <img src="/images/finail.svg" class="w-48  text-teal-500 " />
               </a>
               <p class="mt-2 text-sm text-gray-500 uppercase">
                 {' '}
