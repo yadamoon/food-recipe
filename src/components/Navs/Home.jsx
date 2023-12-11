@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <div className="container bg-white mx-auto w-full h-full">
+    <div className="container bg-white mx-auto w-auto h-auto">
       <FoodForHealthy />
       <PopularVideo />
       <Sub />
@@ -101,7 +101,7 @@ export const PopularVideo = () => {
   const popularVideo = [
     {
       title: 'pizza',
-      img: '/images/original_italian_pizza.jpg',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Makhsoos_%28Special%29_Pizza.jpg/800px-Makhsoos_%28Special%29_Pizza.jpg',
       alt: 'Pizza',
     },
     {
