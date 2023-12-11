@@ -16,17 +16,17 @@ const Settings = () => {
   const contents = [
     {
       title: 'Public Profile',
-      image: 'public/images/user-profile-filled-svgrepo-com.svg',
+      image: '/images/user-profile-filled-svgrepo-com.svg',
       content: publicProfile,
     },
     {
       title: 'Language',
-      image: 'public/images/language-svgrepo-com.svg',
+      image: '/images/language-svgrepo-com.svg',
       content: accountSettings,
     },
     {
       title: 'Appearance',
-      image: 'public/images/theme-opened-svgrepo-com.svg',
+      image: '/images/theme-opened-svgrepo-com.svg',
       content: notifications,
     },
   ]
@@ -94,7 +94,7 @@ const Settings = () => {
 
             <Link onClick={handlLogout} className="border p-2">
               <img
-                src="public/images/logout-svgrepo-com.svg"
+                src="/images/logout-svgrepo-com.svg"
                 width={30}
                 height={30}
                 alt=""

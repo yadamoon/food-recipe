@@ -8,7 +8,7 @@ export default function HeaderApp() {
   const [show, setshow] = useState(false)
   const [showButton, setShowButton] = useState()
   const { signedIn } = useSelector((state) => state.auth)
-  const urlLogo = 'public/images/finail.svg'
+  const urlLogo = '/images/finail.svg'
 
   return (
     <div className=" bg-gray-100  w-full ">

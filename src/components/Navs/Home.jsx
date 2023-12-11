@@ -22,7 +22,7 @@ export const Sub = () => {
           animate={{ y: 20 }}
         >
           <img
-            src="public/images/email-14-svgrepo-com.svg"
+            src="/images/email-14-svgrepo-com.svg"
             alt="landing image"
             role="img"
             className="w-1/3 "
@@ -59,7 +59,7 @@ export const FoodForHealthy = () => {
       <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white ">
         <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative flex items-center justify-center">
           <motion.img
-            src="public/images/test.png"
+            src="/images/test.png"
             alt="Envelope with a newsletter"
             role="img"
             className="h-2/3 xl:w-full lg:w-1/2 w-full bg-white rounded-2xl md:w-1/2 "
@@ -101,22 +101,22 @@ export const PopularVideo = () => {
   const popularVideo = [
     {
       title: 'pizza',
-      img: 'public/images/original_italian_pizza.jpg',
+      img: '/images/original_italian_pizza.jpg',
       alt: 'Pizza',
     },
     {
       title: 'salad',
-      img: 'public/images/Screenshot from 2023-09-30 12-00-11.png',
+      img: '/images/Screenshot from 2023-09-30 12-00-11.png',
       alt: 'Salad',
     },
     {
       title: 'tibs',
-      img: 'public/images/Screenshot from 2023-09-30 12-39-20.png',
+      img: '/images/Screenshot from 2023-09-30 12-39-20.png',
       alt: 'Tibs',
     },
     {
       title: 'shiro',
-      img: 'public/images/Screenshot from 2023-09-27 16-09-25.png',
+      img: '/images/Screenshot from 2023-09-27 16-09-25.png',
       alt: 'Shiro',
     },
   ]
