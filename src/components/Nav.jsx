@@ -8,12 +8,9 @@ const Nav = () => {
   const [activeStatus, setActiveStatus] = useState(1)
 
   return (
-    <div className="w-full">
-      <div className="bg-white ">
-        <motion.ul
-          animate={{ x: 10 }}
-          className=" flex justify-end w-full mx-3 "
-        >
+    <div className="">
+      <ul className="bg-white ">
+        <motion.ul animate={{ x: 10 }} className=" flex justify-end ">
           <li
             onClick={() => setActiveStatus(1)}
             className={
@@ -299,7 +296,7 @@ const Nav = () => {
             )}
           </li>
         </motion.ul>
-      </div>
+      </ul>
     </div>
   )
 }
