@@ -195,49 +195,49 @@ const Nav = () => {
             </li>
           )}
 
-          {/* {signedIn && ( */}
-          <li
-            onClick={() => setActiveStatus(5)}
-            className={
-              activeStatus == 5
-                ? 'text-sm border-teal-700 pt-3 rounded-t text-teal-700 mr-12'
-                : 'text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-teal-700 cursor-pointer'
-            }
-          >
-            <Link to="/Add_New_Recipe" className="flex items-center mb-3">
-              <span>
-                <svg
-                  width={20}
-                  height={20}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+          {signedIn && (
+            <li
+              onClick={() => setActiveStatus(5)}
+              className={
+                activeStatus == 5
+                  ? 'text-sm border-teal-700 pt-3 rounded-t text-teal-700 mr-12'
+                  : 'text-sm text-gray-600 py-3 flex items-center mr-12 hover:text-teal-700 cursor-pointer'
+              }
+            >
+              <Link to="/Add_New_Recipe" className="flex items-center mb-3">
+                <span>
+                  <svg
+                    width={20}
+                    height={20}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M12 11V14M12 14V17M12 14H15M12 14H9M6 7H18M8 5H16M6 9H18C19.1046 9 20 9.89543 20 11V17C20 18.1046 19.1046 19 18 19H6C4.89543 19 4 18.1046 4 17V11C4 9.89543 4.89543 9 6 9Z"
-                      stroke="#2ea31f"
+                    <g
+                      id="SVGRepo_tracerCarrier"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                    />{' '}
-                  </g>
-                </svg>
-              </span>
-              <span className="hidden ml-1 md:block  font-normal">Add</span>
-            </Link>
-            {activeStatus == 5 && (
-              <div className="w-full h-1 bg-teal-700 rounded-t-md" />
-            )}
-          </li>
-          {/* )} */}
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M12 11V14M12 14V17M12 14H15M12 14H9M6 7H18M8 5H16M6 9H18C19.1046 9 20 9.89543 20 11V17C20 18.1046 19.1046 19 18 19H6C4.89543 19 4 18.1046 4 17V11C4 9.89543 4.89543 9 6 9Z"
+                        stroke="#2ea31f"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />{' '}
+                    </g>
+                  </svg>
+                </span>
+                <span className="hidden ml-1 md:block  font-normal">Add</span>
+              </Link>
+              {activeStatus == 5 && (
+                <div className="w-full h-1 bg-teal-700 rounded-t-md" />
+              )}
+            </li>
+          )}
 
           <li
             onClick={() => setActiveStatus(6)}
