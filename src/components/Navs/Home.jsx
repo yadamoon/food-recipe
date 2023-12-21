@@ -55,26 +55,27 @@ export const Sub = () => {
 // helathy food
 export const FoodForHealthy = () => {
   return (
-    <>
-      <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex  xl:items-stretch justify-between xl:flex-row bg-white ">
-        <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative flex items-center justify-center">
+    <div div className="flex  justify-center mx-40">
+      <div className="w-full grid grid-cols-2 gap-2">
+        <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative flex items-center justify-center lg:col-span-1 sm:col-span-2 md:col-span-2">
           <motion.img
             src="/images/test.png"
             alt="Envelope with a newsletter"
             role="img"
-            className="h-2/3 xl:w-full lg:w-1/2 w-full bg-white rounded-2xl md:w-1/2 "
+            className="h-2/3 lg:w-full w-full bg-white rounded-2xl md:w-1/2"
             animate={{ x: 20 }}
           />
         </div>
+
         <motion.div
-          className="w-full xl:w-1/2 xl:pl-40 xl:py-28 "
+          className="w-full xl:w-1/2 xl:pl-40 xl:py-28  col-span-1"
           animate={{ y: 30 }}
         >
           <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold leading-10 text-teal-800 mb-4 text-center xl:text-left md:mt-0 mt-4">
             Eat Healthy <br />
             Live Healthy
           </h1>
-          <p className="text-base leading-normal text-gray-600 text-center xl:text-left">
+          <p className="text-base leading-normal text-gray-600 text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aperiam
             atque a laborum? Facere eligendi vitae tenetur at doloremque, sequi
             esse est neque debitis reiciendis autem officiis libero ducimus
@@ -92,7 +93,7 @@ export const FoodForHealthy = () => {
           </div>
         </motion.div>
       </div>
-    </>
+    </div>
   )
 }
 // popular videos
