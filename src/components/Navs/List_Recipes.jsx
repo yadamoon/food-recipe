@@ -70,7 +70,7 @@ function DetailsComponents() {
       <SearchForm recipes={recipes} setter={setRecipesFiltered} />
       <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:grid-cols-2 p-3 ">
-          {recipesDisplayed.map((recipe, index) => (
+          {recipesDisplayed.map((recipe) => (
             <div
               className=" h-5/5 body-font bg-white text-gray-600 rounded-t"
               key={recipe.id}
