@@ -25,7 +25,7 @@ export const Sub = () => {
             src="/images/email-14-svgrepo-com.svg"
             alt="landing image"
             role="img"
-            className="w-1/3 "
+            className="hidden lg:mt-0 lg:col-span-5 lg:flex w-44  "
           />
         </motion.div>
         <div className="w-full xl:w-1/2 xl:pl-40 xl:py-28 ">
@@ -33,17 +33,17 @@ export const Sub = () => {
             Subscribe
           </h1>
           <p className="text-base leading-normal text-gray-600 text-center xl:text-left">
-            Whether article spirits new her covered hastily sitting her. Money
-            witty books nor son add.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
+            doloribus enim aliquam fugit ut dolores quae! Accusamus, voluptatum
           </p>
           <div className="flex items-stretch mt-12">
             <input
-              className="bg-gray-50 rounded-lg rounded-r-none text-base leading-none text-gray-800 p-5 w-4/5 border border-transparent focus:outline-none focus:border-gray-500"
+              className="bg-gray-50 rounded-lg rounded-r-none text-base leading-none text-gray-800 p-2 w-4/5 border border-transparent focus:outline-none focus:border-gray-500"
               type="email"
               placeholder="Your Email"
             />
 
-            <button className="w-32 rounded-l-none hover:bg-teal-600 bg-teal-700 rounded text-base font-medium leading-none text-white p-5 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-700">
+            <button className="w-32 rounded-l-none hover:bg-teal-600 bg-teal-700 rounded text-base font-medium leading-none text-white p-2 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-700">
               subscribe
             </button>
           </div>
@@ -65,8 +65,8 @@ export const FoodForHealthy = () => {
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl ">
               Eat Healthy Live Healthy
             </p>
-            <a
-              href="#"
+            <Link
+              to="/"
               class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
             >
               Get started
@@ -82,7 +82,7 @@ export const FoodForHealthy = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img src="/images/test.png" alt="food recipe" />
