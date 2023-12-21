@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <div className="container bg-white mx-auto w-auto h-auto">
+    <div className="mx-5 bg-white mx-auto w-auto h-auto">
       <FoodForHealthy />
       <PopularVideo />
       <Sub />
@@ -15,10 +15,10 @@ export default function Home() {
 
 export const Sub = () => {
   return (
-    <>
-      <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white">
+    <div className="flex justify-center items-center">
+      <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-center justify-between xl:flex-row bg-white">
         <motion.div
-          className="xl:w-1/2 md:mb-14 xl:mb-0 relative h-auto flex items-center justify-center"
+          className="xl:w-1/2 md:mb-14 xl:mb-0 relative h-auto flex  md:justify-center md:items-center"
           animate={{ y: 20 }}
         >
           <img
@@ -49,14 +49,14 @@ export const Sub = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 // helathy food
 export const FoodForHealthy = () => {
   return (
     <>
-      <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex flex-col xl:items-stretch justify-between xl:flex-row bg-white ">
+      <div className="p-6  md:w-2/3 xl:w-auto mx-3  flex  xl:items-stretch justify-between xl:flex-row bg-white ">
         <div className="xl:w-1/2 md:mb-14 xl:mb-0 relative flex items-center justify-center">
           <motion.img
             src="/images/test.png"
@@ -122,7 +122,7 @@ export const PopularVideo = () => {
   ]
 
   return (
-    <div className="p-6 w-ful  md:full xl:w-auto mx-3   xl:items-stretch bg-white    overflow-auto">
+    <div className="p-6 w-ful   xl:w-auto mx-3   xl:items-stretch bg-white    overflow-auto">
       {/* //!? from tilawind Componenets */}
       <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
         <motion.div className=" text-center" animate={{ y: 20 }}>
