@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <div className="mx-5 bg-white mx-auto w-auto h-auto">
+    <div className="mx-5 bg-white  w-auto h-auto">
       <FoodForHealthy />
       <PopularVideo />
       <Sub />
@@ -56,43 +56,6 @@ export const Sub = () => {
 export const FoodForHealthy = () => {
   return (
     <div div className=" mx-5">
-      {/* <div className="w-full grid grid-cols-2 gap-2">
-        <div className=" sm:col-span-2 md:col-span-2 ">
-          <motion.img
-            src="/images/test.png"
-            alt="Envelope with a newsletter"
-            role="img"
-            className="h-2/3 lg:w-2/3 bg-white rounded-2xl md:w-1/2 justify-center items-center"
-            animate={{ x: 20 }}
-          />
-        </div>
-
-        <motion.div
-          className="w-full xl:w-1/2 xl:pl-40 xl:py-28  col-span-1"
-          animate={{ y: 30 }}
-        >
-          <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold leading-10 text-teal-800 mb-4 text-center xl:text-left md:mt-0 mt-4">
-            Eat Healthy <br />
-            Live Healthy
-          </h1>
-          <p className="text-base leading-normal text-gray-600 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aperiam
-            atque a laborum? Facere eligendi vitae tenetur at doloremque, sequi
-            esse est neque debitis reiciendis autem officiis libero ducimus
-            fugiat?
-          </p>
-          <br />
-          <br />
-          <div className="grid grid-cols-1 w-full items-center sm:w-2/3 sm:mx-16 space-y-10">
-            <Link
-              to="/"
-              className="bg-teal-600 text-white p-3 text-center rounded "
-            >
-              Get Startd
-            </Link>
-          </div>
-        </motion.div>
-      </div> */}
       <section className="bg-white ">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
